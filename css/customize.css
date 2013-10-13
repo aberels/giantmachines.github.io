@@ -39,7 +39,7 @@
   filter: alpha(opacity=20);
 }
 .section .background-2 .image {
-  background-image: url('../img/city.jpg');
+  background-image: url('../img/bg-2.jpg');
   -webkit-opacity: 0.2;
   -moz-opacity: 0.2;
   opacity: 0.2;
