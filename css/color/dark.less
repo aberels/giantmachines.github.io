@@ -1,0 +1,1204 @@
+@import "../libs.less";
+
+@color_focus: #fff;
+@color: #666;
+@color_primary: #111;
+@color_diff: #efefef;
+
+@color_focus_inverse: #666;
+@color_inverse: #cecece;
+@color_primary_inverse: @color_diff;
+@color_diff_inverse: @color_primary;
+
+/*********************************************************************************************
+ *			Base
+ ********************************/
+html,
+button,
+input,
+select,
+textarea,
+body {
+	color: @color;
+}
+
+a {
+	color: @color_primary;
+	text-decoration: none;
+
+	&:hover {
+		color: @color_focus;
+		text-decoration: underline;
+	}
+}
+
+.navbar {
+	
+	border-bottom-color: lighten(@color_primary,8%);
+	
+	.bg-hex-to-rgba( darken(@color_primary,5%), 0.6 );
+
+	body.scrolled & {
+		background-color: darken(@color_primary,5%);
+	}
+
+	.nav {
+
+		& > li {
+			& > a {
+				color: @color_primary_inverse;
+				&:hover {
+					color: @color_focus;
+					border-bottom-color: @color_focus;
+				}
+
+				span {
+
+				}
+				small {
+					color: @color_primary_inverse;
+					.opacity(0.3);
+				}
+			}
+			&.active {
+				& > a,
+				& > a:hover, 
+				& > a:focus {
+					color: @color_focus;
+					background-color: transparent;
+					.box-shadow(none);
+					border-bottom-color: @color_focus;
+				}
+			}
+		}
+
+		li.dropdown {
+			&.open > .dropdown-toggle, 
+			&.active > .dropdown-toggle, 
+			&.open.active > .dropdown-toggle {
+				color: @color_focus;
+				background-color: transparent;
+				.box-shadow(none);
+			}
+		}
+	}
+
+	.dropdown-menu {
+		.border-radius(0px);
+		background-color: darken(@color_primary,5%);
+
+		& > li > a {
+			color: @color_diff;
+			border-top: 1px solid darken(@color_primary,3%);
+		}
+		& > li:first-child > a {
+			border-top: none;
+		}
+
+		& > li > a:hover, 
+		& > li > a:focus, 
+		&:hover > a, 
+		&:focus > a {
+			background-color: lighten(@color_primary,2%);
+			color: @color_diff;
+			background-image: none;
+			filter: none;
+		}
+	}
+	.nav .active > a, 
+	.nav .active > a:hover, 
+	.nav .active > a:focus {
+		background-color: lighten(@color_primary,2%);
+		color: @color_focus;
+		background-image: none;
+		filter: none;
+	}
+
+	.nav>li>.dropdown-menu:after {
+		border-bottom-color: darken(@color_primary,5%);
+	}
+
+	.btn.btn-navbar  {
+		&.collapsed .icon-bar {
+			background-color: @color_diff;
+		}
+		.icon-bar {
+			background-color: @color_focus;
+		}
+		&:hover {
+			.icon-bar {
+				background-color: @color_focus;
+			}
+		}
+	}
+
+	.nav li.dropdown.open > .dropdown-toggle .caret, 
+	.nav li.dropdown.active > .dropdown-toggle .caret, 
+	.nav li.dropdown.open.active>.dropdown-toggle .caret,
+	.nav li.dropdown>a:hover .caret, 
+	.nav li.dropdown>a:focus .caret {
+		border-top-color: @color_focus;
+		border-bottom-color: @color_focus;
+	}
+}
+
+
+#page-title {
+	color: @color_focus;
+}
+
+/*********************************************************************************************
+ *			Common Elements
+ *				1. overlay
+ *				2. portfolio-thumbnails
+ ********************************/
+.overlay {
+	background-color: transparent;
+	a & {
+		color: transparent;
+	}
+	.section:hover a & {
+		.color-hex-to-rgba(#fff,0.5);
+	}
+
+	.section:hover .entry a & {
+		color: transparent;
+	}
+
+	.section:hover .entry:hover a &,
+	.entry:hover a & {
+		.color-hex-to-rgba(#fff,0.5);
+	}
+
+	a:hover &,
+	.section:hover a:hover &,
+	.section:hover .entry:hover a:hover &,
+	.entry:hover a:hover & {
+		.bg-hex-to-rgba(@color_primary,0.9);
+		color: @color_focus;
+	}
+}
+
+.portfolio-thumbnails {
+
+	.portfolio-detail {
+		.portfolio-icon {
+			.color-hex-to-rgba(#fff,0.4);
+		}
+		.portfolio-title {
+			color: @color_focus;
+		}
+		.portfolio-cat {
+			color: darken(@color_diff,10%);
+		}
+	}
+
+	a:hover,
+	li&:hover {
+		.portfolio-detail {
+			.portfolio-icon {
+				color: @color_focus;
+			}
+		}
+	}
+}
+
+/*********************************************************************************************
+ *			Section Elements
+ *				1. background
+ *				2. heading 
+ *				3. section-header
+ *				4. sectopn-more
+ *				5. breadcrumbs
+ *				6. highlight
+ *				7. thumb
+ *				8. nav
+ *				9. thumbnails-bordered
+ *				10. callout
+ *				11. blog-entries
+ *				12. widget
+ *				13. separator
+ *				14. icon element
+ *				15. form
+ *				16. pagination
+ *				17. table
+ *				18. accordion
+ *				19. list
+ *				20. carousel
+ *				17. footer
+ ********************************/
+blockquote {
+	color: @color_primary;
+}
+select,
+textarea,
+input {
+	color: @color_primary;
+}
+
+.background {
+	background-color: @color_diff;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-weight: normal;
+	color: @color_primary;
+	strong {
+		font-weight: normal;
+		color: @color_focus;
+	}
+	a {
+		color: @color_primary;
+		&:hover {
+			color: @color_focus;
+		}
+	}
+}
+
+.section-header {
+	&::after,
+	& > .after {
+		border-bottom-color: @color_primary;
+		.opacity(0.1);
+	}
+	.section-title {
+		span {
+			border-bottom-color: @color_primary;
+
+			#footer & {
+				border-bottom-color: darken(@color_diff, 10%);
+			}
+		}
+	}
+}
+
+.section-more {
+	color: @color;
+
+	.section:hover & {
+		color: @color_focus;
+	}
+}
+
+.breadcrumb.page-breadcrumb > li {
+	color: @color_primary;
+	& > a {
+		color: @color_primary;
+		.opacity(0.3);
+		&:hover {
+			.opacity(0.8);
+			text-decoration: none;
+		}
+	}
+	& > .divider {
+		color: @color_primary;
+		.opacity(0.3);
+	}
+	&.active {
+		.opacity(0.3);
+	}
+}
+
+.highlight {
+	background-color: @color_primary;
+	color: @color_diff;
+}
+
+.nav{
+	&.nav-pills {
+		& > li {
+			& > a {
+				&:hover {
+					color: @color_diff;
+					background-color: @color_primary;
+				}
+			}
+			&.active > a,
+			&.active > a:hover {
+				color: @color_focus;
+				background-color: @color_primary;
+			}
+		}
+	}
+
+	&.nav-list {
+
+		background-color: darken(@color_diff,3%);
+		border: 1px solid darken(@color_diff,5%);
+
+		a {
+			.transition( all 0.3s ease-in-out );
+			.text-shadow(none);
+			&:hover {
+				background-color: @color_primary;
+				color: @color_diff;
+			}
+		}
+
+		& > .active > a, 
+		& > .active > a:hover, 
+		& > .active > a:focus {
+			background-color: @color_primary;
+			color: @color_focus;
+		}
+	}
+
+
+	&.nav-pills {
+		.dropdown-menu > li > a:hover, 
+		.dropdown-menu > li > a:focus, 
+		.dropdown-submenu:hover > a, 
+		.dropdown-submenu:focus > a {
+			background-color: @color_primary;
+			color: @color_diff;
+		}
+		.dropdown-menu > .active {
+			& > a, 
+			& > a:hover, 
+			& > a:focus {
+				background-color: @color_primary;
+				color: @color_focus;
+			}
+		}
+	}
+
+}
+
+.thumb {
+	color: @color_primary;
+
+	&.thumb-framed,
+	&.thumb-circled {
+		.bg-hex-to-rgba(@color_primary,0.5);
+		color: @color_diff;
+
+		&::after,
+		& > .after {
+			border-color: #fff;
+			.opacity(0.3);
+		}	
+	}
+	&.section-more {
+		color: @color_focus;
+
+		&.thumb-framed,
+		&.thumb-circled {
+			color: @color_primary;
+			background-color: @color_diff;
+
+			&:hover {
+				color: @color_diff;
+				background-color: @color_focus;
+			}
+		}
+	}
+}
+
+.thumbnails-bordered {
+	li {
+		&::before,
+		& > .before {
+			background-color: @color_primary;
+			.opacity(0.3);
+		}
+		&::after,
+		& > .after {
+			background-color: @color_primary;
+			.opacity(0.3);
+		}
+	}
+}
+
+.callout {
+	&.section {
+		&:hover {
+			.background {
+				background-color: @color_primary;
+			}
+			.section-inner {
+				color: @color_diff;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				color: @color_diff;
+			}
+		}
+	}
+}
+
+.blog-entries {
+	.entry {
+		.entry-meta span  {
+			.color-hex-to-rgba(@color, 0.8);
+
+			&.entry-author {
+				color: @color;
+				a {
+					color: @color;
+					&:hover {
+						color: @color_focus;
+					}
+				}
+			}
+		}
+		.entry-meta a,
+		a.more {
+			.color-hex-to-rgba(@color, 0.8);
+			&:hover {
+				color: @color_focus;
+			}
+		}
+	}
+	.entry-header {
+		.small {
+			.color-hex-to-rgba(@color, 0.8);
+			a {
+				.color-hex-to-rgba(@color, 0.8);
+				&:hover {
+					color: @color_focus;
+				}
+			}
+		}
+		.comments {
+			.opacity(0.4);
+		}
+	}
+
+	.type-quote,
+	.type-video {
+		.entry-featured {
+			color: @color_primary;
+			.transparent-bg-hex(@color_primary, 0.2);
+		}
+	}
+}
+
+.blog-entries-primary {
+	.entry {
+		.border-color-hex-to-rgba(@color, 0.15);
+	}
+}
+
+.widget_calendar {
+	table {
+		td {
+			.border-color-hex-to-rgba(@color, 0.1);
+		}
+		#today {
+			.bg-hex-to-rgba(@color, 0.1);
+		}
+	}
+}
+
+
+.separator {
+	border-top-color: @color_primary;
+	.opacity(0.1);
+}
+.content-separator {
+	border-top-color: @color_primary;
+	.opacity(0.5);
+}
+
+a > .icon-frame,
+a > .icon-circled {
+	border-color: @color;
+
+	&:hover {
+		color: @color_diff;
+		background-color: @color_focus;
+		border-color: @color_focus;
+	}
+}
+
+@border_rgba: hsla(hue(@color_primary), saturation(@color_primary), lightness(@color_primary), 0.65);
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	border-color: @border_rgba;
+	background-color: transparent;
+
+	&:focus {
+		border-color: @color_primary;
+	}
+}
+
+.btn-primary {
+	// color, color:hover, background, background:hover, border-color, border-color:hover;
+	.btn-bundle( @color_primary, @color_diff, transparent, @color_focus, @border_rgba, @color_focus);
+	.transition( all 0.3s ease-in-out );
+}
+
+.pagination {
+	ul {
+		li {
+			a {
+				background-color: darken(@color_diff,3%);
+				color: @color_primary;
+				border-color: darken(@color_diff,6%);
+			}
+			
+			&:hover {
+				a,
+				a:hover {
+					background-color: @color_primary;
+					color: @color_diff;
+				}
+			}
+			&.active {
+				a,
+				a:hover {
+					background-color: @color_primary;
+					color: @color_focus;
+				}
+			}
+		}
+	}
+}
+
+.table {
+	td {
+		th {
+			color: @color_primary;
+		}
+	}
+
+	tbody {
+		tr {
+			td {
+				border-color: darken(@color_diff,5%);
+			}
+			&:first-child {	
+				td {
+					.border-color-hex-to-rgba(@color_primary, 0.1);
+				}
+			}
+		}
+	}
+
+	&.table-striped tbody > tr:nth-child(odd)  {
+		& > td, 
+		& > th {
+			background-color: darken(@color_diff,2%);
+		}
+	}
+}
+
+.nav-tabs {
+	.border-color-hex-to-rgba(@color_primary, 0.2);
+
+	& > .active > a {
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-top-left-radius: 0px;
+		-moz-border-radius-topright: 0px;
+		-moz-border-radius-topleft: 0px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+	}
+	& > .active > a, 
+	& > .active > a:hover, 
+	& > .active > a:focus {
+		color: @color_primary;
+		.border-color-hex-to-rgba(@color_primary, 0.2);
+		border-bottom-color: transparent;
+		background-color: @color_diff;
+	}
+
+	& > li > a:hover, 
+	& > li > a:focus {
+		.bg-hex-to-rgba(@color_primary,0.1);
+		.border-color-hex-to-rgba(@color_primary, 0.2);
+		border-bottom-color: transparent;
+		color: @color;
+		-webkit-border-top-right-radius: 0px;
+		-webkit-border-top-left-radius: 0px;
+		-moz-border-radius-topright: 0px;
+		-moz-border-radius-topleft: 0px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+	}
+
+	.dropdown-menu > li > a:hover, 
+	.dropdown-menu > li > a:focus, 
+	.dropdown-submenu:hover > a, 
+	.dropdown-submenu:focus > a {
+		filter: none;
+		background-image: none;
+		background-color: @color_primary;
+		color: @color_diff;
+	}
+
+	.dropdown-menu > .active > a, 
+	.dropdown-menu > .active > a:hover, 
+	.dropdown-menu > .active > a:focus {
+		filter: none;
+		background-image: none;
+		background-color: @color_primary;
+		color: @color_focus;
+	}
+}
+
+.accordion {
+	.accordion-group {
+		.accordion-heading  {
+			.border-color-hex-to-rgba(@color_primary,0.1);
+
+			.accordion-toggle {
+				color: @color_primary;
+			}
+		}
+	}
+}
+
+.ul-texts,
+.ul-icons {
+	&.ul-circle {
+		li {
+			i:first-child {
+				background-color: @color_primary;
+				color: @color_diff;
+			}
+		}
+	}
+}
+
+.icon-floating.carousel-nav {
+	color: @color_primary;
+	.transition( all 0.3s ease-in-out );
+
+	&:hover {
+		color: @color_focus;
+	}
+}
+
+#footer .section.section-footerinfo {
+	
+	color: lighten(@color, 20%);
+	a {
+		color: lighten(@color, 10%);
+		&:hover {
+			color: @color_focus;
+		}
+	}
+	
+}
+
+/*********************************************************************************************
+ *			Section Inverse Elements
+ *				1. background
+ *				2. heading 
+ *				3. section-header
+ *				4. sectopn-more
+ *				5. breadcrumbs
+ *				6. highlight
+ *				7. thumb
+ *				8. navs
+ *				9. thumbnails-bordered
+ *				10. callout
+ *				11. blog-entries
+ *				12. widget
+ *				13. separator
+ *				14. icon element
+ *				15. form
+ *				16. pagination
+ *				17. table
+ *				18. accordion
+ *				19. list
+ *				20. carousel
+ *				17. footer
+ ********************************/
+
+.section-inverse {
+
+	color: @color_inverse;
+
+	a {
+		color: @color_primary_inverse;
+		text-decoration: none;
+
+		&:hover {
+			color: @color_focus_inverse;
+		}
+	}
+
+	blockquote {
+		color: @color_primary_inverse;
+	}
+
+	select,
+	textarea,
+	input {
+		color: @color_primary_inverse;
+	}
+
+	.background {
+		background-color: @color_diff_inverse;
+	}
+	
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		color: @color_primary_inverse;
+		a {
+			color: @color_primary_inverse;
+			&:hover {
+				color: @color_focus_inverse;
+			}
+		}
+	}
+
+	.section-header {
+		&::after,
+		& > .after {
+			border-bottom-color: @color_primary_inverse;
+		}
+		.section-title {
+			span {
+				border-bottom-color: @color_primary_inverse;
+
+				#footer & {
+					border-bottom-color: lighten(@color_diff_inverse, 10%);
+				}
+			}
+		}
+	}
+
+	.section-more {
+		color: @color_inverse;
+
+		.section:hover & {
+			color: @color_focus_inverse;
+		}
+	}
+
+	.breadcrumb.page-breadcrumb > li {
+		color: @color_primary_inverse;
+		& > a {
+			color: @color_primary_inverse;
+		}
+		& > .divider {
+			color: @color_primary_inverse;
+		}
+	}
+
+	.highlight {
+		background-color: @color_primary_inverse;
+		color: @color_diff_inverse;
+	}
+
+	.thumb {
+		color: @color_primary_inverse;
+
+		&.thumb-framed,
+		&.thumb-circled {
+			.bg-hex-to-rgba(@color_primary_inverse,0.8);
+			color: @color_diff_inverse;
+		}
+		&.section-more {
+			color: @color_focus_inverse;
+			&.thumb-framed,
+			&.thumb-circled {
+				color: @color_primary_inverse;
+				background-color: @color_diff_inverse;
+
+				&:hover {
+					color: @color_diff_inverse;
+					background-color: @color_focus_inverse;
+				}
+			}
+		}
+	}
+
+	.nav{
+		&.nav-pills {
+			& > li {
+				& > a {
+					&:hover {
+						color: @color_diff_inverse;
+						background-color: @color_primary_inverse;
+					}
+				}
+				&.active > a,
+				&.active > a:hover {
+					color: @color_focus_inverse;
+					background-color: @color_primary_inverse;
+				}
+			}
+		}
+
+		&.nav-list {
+
+			background-color: darken(@color_diff_inverse,3%);
+			border: 1px solid darken(@color_diff_inverse,5%);
+			
+			a {
+				.transition( all 0.3s ease-in-out );
+				.text-shadow(none);
+				&:hover {
+					background-color: @color_primary_inverse;
+					color: @color_diff_inverse;
+				}
+			}
+
+			& > .active > a, 
+			& > .active > a:hover, 
+			& > .active > a:focus {
+				background-color: @color_primary_inverse;
+				color: @color_focus_inverse;
+			}
+		}
+
+	}
+
+	.thumbnails-bordered {
+		li {
+			&::before,
+			& > .before {
+				background-color: @color_primary_inverse;
+			}
+			&::after,
+			& > .after {
+				background-color: @color_primary_inverse;
+			}
+		}
+	}
+
+	&.callout {
+		&:hover {
+			.background {
+				background-color: @color_focus_inverse;
+			}
+			.section-inner {
+			}
+			h1, h2, h3, h4, h5, h6 {
+				span,
+				strong {
+					color: @color_primary;
+				}
+			}
+		}
+	}
+
+	.blog-entries {
+		.entry {
+			.entry-meta span  {
+				.color-hex-to-rgba(@color_inverse, 0.5);
+
+				&.entry-author {
+					color: @color_inverse;
+					a {
+						color: @color_inverse;
+						&:hover {
+							color: @color_focus_inverse;
+						}
+					}
+				}
+			}
+			.entry-meta a,
+			a.more {
+				.color-hex-to-rgba(@color_inverse, 0.5);
+				&:hover {
+					color: @color_focus_inverse;
+				}
+			}
+		}
+		.entry-header {
+			.small {
+				.color-hex-to-rgba(@color_inverse, 0.6);
+				a {
+					.color-hex-to-rgba(@color_inverse, 0.6);
+					&:hover {
+						color: @color_focus_inverse;
+					}
+				}
+			}
+		}
+
+		.type-quote {
+			color: @color_primary_inverse;
+			.entry-featured {
+				.transparent-bg-hex(@color_primary_inverse, 0.05);
+			}
+		}
+	}
+	.blog-entries-primary {
+		.entry {
+			.border-color-hex-to-rgba(@color_inverse, 0.15);
+		}
+	}
+
+	.widget_calendar {
+		table {
+			td {
+				.border-color-hex-to-rgba(@color_inverse, 0.1);
+			}
+			#today {
+				.bg-hex-to-rgba(@color_inverse, 0.1);
+			}
+		}
+	}
+
+	.separator {
+		border-top-color: @color_primary_inverse;
+		.opacity(0.1);
+	}
+	.content-separator {
+		border-top-color: @color_primary_inverse;
+	}
+
+	a > .icon-frame,
+	a > .icon-circled {
+		border-color: @color_inverse;
+
+		&:hover {
+			color: @color_diff_inverse;
+			background-color: @color_focus_inverse;
+			border-color: @color_focus_inverse;
+		}
+	}
+
+	@border_rgba: hsla(hue(@color_primary_inverse), saturation(@color_primary_inverse), lightness(@color_primary_inverse), 0.65);
+
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.uneditable-input {
+		border-color: @border_rgba;
+		background-color: transparent;
+
+		&:focus {
+			border-color: @color_primary_inverse;
+		}
+	}
+
+	.btn-primary {
+		// color, color:hover, background, background:hover, border-color, border-color:hover;
+		.btn-bundle( @color_primary_inverse, @color_diff_inverse, transparent, @color_focus_inverse, @border_rgba, @color_focus_inverse );
+	}
+
+	.pagination {
+		ul {
+			li {
+				a {
+					background-color: darken(@color_diff_inverse,1%);
+					color: @color_primary_inverse;
+					border-color: darken(@color_diff_inverse,3%);
+				}
+				&:hover {
+					a,
+					a:hover {
+						background-color: @color_primary_inverse;
+						color: @color_diff_inverse;
+					}
+				}
+				&.active {
+					a,
+					a:hover {
+						background-color: @color_primary_inverse;
+						color: @color_focus_inverse;
+					}
+				}
+			}
+		}
+	}
+
+	.table {
+		td {
+			th {
+				color: @color_primary_inverse;
+			}
+		}
+
+		tbody {
+			tr {
+				td {
+					border-color: darken(@color_diff_inverse,3%);
+				}
+				&:first-child {	
+					td {
+						.border-color-hex-to-rgba(@color_primary_inverse, 0.1);
+					}
+				}
+			}
+		}
+
+		&.table-striped tbody > tr:nth-child(odd)  {
+			& > td, 
+			& > th {
+				background-color: darken(@color_diff_inverse,1%);
+			}
+		}
+	}
+
+	.nav-tabs {
+
+		.border-color-hex-to-rgba(@color_primary_inverse, 0.2);
+
+		& > .active > a, 
+		& > .active > a:hover, 
+		& > .active > a:focus {
+			color: @color_primary_inverse;
+			.border-color-hex-to-rgba(@color_primary_inverse, 0.2);
+			border-bottom-color: transparent;
+			background-color: @color_diff_inverse;
+		}
+		
+		& > li > a:hover, 
+		& > li > a:focus {
+			.bg-hex-to-rgba(@color_primary_inverse,0.1);
+			.border-color-hex-to-rgba(@color_primary_inverse, 0.2);
+			border-bottom-color: transparent;
+			color: @color_inverse;
+		}
+	}
+
+
+	.accordion {
+		.accordion-group {
+			.accordion-heading  {
+				.border-color-hex-to-rgba(@color_primary_inverse,0.1);
+
+				.accordion-toggle {
+					color: @color_primary_inverse;
+				}
+			}
+		}
+	}
+
+	.ul-texts,
+	.ul-icons {
+		&.ul-circle {
+			li {
+				i:first-child {
+					background-color: @color_primary_inverse;
+					color: @color_diff_inverse;
+				}
+			}
+		}
+	}
+
+	.icon-floating.carousel-nav {
+		color: @color_primary_inverse;
+		.transition( all 0.3s ease-in-out );
+	 	&:hover {
+			color: @color_focus;
+		}
+	}
+
+	#footer &.section.section-footerinfo {
+
+		color: darken(@color_inverse, 20%);
+		a {
+			color: darken(@color_inverse, 10%);
+			&:hover {
+				color: @color_focus_inverse;
+			}
+		}
+		
+	}
+
+}
+
+/*********************************************************************************************
+ *			Dakern Section 
+ *				1. background
+ *				2. heading 
+ ********************************/
+.section.darken {
+
+	.background {
+		background-color: lighten(@color_diff_inverse,70%);
+	}
+
+	// for footer. uses 3 class: section, section-inverse, darken
+	&.section-inverse {
+		.background {
+			background-color: darken(@color_diff_inverse,12%);
+		}
+	}
+
+
+}
+.section.darken-more {
+
+	.background {
+		background-color: lighten(@color_diff_inverse,68%);
+	}
+
+	// for footer. uses 3 class: section, section-inverse, darken
+	&.section-inverse {
+		.background {
+			background-color: darken(@color_diff_inverse,13%);
+		}
+	}
+
+
+}
+
+/*********************************************************************************************
+ *        Responsives styles
+ ********************************/
+
+@media (max-width: 979px) {
+	.navbar {
+		
+		.transparent-bg-hex( darken(@color_primary,5%), 0.975);
+		
+		.nav-collapse .nav > li > a,
+		.nav-collapse .dropdown-menu a {
+
+			&:hover,
+			&:focus {
+				color: @color_focus;
+				background-color: @color_primary;
+			}
+		}
+
+		.nav-collapse .dropdown-menu a {
+			background-color: darken(@color_primary,4%);
+		}
+
+		.nav-collapse .active > a, 
+		.nav-collapse .active > a:hover, 
+		.nav-collapse .active > a:focus {
+			color: @color_focus;
+			background-color: @color_primary;
+		}
+		
+	}
+}

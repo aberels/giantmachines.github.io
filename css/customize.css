@@ -1,0 +1,81 @@
+/**
+ * some helpers located on libs.less
+ */
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.navbar .brand {
+  line-height: 73px;
+  height: 73px;
+  width: 140px;
+}
+.navbar .brand a {
+  background: transparent url(../img/logo.png) no-repeat top left;
+}
+.section .background-1 .image {
+  background-image: url('http://placehold.it/1420x800');
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.section .background-2 .image {
+  background-image: url('../img/city.jpg');
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.section .background-3 .image {
+  background-image: url('http://placehold.it/1420x900');
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.section .background-4 .image {
+  background-image: url('http://placehold.it/485x485');
+  -webkit-opacity: 0.1;
+  -moz-opacity: 0.1;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  -webkit-background-size: inherit;
+  -moz-background-size: inherit;
+  background-size: inherit;
+}
+.section .background-5 .image {
+  background-image: url('http://placehold.it/1420x950');
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.section .background-6 .image {
+  background-image: url('http://placehold.it/485x485');
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-background-size: inherit;
+  -moz-background-size: inherit;
+  background-size: inherit;
+}
