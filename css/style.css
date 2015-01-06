@@ -437,8 +437,6 @@ hr {
 
 .client-icon {
   background: white;
-  height: 165px;
-  line-height: 165px;
   margin-bottom: 20px;
 }
 
@@ -446,6 +444,7 @@ hr {
   width: 100%;
   vertical-align: middle;
   padding: 10px;
+
 }
 
 
@@ -604,6 +603,7 @@ Parallax
     width: 70px;
     height: 70px;
     margin-top: 15px;
+    margin-bottom: 30px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -733,6 +733,13 @@ Parallax
 
 /* Media queries */
 
+@media (min-width: 992px) {
+  .client-icon {
+    min-height: 165px;
+    line-height: 165px;
+  }
+}
+
 @media(min-width:767px) {
 
     .navbar {
@@ -768,10 +775,13 @@ Parallax
         font-size: 25px;
     }
 
-
 }
+
+
+
 @media (max-width:768px) {
-	
+
+
 	.team.boxed-grey {
 		margin-bottom: 30px;
 	}
@@ -784,6 +794,11 @@ Parallax
 }
 
 @media (max-width:480px) {
+
+    .client-icon {
+      min-height: 95px;
+      line-height: 95px;
+    }
 
 	.navbar-custom .nav.navbar-nav {
     background-color: rgba(255,255,255,.4);
