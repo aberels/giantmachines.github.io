@@ -1,736 +1,643 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>   <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>      <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-
-		<meta charset="utf-8">
-		<title>Giant Machines: We Program.</title>
-		<meta name="description" content="">
-
-		<!-- Mobile Devices Viewport Resset-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-
-		<link rel="stylesheet" href="vendor/reset.css">
-
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-responsive.min.css">
-
-		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-		<!--[if IE 8]>
-			<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome-ie7.min.css">
-		<![endif]-->
-
-		<link rel="stylesheet" href="vendor/prettyPhoto/css/prettyPhoto.css">
-
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans|Maven+Pro">
-
-		<link rel="stylesheet" href="css/base.css">
-		<!--[if IE 7]>
-			<link rel="stylesheet" href="css/ie-7.css">
-		<![endif]-->
-
-		<!-- here where we put the styling for components -->
-		<link rel="stylesheet" href="css/components.css">
-
-		<!--here where we put coloring for whole page -->
-		<link rel="stylesheet" href="css/color/midnight-blue.css">
-
-		<!--here where we put logo custom and background (so you can easyli change the background based on your need)-->
-		<link rel="stylesheet" href="css/customize.css">
-
-		<script src="vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-	</head>
-	<body>
-		<div id="page">
-
-			<!--replace navbar-fixed-top with navbar-static-top if you dont like fixed top navbar-->
-			<header id="header" class="navbar navbar-inverse navbar-fixed-top">
-				<div class="navbar-inner container">
-
-					<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-
-					<h1 class="brand">Giant Machines<!-- <a href="index.html">Giant Machines</a> --></h1>
-
-					<!--navbar-inverse-collapse--><!-- 
-					<nav id="access" class="nav-collapse collapse">
-
-						<ul class="nav">
-							<li class="active dropdown">
-
-								<a href="index.html" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-angle-right hidden-desktop"></i> Home <b class="caret"></b></a>
-
-								<ul class="dropdown-menu">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="index-2.html">Home variation 2 / Navbar 2 </a></li>
-									<li><a href="index-3.html">Home variation 3 ( Apps ) </a></li>
-									<li><a href="index-dark.html">Colorsheme: Dark </a></li>
-									<li><a href="index-red.html">Colorsheme: Red </a></li>
-									<li><a href="index-grey.html">Colorsheme: Grey </a></li>
-									<li><a href="index-green.html">Colorsheme: Green</a></li>
-								</ul>
-
-							</li>
-
-							<li class="dropdown">
-
-								<a href="portfolio.html" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-angle-right hidden-desktop"></i> Portfolio <b class="caret"></b></a>
-
-								<ul class="dropdown-menu">
-									<li><a href="portfolio.html">Porfolio Full Window</a></li>
-									<li><a href="portfolio-1-col.html">Porfolio Full Page</a></li>
-									<li><a href="portfolio-3-cols.html">Porfolio 3 Cols</a></li>
-									<li><a href="portfolio-4-cols.html">Porfolio 4 Cols</a></li>
-									<li><a href="single-portfolio.html">Single Porfolio</a></li>
-								</ul>
-
-							</li>
-
-							<li class="dropdown">
-
-								<a href="blog.html" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-angle-right hidden-desktop"></i> Blog <b class="caret"></b></a>
-
-								<ul class="dropdown-menu">
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="blog-full.html">Blog fullpage</a></li>
-									<li><a href="single-blog.html">Single Blog</a></li>
-									<li><a href="archive.html">Blog Archive</a></li>
-								</ul>
-
-							</li>
-
-							<li class="dropdown">
-
-								<a href="features.html" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-angle-right hidden-desktop"></i> Features <b class="caret"></b></a>
-
-								<ul class="dropdown-menu">
-									<li><a href="components.html">Components</a></li>
-									<li><a href="columns-and-media-object.html">Columns and Media Object</a></li>
-									<li><a href="image-and-video.html">Image and Video</a></li>
-									<li><a href="thumb.html">Thumb</a></li>
-									<li><a href="containers.html">Containers</a></li>
-									<li><a href="features.html">Features / Service Page</a></li>
-								</ul>
-
-							</li>
-							<li><a href="about.html"><i class="icon-angle-right hidden-desktop"></i> About</a></li>
-							<li><a href="contact.html"><i class="icon-angle-right hidden-desktop"></i> Contact</a></li>
-
-						</ul>
-
-					</nav> -->
-					<!-- /.nav-collapse -->
-
-				</div><!-- /navbar-inner -->
-
-			</header><!-- /#header -->
-
-			<div id="main">
-
-				<div id="homeHeadline" class="section section-inverse section-headline-carousel carousel slide from-right" data-interval="6000">
-
-<!-- 					<ol class="carousel-indicators">
-						<li data-target="#homeHeadline" data-slide-to="0" class="active"></li>
-						<li data-target="#homeHeadline" data-slide-to="1"></li>
-						<li data-target="#homeHeadline" data-slide-to="2"></li>
-						<li data-target="#homeHeadline" data-slide-to="3"></li>
-					</ol> -->
-
-					<div class="carousel-inner">
-
-						<div class="active item section-inner headline headline-full aligncenter" data-background="http://farm9.staticflickr.com/8090/8563713552_7e6c9dd73f_o.jpg" data-background-size="cover" data-opacity="0.3">
-							
-							<div class="container headline-inner">
-
-							
-								<h1 class="headline-text"><span class="highlight">Giant Machines</span> <strong>We&nbsp;program.</strong></h1>
-
-								<p class="">
-									Giant Machines is a boutique software consultancy offering software design, development, and consulting services with a focus on web-connected applications and systems programming.</p>
-
-								<p class="">
-									<a href="#homeServices" class="btn btn-primary btn-large js-scrollto">Services</a>
-								</p>
-							</div>
-
-						</div>
-
-						
-
-					</div>
-
-					<!-- <a class="icon-floating left carousel-nav" href="#homeHeadline" data-slide="prev"><i class="icon-angle-left"></i></a>
-  					<a class="icon-floating right carousel-nav" href="#homeHeadline" data-slide="next"><i class="icon-angle-right"></i></a> -->
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-
-				</div><!--#homeHeadline.section-->
-
-
-
-
-
-
-
-
-				<div id="homeProfile" class="section">
-
-					<div class="section-inner container">
-						<header class="section-header aligncenter">
-							<h1 class="section-title"><span>Who&nbsp;we&nbsp;are</span></h1>
-						</header>
-
-							<div class="row">
-
-								<div class="span10 offset1 aligncenter"><p class="lead">
-									We are a small federation of engineers who have developed and managed software projects in the research, finance, startup, and entertainment industries since the 90s.
-								</p>
-								</div>
-							</div
-
-						<div class="row">
-
-							<div class="media span10 offset1">
-										
-					
-
-								<div class="media-body">
-
-<!-- 
-
-
-<figure class="thumb thumb-small thumb-icon thumb-framed thumb-circled pull-left">
-										<i class="icon-cogs"></i>
-									</figure> -->
-												<figure class="thumb media-object-wrapper span4 pull-left">
-									<img src="./img/gopherswrench.jpg" alt="" class="media-object">
-									<p class="small">Golang's Gophers</p>
-								</figure>
-					
-					
-									<h2 class="media-heading">Development process</h2>
-
-
-	<p>Our approach to software development selects aspects from many different development methodologies including Agile and Kanban to deliver value. For fresh projects we prefer short iterations, continuous integration and delivery, and common-sense pairing with daily standups and retrospectives to taste.  
-	</p>
-		<p>We understand that your organization is unique and can peacefully coexist with your existing processes. If your process is broken, we can help with that too.</p>
-
-
-
-
-<br />
-<!-- <figure class="thumb thumb-small thumb-icon thumb-framed thumb-circled pull-left">
-										<i class="icon-cogs"></i>
-									</figure> -->
-
-<!-- <figure class="span2 pull-right">
-									<img src="http://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="" class="media-object">
-								</figure>
- -->
-<h2 class="media-heading">Technical expertise</h2>
-<p>
-
-Whether its the development of Web apps and APIs in <a href="http://ruby-lang.org">Ruby</a>, complex "thick" clients in <a>JavaScript</a>, systems development with Google's <a href="http://golang.org"  style="color:#D10056;"  target="_blank">Go</a>, DevOps with Chef, or building an <a href="http://ruby-lang.org" style="color:#D10056;" target="_blank">Elasticsearch</a> cluster, we work with you and your team to identify the technological opportunites that will make your project a success.</p>
-
-<p>If you have a project or technology you would like to explore, please <a href="mailto:contact@giantmachines.com">get in touch</a>.</p>
-
-
-
-									<!-- <p><a href="about.html" class="section-more"><em>Get to know us more</em> <i class="icon-long-arrow-right"></i></a></p> -->
-
-		      					</div>
-
-		      				</div><!--/.media.span6-->
-
-		      			</div><!--/.row-->
-
-					</div><!--/.section-inner-->
-
-					<!--since there is no associated custom background image for this section you can simply put background like this: -->
-					<div class="background"></div>
-
-				</div><!--#homeProfile.section-->
-
-
-
-
-
-				<div id="homeServices" class="section section-inverse">
-
-					<div class="section-inner container">
-
-						<header class="section-header aligncenter">
-							<h1 class="section-title"><span>What <strong>we can do</strong> for you</span></h1>
-						</header>
-
-						<div class="row">
-
-
-
-
-
-
-
-
-							<article class="media span6">
-								
-								<figure class="media-object-wrapper thumb thumb-icon thumb-framed thumb-circled thumb-small pull-left">
-									<i class="icon-cogs"></i>
-								</figure>
-
-								<div class="media-body ">
-
-									<h3 class="media-heading">DEVELOPMENT</h3>
-
-									<p>
-Whether its complete application design and development or just a little expert staff augentation to finish a project, programming is our specialty. We can produce your company's MVP, kick-start new technology initiatives, or renovate, replace, and modernize existing systems.
-									</p>
-
-      							</div>
-
-      						</article><!--/.media.span6-->
-
-      						<article class="media span6">
-								
-								<figure class="media-object-wrapper thumb thumb-icon thumb-framed thumb-circled thumb-small pull-left">
-									<i class="icon-ambulance"></i>
-								</figure>
-
-								<div class="media-body ">
-
-									<h3 class="media-heading">PROJECT TRIAGE & RESCUE</h3>
-
-									<p>Does your project seem out of control? Are you worried that your technology initiative is failing? We can evaluate and assume existing projects to get them back under control and delivered successfully.</p>
-
-      							</div>
-
-      						</article><!--/.media.span6-->
-
-      					</div><!--/.row-->
-      					<div class="row">
-
-      						<article class="media span6">
-								
-								<figure class="media-object-wrapper thumb thumb-icon thumb-framed thumb-circled thumb-small pull-left">
-									<i class="icon-umbrella"></i>
-								</figure>
-
-								<div class="media-body ">
-
-									<h3 class="media-heading">TECHNOLOGY AUDITING</h3>
-
-									<p>
-										We deliver expert research, advice, and opinions about your technology options so that you can move forward (or look back) with confidence.  
-									</p>
-
-      							</div>
-
-      						</article><!--/.media.span6-->
-
-      						<article class="media span6">
-								
-								<figure class="media-object-wrapper thumb thumb-icon thumb-framed thumb-circled thumb-small pull-left">
-									<i class="icon-user"></i>
-								</figure>
-
-								<div class="media-body ">
-
-									<h3 class="media-heading">TRAINING</h3>
-
-									<p> We offer customized training for <a href="">Go</a>, <a href="">Ruby</a>, <a href="">Elasticsearch</a> and <a href="">Javascript</a> as well as related libraries and frameworks so your team can take a giant step forward.</p>
-
-      							</div>
-
-      						</article><!--/.media.span6-->
-
-      					</div><!--/.row-->
-
-
-						<!-- <footer class="section-footer aligncenter">
-							<a href="about.html#how" class="section-more"><em>Learn about our creative workflow</em> <i class="icon-long-arrow-right"></i></a>
-						</footer> -->
-
-					</div><!--.section-inner-->
-
-					<!--background-2 is custom class for applying background. see customize.css-->
-					<div class="background background-2" data-speed="10"><span class="image"></span></div>
-
-				</div><!--#homeServices.section-->
-
-				<!-- <div id="homePortfolio" class="section section-inverse with-thumb-over-bottom">
-
-					<div class="section-inner">
-
-						<header class="section-header aligncenter">
-							<h1 class="section-title"><span>Some of our <strong>selected works</strong></span></h1>
-						</header>
-
-						<ul class="nav nav-pills js-filter aligncenter">
-							<li class="active"><a href="#porfolioThumbnails" data-filter=".all">All</a></li>
-							<li><a href="#porfolioThumbnails" data-filter=".web">Website</a></li>
-							<li><a href="#porfolioThumbnails" data-filter=".mobile">Mobile Apps</a></li>
-							<li><a href="#porfolioThumbnails" data-filter=".game">Game</a></li>
-							<li><a href="#porfolioThumbnails" data-filter=".prettyphoto">PrettyPhoto</a></li>
-						</ul>
-
-						<ul id="porfolioThumbnails" class="entries thumbnails portfolio-thumbnails thumbnails-fullwindow">
-							<li class="entry all web">
-								<a href="single-portfolio.html">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio</h3>
-											<span class="portfolio-cat">Web Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all game prettyphoto">
-								<a href="http://placehold.it/1420x950" data-rel="prettyPhoto" title="Prettyphoto Image">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-search"></i></span>
-											<h3 class="portfolio-title">Prettyphoto Image</h3>
-											<span class="portfolio-cat">Game Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all mobile">
-								<a href="single-portfolio.html">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio Slide</h3>
-											<span class="portfolio-cat">Movile Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all web prettyphoto">
-								<a href="http://themeforest.net?ref=coolorize&amp;iframe=true&amp;width=900&amp;height=400" data-rel="prettyPhoto" title="PrettyPhoto link">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-search"></i></span>
-											<h3 class="portfolio-title">PrettyPhoto Link</h3>
-											<span class="portfolio-cat">Web Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all game">
-								<a href="single-portfolio.html">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio Gallery</h3>
-											<span class="portfolio-cat">Game Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all mobile">
-								<a href="single-portfolio.html">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio Video</h3>
-											<span class="portfolio-cat">Mobile Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all mobile prettyphoto">
-								<a href="http://www.youtube.com/watch?v=t58WCSn5lNI" data-rel="prettyPhoto" title="PrettyPhoto Video">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-search"></i></span>
-											<h3 class="portfolio-title">Prettyphoto Video</h3>
-											<span class="portfolio-cat">Mobile Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all web">
-								<a href="single-portfolio.html">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio</h3>
-											<span class="portfolio-cat">Web Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all game">
-								<a href="single-portfolio.html">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio Gallery</h3>
-											<span class="portfolio-cat">Game Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all game prettyphoto">
-								<a href="http://placehold.it/1420x900" data-rel="prettyPhoto" title="Prettyphoto Image">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-search"></i></span>
-											<h3 class="portfolio-title">Prettyphoto Image</h3>
-											<span class="portfolio-cat">Game Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all web">
-								<a href="single-portfolio.html">
-
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-plus"></i></span>
-											<h3 class="portfolio-title">Single Portfolio</h3>
-											<span class="portfolio-cat">Web Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-							<li class="entry all mobile prettyphoto">
-								<a href="http://vimeo.com/67576172" data-rel="prettyPhoto" title="PrettyPhoto Video">
-									
-									<div class="overlay">
-										<div class="portfolio-detail">
-											<span class="portfolio-icon"><i class="icon-search"></i></span>
-											<h3 class="portfolio-title">Prettyphoto Video</h3>
-											<span class="portfolio-cat">Mobile Development</span>
-										</div>
-									</div>
-
-									<figure class="thumb"><img src="http://placehold.it/300x300" alt=""></figure>
-
-								</a>
-							</li>
-						</ul>
-
-						<footer class="section-footer">
-
-							because you added over-bottom below you must added class 
-							".with-thumb-over-bottom" to the section (parent) 
-							and class ".after-thumb-over-bottom" to the next section 
-							<a href="portfolio.html" class="section-more thumb thumb-text over-bottom thumb-circled thumb-small"><span>MORE</span></a>
-
-						</footer>
-
-					</div>
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-
-				</div>
-
- -->
- <!--#homePortfolio.section-->
-				<div id="homeClients" class="section darken after-thumb-over-bottom before-thumb-over-top">
-
-					<div class="section-inner container">
-						
-						<header class="section-header aligncenter">
-							<h1 class="section-title"><span>Clients</span></h1>
-						</header>
-
-						<ul class="thumbnails thumbnails-bordered">
-							<li class="span3"><img src="http://placehold.it/300x300" alt=""></li>
-							<li class="span3"><img width="300" src="./img/generator-full.png" alt=""></li>
-							<li class="span3"><img width="300" src="./img/eikon2.png" alt=""></li>
-							<li class="span3"><img width="300" src="./img/tr.png" alt=""></li>
-							
-						</ul>
-
-					</div><!--.section-inner-->
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-
-				</div><!--#homeClients.section-->
-<!-- 
-				<div id="homeTestimonial" class="section aligncenter with-thumb-over-top">
-					<hr class="separator">
-
-					<div class="section-inner container">
-
-						<div class="thumb over-top thumb-circled thumb-small"><img src="http://placehold.it/100x100" alt=""></div>
-
-						<blockquote class="large">
-							<i class="icon-quote-left"></i>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-							<small>John Doe - CEO Sepiring</small>
-						</blockquote>
-
-					</div>
-			
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-
-				</div>
-			
-			-->
-
-				<a id="callout" href="mailto:contact@giantmachines.com" class="section section-inverse callout">
-
-					<div class="section-inner container">
-						<h3>
-							<span class="icon-floating right"><i class="icon-angle-right"></i></span> 
-							Want to work with us? <strong>Let's get started!</strong>
-						</h3>
-					</div>
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-
-				</a><!--/#callout.section-->
-
-			</div><!-- /#main -->
-
-			<div id="footer">
-
-				
-
-				<div id="footerInfo" class="section section-inverse darken section-footerinfo">
-
-					<div class="section-inner container">
-
-						<div class="row">
-
-							<aside class="span3 widget">
-								<h5>CONTACT</h5>
-								<p>
-									<i class="icon-envelope"></i>&nbsp;&nbsp;<a href="mailto:contact@giantmachines.com">contact@giantmachines.com<br />
-									</p>
-							</aside>
-
-<!-- 							<aside class="span3 widget">
-								<h5>WORK WITH US</h5>
-								<p>New project? please navigate <a href="contact.html">here</a>. <br> We also open for new position, click <a href="contact.html">here</a> for detailed information.</p>
-							</aside> -->
-
-							<aside class="span3 widget">
-								<h5>CONNECT</h5>
-
-								<ul class="ul-inline">
-									<li><a href="http://github.com/giantmachines"><i class="icon-github-alt icon-circled"></i></a></li>
-									<li><a href="http://giantmachines.tumblr.com"><i class="icon-tumblr icon-circled"></i></a></li>
-									<li><a href="http://twitter.com/giantmachines"><i class="icon-twitter icon-circled"></i></a></li>
-								</ul>
-							</aside>
-
-							<!-- <div class="span3">
-								<h5>SEARCH</h5>
-								<div class="input-append">
-									<form action="#" method="get">
-										<input class="span2" id="appendedInputButton" type="text">
-										<button class="btn btn-primary" type="button">Go!</button>
-									</form>
-								</div>
-							</div> -->
-
-						</div><!--/.row-->	
-
-					</div><!--.section-inner-->
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-					
-				</div><!--#footerInfo.section-->
-
-				<nav id="footerNav" class="section section-inverse darken section-footerinfo aligncenter">
-					<hr class="separator">
-
-					<div class="section-inner container">
-
-						<ul class="ul-inline">
-							<li>&copy; Giant Machines Inc 2013</li>
-							
-						</ul>
-
-					</div><!--.section-inner-->
-
-					<div class="background" data-speed="10"><span class="image"></span></div>
-					
-				</nav><!--#footerInfo.section-->
-
-			</div><!-- /#footer -->
-
-		</div>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-		<script src="vendor/prettyPhoto/jquery.prettyPhoto.js"></script>
-
-		<!--[if lt IE 9]>
-			<script src="js/lt-ie-9.js"></script>
-		<![endif]-->
-		<script src="js/main.js"></script>
-
-		<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-44931438-1', 'giantmachines.com');
-  ga('send', 'pageview');
-
-</script>
-
-	</body>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web and Software Experts">
+  <meta name="author" content="Giant Machines Software LLC">
+  
+  <title>
+    Giant Machines - Web and Software Experts
+  </title>
+  
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  
+  <!-- Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <!-- Squad theme CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="color/default.css" rel="stylesheet">
+  
+  </head>
+  
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+  <div id="preloader">
+    <div id="load">
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars">
+          </i>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <h1>
+            Giant<span style="font-style: normal;">Machines</span>
+          </h1>
+        </a>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#intro">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about">
+              Team
+            </a>
+          </li>
+          <li>
+            <a href="#clients">
+              Clients
+            </a>
+          </li>
+          <li>
+            <a href="#service">
+              Expertise
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  
+  <!-- Section: intro -->
+  <section id="intro" class="intro">
+	
+      <div class="slogan">
+        <h2>
+          We make software that performs.
+        </h2>
+      </div>
+      <div class="page-scroll">
+        <a href="#about" class="btn btn-circle">
+          <i class="fa fa-angle-double-down animated">
+          </i>
+        </a>
+      </div>
+  </section>
+  <!-- /Section: intro -->
+  
+  <!-- Section: about -->
+  <section id="about" class="home-section text-center">
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>
+                  Team
+                </h2>
+                <i class="fa fa-2x fa-angle-down">
+                </i>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-4">
+          <div class="wow bounceInUp" data-wow-delay="0.2s">
+            <div class="team boxed-grey">
+              <div class="inner">
+                <h5>
+                  Frank Cantelmi
+                </h5>
+                <p class="subtitle">
+                  Principal
+                </p>
+
+                 </div>
+                          </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="wow bounceInUp" data-wow-delay="0.5s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>
+                    David Michael
+                  </h5>
+                  <p class="subtitle">
+                    Principal
+                  </p>
+                  </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="wow bounceInUp" data-wow-delay="0.8s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>
+                    Roy Yang
+                  </h5>
+                  <p class="subtitle">
+                    Principal
+                  </p>
+                  
+                      
+                  </div>
+                  </div>
+              </div>
+          </div>
+          
+          </div>
+          
+      </div>
+  </section>
+  <!-- /Section: about -->
+  
+  <!-- Section: services -->
+  <section id="clients" class="home-section text-center bg-gray">
+    
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>
+                  Select Clients
+                </h2>
+                <i class="fa fa-2x fa-angle-down">
+                </i>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/Forbes-logo1.jpg" alt="Forbes" title="Forbes" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/tr.png" alt="Thomson Reuters" title="Thomson Reuters"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/sony.png" alt="Sony Music" title="Sony Music" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/airdye.png" alt="AirDye" title="AirDye" />
+              </div>
+            </div>
+          </div>
+        </div>   
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/npr.jpg" alt="NPR" title="NPR"  />
+              </div>
+            </div>
+          </div>
+        </div>   
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/etsy.jpg" alt="Etsy" title="Etsy" />
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/g.png" alt="relentlessGENERATOR" title="relentlessGENERATOR" />
+              </div>
+            </div>
+          </div>
+        </div>   
+
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/fm.png" alt="FabricMuse.com" title="FabricMuse.com" />
+              </div>
+            </div>
+          </div>
+        </div>   
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/aiga.png" alt="AIGA" title="AIGA" />
+              </div>
+            </div>
+          </div>
+        </div>  
+
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/nooka.jpg" alt="Nooka" title="Nooka" />
+              </div>
+            </div>
+          </div>
+        </div>    
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/rh.jpg" alt="Roll %amp; Hill" title="Roll %amp; Hill"/>
+              </div>
+            </div>
+          </div>
+        </div>    
+
+        <div class="col-sm-2 col-md-2">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="client-icon">
+                <img src="img/clients/hatch.png" alt="hatch" title="hatch" />
+              </div>
+            </div>
+          </div>
+        </div>  
+        
+      
+
+
+      </div>
+
+
+  </section>
+  <!-- /Section: services -->
+  
+  <!-- Section: services -->
+  <section id="service" class="home-section text-center">
+    
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>
+                  Our Expertise
+                </h2>
+                <i class="fa fa-2x fa-angle-down">
+                </i>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/service-icon-1.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>
+                  Enterprise
+                </h5>
+                <p>
+                  We specialize in enterprise grade software, whether it be connecting with your existing ERP or helping re-write your production database.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <div class="wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/service-icon-2.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>
+                  Ecommerce
+                </h5>
+                <p>
+                  If you have excess manufacturing capacity or extra inventory, we can help you drive your bottom line by building your marketplace.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <div class="wow fadeInUp" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/service-icon-3.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>
+                  Mobile Apps
+                </h5>
+                <p>
+                  With over a dozen iOS apps under our belts, some with over 1,000,000 downloads, we can help you build your app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <div class="wow fadeInRight" data-wow-delay="0.2s">
+            <div class="service-box">
+              <div class="service-icon">
+                <img src="img/icons/service-icon-4.png" alt="" />
+              </div>
+              <div class="service-desc">
+                <h5>
+                  Financial Tech
+                </h5>
+                <p>
+                  With over 20 years of experience in fintech, our principals understand finance nuances from compliance to redundancy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- /Section: services -->
+  
+  
+  
+  
+  <!-- Section: contact -->
+  <section id="contact" class="home-section text-center bg-gray">
+    <div class="heading-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div class="section-heading">
+                <h2>
+                  Get in touch
+                </h2>
+                <i class="fa fa-2x fa-angle-down">
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <!-- <div class="col-lg-8">
+          <div class="boxed-grey">
+            <form id="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">
+                      Name
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">
+                      Email Address
+                    </label>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-envelope">
+                        </span>
+                      </span>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject">
+                      Subject
+                    </label>
+                    <select id="subject" name="subject" class="form-control" required="required">
+                      <option value="na" selected="">
+                        Choose One:
+                      </option>
+                      <option value="service">
+                        General Customer Service
+                      </option>
+                      <option value="suggestions">
+                        Suggestions
+                      </option>
+                      <option value="product">
+                        Product Support
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">
+                      Message
+                    </label>
+                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                    placeholder="Message">
+                    </textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div> -->
+        
+        <div class="col-lg-4 col-lg-offset-5">
+          <div class="widget-contact">
+<!--             <h5>
+              Main Office
+            </h5> -->
+            
+            <address>
+              <strong>
+                Giant Machines Software LLC
+              </strong>
+              <br>
+              401 Park Avenue South
+              <br/>
+              Suite 1068
+              <br>
+              New York, NY 10016
+              <br>
+              Phone:
+              (877) 444-3602
+            </address>
+            
+            <address>
+              <strong>
+                Email
+              </strong>
+              <br>
+              <script type="text/javascript">eval(unescape("%79%67%6f%71%6c%39%33%3d%5b%27%25%36%39%25%36%65%25%36%36%25%36%66%27%2c%5b%27%25%36%33%25%36%66%25%36%64%27%2c%27%25%36%37%25%36%39%25%36%31%25%36%65%25%37%34%25%36%64%25%36%31%25%36%33%25%36%38%25%36%39%25%36%65%25%36%35%25%37%33%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%68%6e%71%6d%69%39%30%3d%75%6e%65%73%63%61%70%65%28%79%67%6f%71%6c%39%33%29%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%68%6e%71%6d%69%39%30%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%79%67%6f%71%6c%39%33%29%29%3b"));</script>
+
+
+            </address>
+            
+            <!-- 
+<address>
+<strong>
+We're on social networks
+</strong>
+<br>
+<ul class="company-social">
+<li class="social-facebook">
+<a href="#" target="_blank">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li class="social-twitter">
+<a href="#" target="_blank">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li class="social-dribble">
+<a href="#" target="_blank">
+<i class="fa fa-dribbble">
+</i>
+</a>
+</li>
+<li class="social-google">
+<a href="#" target="_blank">
+<i class="fa fa-google-plus">
+</i>
+</a>
+</li>
+</ul>
+
+</address>
+-->
+                      
+                      
+                  </div>
+                  
+              </div>
+          </div>
+          
+     </div>
+  </section>
+  <!-- /Section: contact -->
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="wow shake" data-wow-delay="0.4s">
+            <div class="page-scroll marginbot-30">
+              <a href="#intro" id="totop" class="btn btn-circle">
+                <i class="fa fa-angle-double-up animated">
+                </i>
+              </a>
+            </div>
+          </div>
+          <p>
+            &copy; 2015 Giant Machines Software LLC.  All rights reserved.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js">
+  </script>
+  <script src="js/bootstrap.min.js">
+  </script>
+  <script src="js/jquery.easing.min.js">
+  </script>
+  
+  <script src="js/jquery.scrollTo.js">
+  </script>
+  <script src="js/wow.min.js">
+  </script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/custom.js">
+  </script>
+  
+  </body>
 </html>
