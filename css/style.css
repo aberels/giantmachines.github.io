@@ -72,7 +72,12 @@ a:focus {
   line-height: 1em;
 }
 
+.navbar-brand img {
+  margin-top: 5px;
+}
+
 .navbar-brand h1{
+  text-indent: -1000000em;
 	color: #fff;
   font-size: 20px;
   line-height: 40px;
@@ -363,6 +368,11 @@ hr {
 	background: #f9f9f9;
 	padding: 20px;
   margin-bottom: 20px;
+}
+
+
+.service-box h5 {
+  display: none;
 }
 
 .team h5 {
