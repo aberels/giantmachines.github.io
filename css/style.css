@@ -370,6 +370,11 @@ hr {
   margin-bottom: 20px;
 }
 
+.boxed-pink {
+  background: #e93aa6;
+  color: white;
+}
+
 
 .service-box h5 {
   display: none;
@@ -738,6 +743,15 @@ Parallax
 
 .banner-social-buttons {
     margin-top: 0;
+}
+
+.job-row ul {
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.job-row ul li {
+  margin-bottom: 8px;
 }
 
 
