@@ -311,8 +311,8 @@ hr {
 .intro {
 	width:100%;
 	position:relative;	
-	background: url(../img/giant_machines.jpg) no-repeat; /*your background image*/
-  background-position: center 224px
+	background: url(../img/giant_machines_art.png) no-repeat; /*your background image*/
+  background-position: center 266px
 }
 
 #intro.intro {
