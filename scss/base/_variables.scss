@@ -24,7 +24,9 @@ $black: #000000;
 $white: #FFFFFF;
 
 // Typography
-$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family: "Graphik-Regular", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-regular: "Graphik-Regular";
+$font-semibold: "Graphik-Semibold";
 
 //Grid Variables
 $container-width: 1600px !default;
@@ -38,6 +40,7 @@ $column-margin: 4% !default; // space between columns
 $global-radius: 4px !default;
 
 // Layout
-$gutter: 25px;
+$gutter: 40px;
 $header-height: 54px;
 $left-rail-width: 250px;
+$panel-height: 600px;

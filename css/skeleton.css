@@ -245,7 +245,7 @@ body {
   font-size: 1.5em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Graphik-Regular", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
 }
 
@@ -283,75 +283,53 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   font-weight: 300;
+  color: #FFFFFF;
 }
 
 h1 {
-  font-size: 4.0rem;
-  line-height: 1.2;
-  letter-spacing: -.1rem;
+  font-size: 44px;
+  font-family: "Graphik-Semibold";
 }
 
 h2 {
-  font-size: 3.6rem;
-  line-height: 1.25;
-  letter-spacing: -.1rem;
+  font-size: 36px;
+  font-family: "Graphik-Semibold";
 }
 
 h3 {
-  font-size: 3.0rem;
-  line-height: 1.3;
-  letter-spacing: -.1rem;
+  font-size: 28px;
+  font-family: "Graphik-Regular";
 }
 
 h4 {
-  font-size: 2.4rem;
-  line-height: 1.35;
-  letter-spacing: -.08rem;
+  font-size: 24px;
+  font-family: "Graphik-Regular";
 }
 
-h5 {
-  font-size: 1.8rem;
-  line-height: 1.5;
-  letter-spacing: -.05rem;
-}
-
-h6 {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 5.0rem;
-  }
-
-  h2 {
-    font-size: 4.2rem;
-  }
-
-  h3 {
-    font-size: 3.6rem;
-  }
-
-  h4 {
-    font-size: 3.0rem;
-  }
-
-  h5 {
-    font-size: 2.4rem;
-  }
-
-  h6 {
-    font-size: 1.5rem;
-  }
-}
 p {
   margin-top: 0;
+  font-family: "Graphik-Regular";
+  font-size: 16px;
 }
 
+a {
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: Graphik-Regular;
+  src: url("../fonts/Graphik-Regular.otf");
+}
+@font-face {
+  font-family: Graphik-Semibold;
+  src: url("../fonts/Graphik-Semibold.otf");
+}
+@font-face {
+  font-family: Graphik-Thin;
+  src: url("../fonts/Graphik-This.otf");
+}
 /* Modules */
 /*
 * Skeleton V2.0.4
@@ -799,14 +777,15 @@ form {
   height: 54px;
   width: 100%;
   background-color: #FFFFFF;
+  z-index: 100;
 }
 .header .nav-header {
-  padding-left: 25px;
+  padding-left: 40px;
   min-height: 54px;
 }
 .header .nav-header .nav-control {
   position: absolute;
-  right: 25px;
+  right: 40px;
   top: 15px;
   width: 30px;
   height: 24px;
@@ -824,7 +803,6 @@ form {
 .header .nav-collapse {
   display: none;
   text-transform: uppercase;
-  font-size: 14px;
 }
 .header .copyright {
   display: none;
@@ -833,10 +811,10 @@ form {
   .header {
     height: 100vh;
     width: 250px;
-    padding: 25px;
+    padding: 40px;
   }
   .header .nav-header {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     padding: 0;
     text-align: center;
   }
@@ -860,9 +838,6 @@ form {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    margin-left: -62px;
-    font-size: 12px;
     color: #7E7E80;
   }
 }
@@ -871,30 +846,65 @@ form {
   margin-top: 54px;
 }
 .main-content .panel {
-  height: 800px;
+  position: relative;
+  height: 600px;
+  width: 100%;
 }
-.main-content .panel:nth-child(1) {
-  background: green;
+.main-content .panel .panel-content {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 10%;
 }
-.main-content .panel:nth-child(2) {
-  background: blue;
+.main-content .panel .panel-content .button {
+  border: 3px solid #FFFFFF;
+  border-radius: 8px;
+  height: 45px;
+  width: 200px;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 0;
+  margin-top: 20px;
 }
-.main-content .panel:nth-child(3) {
-  background: yellow;
+.main-content .panel-intro {
+  background-image: url("../images/background-pattern.png");
+  background-size: 120px;
+  background-color: #0080CA;
 }
-.main-content .panel:nth-child(4) {
-  background: pink;
+.main-content .panel-intro .illustration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  width: 95%;
+  margin: auto;
+  background: url("../images/home-image.png") no-repeat;
+  background-size: contain;
+}
+.main-content .panel-finance {
+  background-color: #397D5F;
+}
+.main-content .panel-fashion {
+  background-color: #B4A056;
+}
+.main-content .panel-stationary {
+  background-color: #C17DA6;
 }
 @media (min-width: 1024px) {
   .main-content {
     margin-top: 0;
     padding-left: 250px;
   }
+  .main-content .panel .panel-content {
+    top: 40%;
+    left: 22%;
+  }
 }
 
 .footer {
   width: 100%;
-  padding: 25px;
+  padding: 40px;
   text-align: center;
 }
 @media (min-width: 1024px) {

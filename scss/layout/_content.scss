@@ -2,25 +2,68 @@
   margin-top: $header-height;
 
   .panel {
-    height: 800px;
+    position: relative;
+    height: $panel-height;
+    width: 100%;
 
-    &:nth-child(1) {
-      background: green;
+    .panel-content {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      right: 10%;
+
+      .button {
+        border: 3px solid $white;
+        border-radius: 8px;
+        height: 45px;
+        width: 200px;
+        color: $white;
+        font-size: 18px;
+        padding: 0;
+        margin-top: 20px;
+      }
     }
-    &:nth-child(2) {
-      background: blue;
+  }
+
+  .panel-intro {
+    background-image: url("../images/background-pattern.png");
+    background-size: 120px;
+    background-color: $blue;
+
+    .illustration {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 180px;
+      width: 95%;
+      margin: auto;
+      background: url("../images/home-image.png") no-repeat;
+      background-size: contain;
     }
-    &:nth-child(3) {
-      background: yellow;
-    }
-    &:nth-child(4) {
-      background: pink;
-    }
+  }
+
+  .panel-finance {
+    background-color: #397D5F;
+  }
+
+  .panel-fashion {
+    background-color: #B4A056;
+  }
+
+  .panel-stationary {
+    background-color: #C17DA6;
   }
 
   @media (#{$bp-larger-than-tablet}) {
     margin-top: 0;
-
     padding-left: $left-rail-width;
+
+    .panel {
+      .panel-content {
+        top: 40%;
+        left: 22%;
+      }
+    }
   }
 }
