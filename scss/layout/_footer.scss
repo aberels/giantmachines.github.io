@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  padding: $gutter;
+  text-align: center;
+
+  @media (#{$bp-larger-than-tablet}) {
+    display: none;
+   }
+}

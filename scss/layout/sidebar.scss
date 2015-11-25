@@ -1,8 +1,0 @@
-.sidebar {
-  height: 54px;
-  background: red;
-
-  @media (#{$bp-larger-than-tablet}) {
-    height: 100vh;
-  }
-}

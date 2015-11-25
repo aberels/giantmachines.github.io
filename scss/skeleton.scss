@@ -27,5 +27,22 @@
 @import "modules/media-queries";
 
 /* Layout */
-@import "layout/sidebar";
+@import "layout/header";
 @import "layout/content";
+@import "layout/footer";
+
+// Global Styles
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

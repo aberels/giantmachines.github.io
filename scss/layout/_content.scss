@@ -1,0 +1,26 @@
+.main-content {
+  margin-top: $header-height;
+
+  .panel {
+    height: 800px;
+
+    &:nth-child(1) {
+      background: green;
+    }
+    &:nth-child(2) {
+      background: blue;
+    }
+    &:nth-child(3) {
+      background: yellow;
+    }
+    &:nth-child(4) {
+      background: pink;
+    }
+  }
+
+  @media (#{$bp-larger-than-tablet}) {
+    margin-top: 0;
+
+    padding-left: $left-rail-width;
+  }
+}
