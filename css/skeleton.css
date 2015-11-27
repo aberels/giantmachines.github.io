@@ -291,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 44px;
   font-family: "Graphik-Semibold";
+  line-height: 1;
 }
 
 h2 {
@@ -847,7 +848,7 @@ form {
 }
 .main-content .panel {
   position: relative;
-  height: 600px;
+  height: 800px;
   width: 100%;
 }
 .main-content .panel .panel-content {
@@ -859,37 +860,60 @@ form {
 .main-content .panel .panel-content .button {
   border: 3px solid #FFFFFF;
   border-radius: 8px;
-  height: 45px;
-  width: 200px;
+  height: 50px;
+  width: 240px;
   color: #FFFFFF;
-  font-size: 18px;
-  padding: 0;
+  font-size: 20px;
+  padding: 5px 0 0;
   margin-top: 20px;
 }
-.main-content .panel-intro {
+.main-content .panel-primary {
   background-image: url("../images/background-pattern.png");
   background-size: 120px;
   background-color: #0080CA;
 }
-.main-content .panel-intro .illustration {
+.main-content .panel-primary .panel-content {
+  top: 30%;
+}
+.main-content .illustration-container {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  width: 95%;
-  margin: auto;
-  background: url("../images/home-image.png") no-repeat;
-  background-size: contain;
+  bottom: 25px;
+  width: 100%;
+}
+.main-content .illustration-container img {
+  width: 100%;
+}
+.main-content .illustration-container .illustration--desktop {
+  display: none;
 }
 .main-content .panel-finance {
-  background-color: #397D5F;
+  background: url("../images/home-flightclub-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0;
 }
 .main-content .panel-fashion {
-  background-color: #B4A056;
+  background: url("../images/home-airdye-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0;
 }
 .main-content .panel-stationary {
-  background-color: #C17DA6;
+  background: url("../images/home-minted-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0;
+}
+@media screen and (min-width: 750px) {
+  .main-content .panel {
+    height: 600px;
+  }
+  .main-content .illustration-container {
+    padding: 0 40px;
+  }
+  .main-content .illustration-container .illustration--desktop {
+    display: block;
+  }
+  .main-content .illustration-container .illustration--mobile {
+    display: none;
+  }
 }
 @media (min-width: 1024px) {
   .main-content {
@@ -897,8 +921,11 @@ form {
     padding-left: 250px;
   }
   .main-content .panel .panel-content {
+    top: 30%;
+    left: 20%;
+  }
+  .main-content .panel-primary .panel-content {
     top: 40%;
-    left: 22%;
   }
 }
 
