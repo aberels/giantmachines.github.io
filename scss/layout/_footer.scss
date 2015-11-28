@@ -3,6 +3,10 @@
   padding: $gutter;
   text-align: center;
 
+  p {
+    margin: 0;
+  }
+
   @media (#{$bp-larger-than-tablet}) {
     display: none;
    }

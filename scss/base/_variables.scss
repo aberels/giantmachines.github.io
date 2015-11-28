@@ -29,7 +29,7 @@ $font-regular: "Graphik-Regular";
 $font-semibold: "Graphik-Semibold";
 
 //Grid Variables
-$container-width: 1600px !default;
+$container-width: 100% !default;
 $container-width-larger-than-mobile: 100% !default;
 $container-width-larger-than-tablet: 100% !default;
 $total-columns: 12 !default;
@@ -43,4 +43,4 @@ $global-radius: 4px !default;
 $gutter: 40px;
 $header-height: 54px;
 $left-rail-width: 250px;
-$panel-height: 800px;
+$panel-height: 100vh;

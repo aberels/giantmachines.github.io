@@ -1,6 +1,27 @@
 .main-content {
   margin-top: $header-height;
 
+  .carousel {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 1;
+
+    li {
+      cursor: pointer;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      background-color: white;
+      opacity: 0.5;
+
+      &.active {
+        opacity: 1.0;
+      }
+    }
+  }
+
   .panel {
     position: relative;
     height: $panel-height;
@@ -69,7 +90,7 @@
 
   @media screen and (min-width: 750px) {
     .panel {
-      height: 600px;
+      height: $panel-height;
     }
 
     .illustration-container {
