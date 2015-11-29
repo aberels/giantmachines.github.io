@@ -3,7 +3,7 @@
 
   .carousel {
     position: fixed;
-    right: 20px;
+    right: 3%;
     top: 50%;
     margin-top: -50px;
     z-index: 1;
@@ -11,10 +11,11 @@
     li {
       cursor: pointer;
       border-radius: 50%;
-      height: 15px;
-      width: 15px;
+      height: 13px;
+      width: 13px;
       background-color: white;
-      opacity: 0.5;
+      opacity: 0.4;
+      margin-bottom: 12px;
 
       &.active {
         opacity: 1.0;
@@ -29,9 +30,19 @@
 
     .panel-content {
       position: absolute;
-      top: 30%;
-      left: 10%;
-      right: 10%;
+      top: 25%;
+      left: 6%;
+      right: 11%;
+
+      h4 {
+        a {
+          color: $white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
 
       .button {
         border: 3px solid $white;
@@ -52,13 +63,13 @@
     background-color: $blue;
 
     .panel-content {
-      top: 30%;
+      top: 23%;
     }
   }
 
   .illustration-container {
     position: absolute;
-    bottom: 25px;
+    bottom: 60px;
     width: 100%;
 
     img {
@@ -88,9 +99,39 @@
     background-position: 0;
   }
 
-  @media screen and (min-width: 750px) {
+  @media (#{$bp-larger-than-tablet}) {
+    margin-top: 0;
+    padding-left: $left-rail-width;
+
+    .carousel {
+      right: 20px;
+      top: 45%;
+    }
+
     .panel {
-      height: $panel-height;
+      .panel-content {
+        top: 30%;
+        left: 20%;
+        right: 15%;
+
+        h1 {
+          font-size: 46px;
+        }
+
+        h2 {
+          font-size: 38px;
+        }
+
+        h4 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .panel-primary {
+      .panel-content {
+        top: 40%;
+      }
     }
 
     .illustration-container {
@@ -106,20 +147,20 @@
     }
   }
 
-  @media (#{$bp-larger-than-tablet}) {
-    margin-top: 0;
-    padding-left: $left-rail-width;
-
+  // iPhone 4ish
+  @media screen and (max-width: 320px) {
     .panel {
       .panel-content {
-        top: 30%;
-        left: 20%;
+        top: 8%;
       }
     }
+  }
 
-    .panel-primary {
+  // iPhone 5ish
+  @media screen and (max-width: 320px) and (min-height: 500px) {
+    .panel {
       .panel-content {
-        top: 40%;
+        top: 13%;
       }
     }
   }

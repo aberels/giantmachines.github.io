@@ -289,24 +289,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 40px;
   font-family: "Graphik-Semibold";
-  line-height: 1;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Graphik-Semibold";
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 26px;
   font-family: "Graphik-Regular";
+  line-height: 1.4;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Graphik-Regular";
+  line-height: 1.4;
+  text-align: justify;
 }
 
 p {
@@ -781,13 +787,17 @@ form {
   z-index: 100;
 }
 .header .nav-header {
-  padding-left: 40px;
+  padding-left: 20px;
   min-height: 54px;
 }
 .header .nav-header .nav-control {
   position: absolute;
-  right: 40px;
-  top: 15px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 14px 20px;
+}
+.header .nav-header .nav-icon {
   width: 30px;
   height: 24px;
   background: url("../images/hamburger.png") no-repeat;
@@ -803,7 +813,24 @@ form {
 }
 .header .nav-collapse {
   display: none;
+}
+.header .nav-collapse .nav-list {
   text-transform: uppercase;
+  background: #FFFFFF;
+  margin-bottom: 0;
+  box-shadow: 0px 0px 3px #7E7E80 inset;
+  opacity: 0.97;
+}
+.header .nav-collapse .nav-list li {
+  margin-bottom: 0;
+  height: 76px;
+  border-bottom: 1px solid #DBDBDB;
+}
+.header .nav-collapse .nav-list li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 24px 20px;
 }
 .header .copyright {
   display: none;
@@ -834,6 +861,14 @@ form {
   }
   .header .nav-collapse .nav-list {
     text-align: center;
+    box-shadow: none;
+  }
+  .header .nav-collapse .nav-list li {
+    border: none;
+    height: inherit;
+  }
+  .header .nav-collapse .nav-list li a {
+    padding: 15px;
   }
   .header .copyright {
     display: block;
@@ -842,13 +877,18 @@ form {
     color: #7E7E80;
   }
 }
+@media screen and (max-width: 320px) {
+  .header .nav-header .nav-control {
+    padding: 14px 10px;
+  }
+}
 
 .main-content {
   margin-top: 54px;
 }
 .main-content .carousel {
   position: fixed;
-  right: 20px;
+  right: 3%;
   top: 50%;
   margin-top: -50px;
   z-index: 1;
@@ -856,10 +896,11 @@ form {
 .main-content .carousel li {
   cursor: pointer;
   border-radius: 50%;
-  height: 15px;
-  width: 15px;
+  height: 13px;
+  width: 13px;
   background-color: white;
-  opacity: 0.5;
+  opacity: 0.4;
+  margin-bottom: 12px;
 }
 .main-content .carousel li.active {
   opacity: 1.0;
@@ -871,9 +912,15 @@ form {
 }
 .main-content .panel .panel-content {
   position: absolute;
-  top: 30%;
-  left: 10%;
-  right: 10%;
+  top: 25%;
+  left: 6%;
+  right: 11%;
+}
+.main-content .panel .panel-content h4 a {
+  color: #FFFFFF;
+}
+.main-content .panel .panel-content h4 a:hover {
+  text-decoration: underline;
 }
 .main-content .panel .panel-content .button {
   border: 3px solid #FFFFFF;
@@ -891,11 +938,11 @@ form {
   background-color: #0080CA;
 }
 .main-content .panel-primary .panel-content {
-  top: 30%;
+  top: 23%;
 }
 .main-content .illustration-container {
   position: absolute;
-  bottom: 25px;
+  bottom: 60px;
   width: 100%;
 }
 .main-content .illustration-container img {
@@ -919,9 +966,31 @@ form {
   background-size: cover;
   background-position: 0;
 }
-@media screen and (min-width: 750px) {
-  .main-content .panel {
-    height: 100vh;
+@media (min-width: 1024px) {
+  .main-content {
+    margin-top: 0;
+    padding-left: 250px;
+  }
+  .main-content .carousel {
+    right: 20px;
+    top: 45%;
+  }
+  .main-content .panel .panel-content {
+    top: 30%;
+    left: 20%;
+    right: 15%;
+  }
+  .main-content .panel .panel-content h1 {
+    font-size: 46px;
+  }
+  .main-content .panel .panel-content h2 {
+    font-size: 38px;
+  }
+  .main-content .panel .panel-content h4 {
+    font-size: 24px;
+  }
+  .main-content .panel-primary .panel-content {
+    top: 40%;
   }
   .main-content .illustration-container {
     padding: 0 40px;
@@ -933,23 +1002,20 @@ form {
     display: none;
   }
 }
-@media (min-width: 1024px) {
-  .main-content {
-    margin-top: 0;
-    padding-left: 250px;
-  }
+@media screen and (max-width: 320px) {
   .main-content .panel .panel-content {
-    top: 30%;
-    left: 20%;
+    top: 8%;
   }
-  .main-content .panel-primary .panel-content {
-    top: 40%;
+}
+@media screen and (max-width: 320px) and (min-height: 500px) {
+  .main-content .panel .panel-content {
+    top: 13%;
   }
 }
 
 .footer {
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 .footer p {
