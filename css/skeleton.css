@@ -312,7 +312,6 @@ h4 {
   font-size: 20px;
   font-family: "Graphik-Regular";
   line-height: 1.4;
-  text-align: justify;
 }
 
 p {
@@ -793,15 +792,45 @@ form {
 .header .nav-header .nav-control {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -3px;
   bottom: 0;
-  padding: 14px 20px;
+  padding: 0px 20px;
 }
 .header .nav-header .nav-icon {
-  width: 30px;
-  height: 24px;
-  background: url("../images/hamburger.png") no-repeat;
-  background-size: contain;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+.header .nav-header .nav-icon span, .header .nav-header .nav-icon span:before, .header .nav-header .nav-icon span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 35px;
+  background: #7E7E80;
+  position: absolute;
+  display: block;
+  content: '';
+  opacity: 0.9;
+}
+.header .nav-header .nav-icon span:before {
+  top: -10px;
+}
+.header .nav-header .nav-icon span:after {
+  bottom: -10px;
+}
+.header .nav-header .nav-icon span, .header .nav-header .nav-icon span:before, .header .nav-header .nav-icon span:after {
+  transition: all 500ms ease-in-out;
+}
+.header .nav-header .nav-icon.active span {
+  background-color: transparent;
+}
+.header .nav-header .nav-icon.active span:before, .header .nav-header .nav-icon.active span:after {
+  top: 0;
+}
+.header .nav-header .nav-icon.active span:before {
+  transform: rotate(45deg);
+}
+.header .nav-header .nav-icon.active span:after {
+  transform: rotate(-45deg);
 }
 .header .nav-header .logo {
   display: inline-block;
@@ -878,8 +907,11 @@ form {
   }
 }
 @media screen and (max-width: 320px) {
+  .header .nav-header {
+    padding-left: 10px;
+  }
   .header .nav-header .nav-control {
-    padding: 14px 10px;
+    padding: 0px 10px;
   }
 }
 

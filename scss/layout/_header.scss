@@ -12,16 +12,44 @@
     .nav-control {
       position: absolute;
       right: 0;
-      top: 0;
+      top: -3px;
       bottom: 0;
-      padding: 14px 20px;
+      padding: 0px 20px;
     }
 
-    .nav-icon {
-      width: 30px;
-      height: 24px;
-      background: url("../images/hamburger.png") no-repeat;
-      background-size: contain;
+    .nav-icon { cursor: pointer; padding: 10px 35px 16px 0px; }
+    .nav-icon span, .nav-icon span:before, .nav-icon span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 35px;
+      background: $medium-gray;
+      position: absolute;
+      display: block;
+      content: '';
+      opacity: 0.9;
+    }
+    .nav-icon span:before {
+      top: -10px;
+    }
+    .nav-icon span:after {
+      bottom: -10px;
+    }
+
+    .nav-icon span, .nav-icon span:before, .nav-icon span:after {
+      transition: all 500ms ease-in-out;
+    }
+    .nav-icon.active span {
+      background-color: transparent;
+    }
+    .nav-icon.active span:before, .nav-icon.active span:after {
+      top: 0;
+    }
+    .nav-icon.active span:before {
+      transform: rotate(45deg);
+    }
+    .nav-icon.active span:after {
+      transform: rotate(-45deg);
     }
 
     .logo {
@@ -115,8 +143,10 @@
   // iPhone 4ish
   @media screen and (max-width: 320px) {
     .nav-header {
+      padding-left: 10px;
+
       .nav-control {
-        padding: 14px 10px;
+        padding: 0px 10px;
       }
     }
   }

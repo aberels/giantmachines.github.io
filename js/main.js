@@ -67,6 +67,7 @@ $(function() {
   // Menu Click Handler
   $('.nav-control').click(function() {
     $('.nav-collapse').slideToggle(300);
+    $('.nav-icon').toggleClass('active', 300);
   });
 
 });
