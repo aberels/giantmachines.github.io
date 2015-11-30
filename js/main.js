@@ -7,7 +7,7 @@ $(function() {
   var footerHeight = $('.footer').height();
 
   // Auto-scroll
-  // autoScrollCarousel();
+  autoScrollCarousel();
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
@@ -84,16 +84,23 @@ $(function() {
     $('.homepage').addClass('plain');
 
     setTimeout(function() {
-      $('.homepage').addClass('hidden');
-    }, 300)
+      $('.homepage, .footer').addClass('hidden');
+    }, 300);
     $('body').scrollTop(0);
   });
 
   // Close Case Study Click Handler
   $('.close-icon').click(function() {
-    $('.homepage').removeClass('hidden');
+    $('.homepage, .footer').removeClass('hidden');
     $('.homepage').removeClass('plain');
     $('.case-study').removeClass('active');
     setActivePanel($('.carousel li').first());
-  })
+  });
+
+  // Next Case Study Click Handler
+  $('.button-next').click(function() {
+    $('.case-study').removeClass('active');
+    $($(this).data('case-study')).addClass('active');
+    $('body').scrollTop(0);
+  });
 });
