@@ -7,7 +7,7 @@ $(function() {
   var footerHeight = $('.footer').height();
 
   // Auto-scroll
-  // autoScrollCarousel();
+  autoScrollCarousel();
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
