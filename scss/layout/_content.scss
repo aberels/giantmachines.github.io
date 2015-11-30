@@ -2,37 +2,58 @@
   margin-top: $header-height;
 
   .carousel {
+    margin-top: -96px;
     position: fixed;
-    right: 3%;
+    right: 4%;
     top: 50%;
-    margin-top: -50px;
     z-index: 1;
 
     li {
-      cursor: pointer;
+      background-color: $white;
+      border: 1px solid $white;
       border-radius: 50%;
-      height: 13px;
-      width: 13px;
-      background-color: white;
-      opacity: 0.4;
-      margin-bottom: 12px;
+      cursor: pointer;
+      height: 30px;
+      margin-bottom: 18px;
+      opacity: .4;
+      position: relative;
+      transition: opacity 200ms;
+      width: 30px;
+
+      .inner-circle {
+        opacity: 0;
+        background: $white;
+        border-radius: 50%;
+        height: 18px;
+        left: 50%;
+        margin: -9px 0 0 -9px;
+        position: absolute;
+        top: 50%;
+        width: 18px;
+        transition: opacity 200ms;
+      }
 
       &.active {
-        opacity: 1.0;
+        background-color: transparent;
+        opacity: 1;
+
+        .inner-circle {
+          opacity: 1;
+        }
       }
     }
   }
 
   .panel {
-    position: relative;
     height: $panel-height;
+    position: relative;
     width: 100%;
 
     .panel-content {
-      position: absolute;
-      top: 25%;
       left: 6%;
-      right: 11%;
+      position: absolute;
+      right: 15%;
+      top: 20%;
 
       h4 {
         a {
@@ -47,29 +68,25 @@
       .button {
         border: 3px solid $white;
         border-radius: 8px;
-        height: 50px;
-        width: 240px;
         color: $white;
         font-size: 20px;
-        padding: 5px 0 0;
+        height: 50px;
         margin-top: 20px;
+        padding: 5px 0 0;
+        width: 240px;
       }
     }
   }
 
   .panel-primary {
-    background-image: url("../images/background-pattern.png");
-    background-size: 120px;
     background-color: $blue;
-
-    .panel-content {
-      top: 23%;
-    }
+    background-image: url('../images/background-pattern.png');
+    background-size: 120px;
   }
 
   .illustration-container {
-    position: absolute;
     bottom: 60px;
+    position: absolute;
     width: 100%;
 
     img {
@@ -82,21 +99,21 @@
   }
 
   .panel-finance {
-    background: url("../images/home-flightclub-background.jpg") no-repeat;
-    background-size: cover;
+    background: url('../images/home-flightclub-background.jpg') no-repeat;
     background-position: 0;
+    background-size: cover;
   }
 
   .panel-fashion {
-    background: url("../images/home-airdye-background.jpg") no-repeat;
-    background-size: cover;
+    background: url('../images/home-airdye-background.jpg') no-repeat;
     background-position: 0;
+    background-size: cover;
   }
 
   .panel-stationary {
-    background: url("../images/home-minted-background.jpg") no-repeat;
-    background-size: cover;
+    background: url('../images/home-minted-background.jpg') no-repeat;
     background-position: 0;
+    background-size: cover;
   }
 
   @media (#{$bp-larger-than-tablet}) {
@@ -104,15 +121,22 @@
     padding-left: $left-rail-width;
 
     .carousel {
-      right: 20px;
+      margin-top: -96px;
+      right: 2%;
       top: 45%;
+
+      li {
+        height: 30px;
+        margin-bottom: 18px;
+        width: 30px;
+      }
     }
 
     .panel {
       .panel-content {
-        top: 30%;
         left: 20%;
         right: 15%;
+        top: 30%;
 
         h1 {
           font-size: 46px;
@@ -147,10 +171,23 @@
     }
   }
 
+  // iPhone Landscape
+  @media screen and (max-width: 960px) and (orientation: landscape) {
+    .panel {
+      .panel-content {
+        z-index: 1;
+      }
+    }
+    .illustration-container {
+      opacity: .3;
+    }
+  }
+
   // iPhone 4ish
   @media screen and (max-width: 320px) {
     .panel {
       .panel-content {
+        right: 20%;
         top: 8%;
       }
     }

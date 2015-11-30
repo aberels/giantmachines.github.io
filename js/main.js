@@ -7,12 +7,12 @@ $(function() {
   var footerHeight = $('.footer').height();
 
   // Auto-scroll
-  // autoScrollCarousel()
+  // autoScrollCarousel();
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
     navHeight = $('.nav-header').height();
-    if (navHeight > 100) { navHeight = 0 };
+    if (navHeight > 100) { navHeight = 0; }
   }
 
   /** SetTimeout for scrolling the main content automatically */
@@ -20,7 +20,7 @@ $(function() {
     var scrollDistance = panelHeight;
     setInterval(function(){
       if (awatingInteraction) {
-        if (scrollDistance === (panelHeight * 4)) { scrollDistance = 0 }
+        if (scrollDistance === (panelHeight * 4)) { scrollDistance = 0; }
         scrollCarousel(scrollDistance);
         scrollDistance += panelHeight;
       }
@@ -51,7 +51,7 @@ $(function() {
 
     $('.link').each(function(e) {
       var linkedPanelClass = $(this).data('panel');
-      var linkedPanelOffset = $('.' + linkedPanelClass).offset().top;
+      var linkedPanelOffset = $('.' + linkedPanelClass).offset().top - (panelHeight / 2);
 
       if (windowPosition >= linkedPanelOffset - navHeight) {
         setActivePanel(this);
@@ -70,9 +70,12 @@ $(function() {
   });
 
   // Menu Click Handler
-  $('.nav-control').click(function() {
+  $('.nav-control').click(function(e) {
+    e.preventDefault();
+    awatingInteraction = false;
+
     $('.nav-collapse').slideToggle(300);
-    $('.nav-icon').toggleClass('active', 300);
+    $('.nav-icon').toggleClass('active');
   });
 
 });
