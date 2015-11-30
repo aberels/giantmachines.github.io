@@ -521,11 +521,7 @@ a {
 .button,
 button {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555555;
   text-align: center;
-  font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -533,10 +529,16 @@ button {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
+  border: 3px solid #FFFFFF;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 5px 0 0;
+  width: 240px;
 }
 
 input[type="submit"], input[type="reset"], input[type="button"] {
@@ -972,16 +974,6 @@ form {
 .main-content .panel .panel-content h4 a:hover {
   text-decoration: underline;
 }
-.main-content .panel .panel-content .button {
-  border: 3px solid #FFFFFF;
-  border-radius: 8px;
-  color: #FFFFFF;
-  font-size: 20px;
-  height: 50px;
-  margin-top: 20px;
-  padding: 5px 0 0;
-  width: 240px;
-}
 .main-content .panel-primary {
   background-color: #0080CA;
   background-image: url("../images/background-pattern.png");
@@ -1087,6 +1079,42 @@ form {
   .footer {
     display: none;
   }
+}
+
+.case-study .panel-flightclub {
+  background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+  height: 50vh;
+}
+.case-study .panel-secondary {
+  background: #F0F0F0;
+  height: 100%;
+  overflow-y: hidden;
+  padding-top: 70px;
+}
+.case-study .panel-secondary h3 {
+  color: #000000;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.case-study .panel-secondary .case-study-section {
+  margin-bottom: 40px;
+}
+.case-study .panel-secondary .case-study-section img {
+  width: 100%;
+  height: 100%;
+}
+.case-study .panel-secondary .case-study-section .right {
+  float: right;
+}
+.case-study .panel-secondary .case-study-section.button-section {
+  text-align: center;
+}
+.case-study .panel-secondary .case-study-section.button-section .button {
+  color: #00B264;
+  border-color: #00B264;
 }
 
 * {

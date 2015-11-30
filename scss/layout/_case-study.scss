@@ -1,0 +1,58 @@
+.case-study {
+  // left: (-100vw);
+  // opacity: 0;
+  // position: absolute;
+  // top: 100vh;
+  // z-index: 100;
+
+  // transition: all 200ms ease;
+
+  // &.active {
+    // left: 0;
+    // opacity: 1;
+    // top: 0;
+  // }
+
+  .panel-flightclub {
+    background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
+    background-position: 0;
+    background-size: cover;
+    height: $case-study-primary-panel-height;
+  }
+
+  .panel-secondary {
+    background: $lightgreybackground;
+    height: 100%;
+    overflow-y: hidden;
+    padding-top: 70px;
+
+    h3 {
+      color: $black;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .case-study-section {
+      margin-bottom: 40px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right {
+        float: right;
+      }
+
+      &.button-section {
+        text-align: center;
+
+        .button {
+          color: $green;
+          border-color: $green;
+        }
+      }
+    }
+  }
+}

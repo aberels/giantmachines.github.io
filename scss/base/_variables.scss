@@ -3,10 +3,7 @@
 
 // Breakpoints
 $bp-larger-than-mobile    : "min-width: 768px" !default;
-// $bp-larger-than-phablet   : "min-width: 550px" !default;
 $bp-larger-than-tablet    : "min-width: 900px" !default;
-// $bp-larger-than-desktop   : "min-width: 1000px" !default;
-// $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Colors
 $light-grey: #e1e1e1 !default;
@@ -20,9 +17,11 @@ $font-color: #222 !default;
 // Custom Colors
 $medium-gray: #7E7E80;
 $lightgreyborder: #DBDBDB;
+$lightgreybackground: #F0F0F0;
 $blue: #0080CA;
 $black: #000000;
 $white: #FFFFFF;
+$green: #00B264;
 
 // Typography
 $font-family: "Graphik-Regular", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -45,3 +44,4 @@ $gutter: 40px;
 $header-height: 54px;
 $left-rail-width: 250px;
 $panel-height: 100vh;
+$case-study-primary-panel-height: 50vh;

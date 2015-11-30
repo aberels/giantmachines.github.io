@@ -4,11 +4,7 @@
 .button,
 button {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: $secondary-color;
   text-align: center;
-  font-size: 11px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -16,10 +12,16 @@ button {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: $global-radius;
-  border: 1px solid $border-color;
   cursor: pointer;
   box-sizing: border-box;
+  border: 3px solid $white;
+  border-radius: 8px;
+  color: $white;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 5px 0 0;
+  width: 240px;
 }
 
 input {
