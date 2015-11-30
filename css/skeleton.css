@@ -919,6 +919,12 @@ form {
 .main-content {
   margin-top: 54px;
 }
+.main-content.plain .panel .panel-content {
+  display: none;
+}
+.main-content.hidden {
+  display: none;
+}
 .main-content .carousel {
   margin-top: -96px;
   position: fixed;
@@ -1081,8 +1087,58 @@ form {
   }
 }
 
+.case-study {
+  opacity: 0;
+  position: absolute;
+  top: 100vh;
+  z-index: -1;
+  height: 0;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+.case-study.active {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  overflow: visible;
+}
+.case-study .main-content .close-icon {
+  background: url("../images/case-studies/close-icon.png");
+  height: 32px;
+  margin: 20px;
+  position: absolute;
+  right: 0;
+  width: 32px;
+  z-index: 1;
+}
+.case-study .main-content .panel .panel-content h1 {
+  margin-bottom: 15px;
+}
+.case-study .main-content .panel .panel-content h4 {
+  font-size: 20px;
+}
+.case-study .underline {
+  border: 1px solid #FFFFFF;
+  margin: 0 0 10px -2px;
+  width: 60%;
+}
 .case-study .panel-flightclub {
   background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+  height: 50vh;
+}
+.case-study .panel-inbu {
+  background: green;
+  background-position: 0;
+  background-size: cover;
+  height: 50vh;
+}
+.case-study .panel-minted {
+  background: url("../images/case-studies/minted/minted-background.jpg") no-repeat;
   background-position: 0;
   background-size: cover;
   height: 50vh;
@@ -1103,8 +1159,8 @@ form {
   margin-bottom: 40px;
 }
 .case-study .panel-secondary .case-study-section img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 .case-study .panel-secondary .case-study-section .right {
   float: right;
@@ -1112,9 +1168,17 @@ form {
 .case-study .panel-secondary .case-study-section.button-section {
   text-align: center;
 }
-.case-study .panel-secondary .case-study-section.button-section .button {
-  color: #00B264;
+.case-study .panel-secondary .case-study-section.button-section .button-flightclub {
   border-color: #00B264;
+  color: #00B264;
+}
+.case-study .panel-secondary .case-study-section.button-section .button-inbu {
+  border-color: #00B264;
+  color: #00B264;
+}
+.case-study .panel-secondary .case-study-section.button-section .button-minted {
+  border-color: #E93AA6;
+  color: #E93AA6;
 }
 
 * {

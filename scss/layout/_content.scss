@@ -1,6 +1,18 @@
 .main-content {
   margin-top: $header-height;
 
+  &.plain {
+    .panel {
+      .panel-content {
+        display: none;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+
   .carousel {
     margin-top: -96px;
     position: fixed;
