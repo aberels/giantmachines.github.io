@@ -6,11 +6,14 @@ $(function() {
   var navHeight = $('.nav-header').height();
   var footerHeight = $('.footer').height();
 
-  // If Desktop, set navHeight to 0
-  if (navHeight > 100) { navHeight = 0 };
-
   // Auto-scroll
   // autoScrollCarousel()
+
+  /** Responsive call for height of navbar */
+  function checkNavHeight() {
+    navHeight = $('.nav-header').height();
+    if (navHeight > 100) { navHeight = 0 };
+  }
 
   /** SetTimeout for scrolling the main content automatically */
   function autoScrollCarousel() {
@@ -44,6 +47,7 @@ $(function() {
   // Sets the active panel on page scroll
   $(window).scroll(function() {
     var windowPosition = $(this).scrollTop();
+    checkNavHeight();
 
     $('.link').each(function(e) {
       var linkedPanelClass = $(this).data('panel');
@@ -60,6 +64,7 @@ $(function() {
     awatingInteraction = false;
     var linkedPanelClass = $(this).data('panel');
     var linkedPanelOffset = $('.' + linkedPanelClass).offset().top;
+    checkNavHeight();
 
     scrollCarousel(linkedPanelOffset - navHeight);
   });
