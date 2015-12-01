@@ -2,6 +2,7 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Breakpoints
+$small-phone              : "max-width: 320px" !default;
 $bp-larger-than-mobile    : "min-width: 768px" !default;
 $bp-larger-than-tablet    : "min-width: 900px" !default;
 
@@ -42,7 +43,11 @@ $column-margin: 4% !default; // space between columns
 $global-radius: 4px !default;
 
 // Layout
-$gutter: 40px;
+// TODO: Remove regular $gutter
+$gutter: 20px;
+$gutter-small-phone: 10px;
+$gutter-mobile: 20px;
+$gutter-desktop: 40px;
 $header-height: 54px;
 $left-rail-width: 250px;
 $panel-full-height: 100vh;

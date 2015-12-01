@@ -3,7 +3,7 @@ $(function() {
   var panelHeight = $('.panel').height();
   var activePanel = 'panel-primary';
   var awatingInteraction = true;
-  var navHeight = $('.nav-header').height();
+  var navHeight = $('.header-section').height();
   var footerHeight = $('.footer').height();
 
   // Auto-scroll
@@ -11,7 +11,7 @@ $(function() {
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
-    navHeight = $('.nav-header').height();
+    navHeight = $('.header-section').height();
     if (navHeight > 100) { navHeight = 0; }
   }
 
@@ -70,12 +70,12 @@ $(function() {
   });
 
   // Menu Click Handler
-  $('.nav-control').click(function(e) {
+  $('.hamburger').click(function(e) {
     e.preventDefault();
     awatingInteraction = false;
 
     $('.nav-collapse').slideToggle(300);
-    $('.nav-icon').toggleClass('active');
+    $('.hamburger').toggleClass('active');
   });
 
   // Case Study Click Handler

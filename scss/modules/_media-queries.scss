@@ -6,6 +6,9 @@
 // on small devices, paste the mobile query code up in the buttons section and style it
 // there.
 
+// Small Phones
+@media (#{$small-phone}) {}
+
 // Larger than mobile
 @media (#{$bp-larger-than-mobile}) {}
 
