@@ -165,6 +165,10 @@
   }
 }
 
+.center-content {
+  text-align: center;
+}
+
 .about-section {
   .panel--primary {
     background-color: $pink;
@@ -184,6 +188,59 @@
   }
 }
 
-.center-content {
-  text-align: center;
+.team-section {
+  .row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .panel--primary {
+    background-color: $green;
+  }
+
+  .history {
+    p {
+      margin: 0;
+    }
+  }
+
+  .employees {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
+
+.contact-section {
+  .panel--primary {
+    background-color: $greybackground;
+
+    .panel__heading {
+      top: 20%;
+    }
+  }
+
+  .underline {
+    border: 1px solid $black;
+    margin-bottom: 20px;
+
+    // Larger than tablet
+    @media (#{$bp-larger-than-tablet}) {
+      width: 60%;
+    }
+  }
+
+  h1, h4 {
+    color: $black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// SPACE

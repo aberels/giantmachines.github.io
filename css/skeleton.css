@@ -836,6 +836,7 @@ form {
   }
 }
 .panel .header-row {
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 .panel img {
@@ -1118,6 +1119,10 @@ form {
   }
 }
 
+.center-content {
+  text-align: center;
+}
+
 .about-section .panel--primary {
   background-color: #E93AA6;
 }
@@ -1133,8 +1138,38 @@ form {
   opacity: 1;
 }
 
-.center-content {
-  text-align: center;
+.team-section .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.team-section .panel--primary {
+  background-color: #00B264;
+}
+.team-section .history p {
+  margin: 0;
+}
+.team-section .employees {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.contact-section .panel--primary {
+  background-color: #F0F0F0;
+}
+.contact-section .panel--primary .panel__heading {
+  top: 20%;
+}
+.contact-section .underline {
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+@media (min-width: 900px) {
+  .contact-section .underline {
+    width: 60%;
+  }
+}
+.contact-section h1, .contact-section h4 {
+  color: #000000;
 }
 
 .footer {
