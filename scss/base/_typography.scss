@@ -1,33 +1,7 @@
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-  font-weight: 300;
-  color: $white;
-}
-
-h1 { font-size: 40px; font-family: $font-semibold; line-height: 1.1; margin-bottom: 20px;}
-h2 { font-size: 32px; font-family: $font-semibold; line-height: 1.1; margin-bottom: 20px;}
-h3 { font-size: 26px; font-family: $font-regular;  line-height: 1.4;}
-h4 { font-size: 20px; font-family: $font-regular;  line-height: 1.4;}
-
-// Larger than tablet
-@media (#{$bp-larger-than-tablet}) {
-
-}
-
-p {
-  margin-top: 0;
-  font-family: $font-regular;
-  font-size: 16px;
-}
-
-a {
-  font-size: 18px;
-}
-
+// Font Imports
 @font-face {
   font-family: Graphik-Regular;
   src: url('../fonts/Graphik-Regular.otf');
@@ -41,4 +15,33 @@ a {
 @font-face {
   font-family: Graphik-Thin;
   src: url('../fonts/Graphik-This.otf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  color: $white;
+  line-height: 1.3;
+}
+
+h1 { font-size: 48px; font-family: $font-semibold;}
+h2 { font-size: 40px; font-family: $font-semibold;}
+h3 { font-size: 28px; font-family: $font-regular;}
+h4 { font-size: 20px; font-family: $font-regular;}
+
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+  h1 { font-size: 48px; font-family: $font-semibold;}
+  h2 { font-size: 40px; font-family: $font-semibold;}
+  h3 { font-size: 28px; font-family: $font-regular;}
+  h4 { font-size: 20px; font-family: $font-regular;}
+}
+
+p {
+  margin-top: 0;
+  font-family: $font-regular;
+  font-size: 16px;
+}
+
+a {
+  font-size: 18px;
 }

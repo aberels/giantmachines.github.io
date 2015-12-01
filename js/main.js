@@ -7,7 +7,7 @@ $(function() {
   var footerHeight = $('.footer').height();
 
   // Auto-scroll
-  autoScrollCarousel();
+  // autoScrollCarousel();
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
@@ -81,7 +81,6 @@ $(function() {
   // Case Study Click Handler
   $('.view-case-study').click(function(){
     $($(this).data('case-study')).addClass('active');
-    $('.homepage').addClass('plain');
 
     setTimeout(function() {
       $('.homepage, .footer').addClass('hidden');
@@ -92,7 +91,6 @@ $(function() {
   // Close Case Study Click Handler
   $('.close-icon').click(function() {
     $('.homepage, .footer').removeClass('hidden');
-    $('.homepage').removeClass('plain');
     $('.case-study').removeClass('active');
     setActivePanel($('.carousel li').first());
   });

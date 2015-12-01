@@ -17,7 +17,8 @@ $font-color: #222 !default;
 // Custom Colors
 $medium-gray: #7E7E80;
 $lightgreyborder: #DBDBDB;
-$lightgreybackground: #F0F0F0;
+$greybackground: #F0F0F0;
+$lightgreybackground: #F9F9F9;
 $blue: #0080CA;
 $black: #000000;
 $white: #FFFFFF;
@@ -44,5 +45,5 @@ $global-radius: 4px !default;
 $gutter: 40px;
 $header-height: 54px;
 $left-rail-width: 250px;
-$panel-height: 100vh;
-$case-study-primary-panel-height: 50vh;
+$panel-full-height: 100vh;
+$panel-half-height: 50vh;

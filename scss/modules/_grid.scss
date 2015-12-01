@@ -33,13 +33,13 @@
 }
 
 // For devices larger than 550px
-@media (#{$bp-larger-than-tablet}) {
+@media (#{$bp-larger-than-mobile}) {
   .container {
-    width: $container-width-larger-than-tablet;
+    width: $container-width-larger-than-mobile;
   }
   .column,
   .columns {
-    // margin-left: $column-margin;
+    margin-left: $column-margin;
   }
   .column:first-child,
   .columns:first-child {

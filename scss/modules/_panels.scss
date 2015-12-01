@@ -1,0 +1,56 @@
+.panel {
+  position: relative;
+  height: $panel-full-height;
+
+  &--half-height {
+    height: $panel-half-height;
+  }
+
+  &--primary {
+    background-image: url('../images/background-pattern.png');
+    background-size: 120px;
+  }
+
+  &--secondary {
+    height: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+    background: $greybackground;
+
+    h3, h4 {
+      color: $black;
+      text-transform: uppercase;
+    }
+  }
+
+  &--tertiary {
+    background: $lightgreybackground;
+  }
+
+  .panel__heading {
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    right: 15%;
+
+    @media (#{$bp-larger-than-tablet}) {
+      top: 40%;
+      right: 15%;
+      left: 20%;
+    }
+  }
+
+  .header-row {
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 70%;
+    margin-bottom: 20px;
+
+
+    @media (#{$bp-larger-than-mobile}) {
+      width: 100%;
+    }
+  }
+}
