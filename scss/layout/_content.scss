@@ -75,16 +75,20 @@
 }
 
 .case-study-section {
+  top: $header-height;
   position: absolute;
   top: 100vh;
+  height: 0;
   visibility: hidden;
+  overflow-y: hidden;
   z-index: -1;
 
   &.active {
-    top: $header-height;
     height: auto;
     visibility: visible;
     z-index: 10;
+    top: $header-height;
+    overflow-y: visible;
   }
 
   @media (#{$bp-larger-than-tablet}) {
@@ -160,6 +164,20 @@
     button {
       color: $black;
       border-color: $black;
+    }
+  }
+
+  &.imbu {
+    .panel--primary {
+      // background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
+      // background-position: 0;
+      // background-size: cover;
+      background-color: $blue;
+    }
+
+    button {
+      color: $blue;
+      border-color: $blue;
     }
   }
 

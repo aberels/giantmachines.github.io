@@ -1131,16 +1131,20 @@ form {
 }
 
 .case-study-section {
+  top: 54px;
   position: absolute;
   top: 100vh;
+  height: 0;
   visibility: hidden;
+  overflow-y: hidden;
   z-index: -1;
 }
 .case-study-section.active {
-  top: 54px;
   height: auto;
   visibility: visible;
   z-index: 10;
+  top: 54px;
+  overflow-y: visible;
 }
 @media (min-width: 900px) {
   .case-study-section.active {
@@ -1205,6 +1209,13 @@ form {
 .case-study-section.flightclub button {
   color: #000000;
   border-color: #000000;
+}
+.case-study-section.imbu .panel--primary {
+  background-color: #0080CA;
+}
+.case-study-section.imbu button {
+  color: #0080CA;
+  border-color: #0080CA;
 }
 .case-study-section.minted .panel--primary {
   background: url("../images/case-studies/minted/minted-background.jpg") no-repeat;
