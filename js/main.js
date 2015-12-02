@@ -8,7 +8,7 @@ $(function() {
 
   // Initialize
   if($('body').is('.homepage')) {
-    autoScrollCarousel();
+    // autoScrollCarousel();
   }
 
   // Kill Autoscroll on user interaction

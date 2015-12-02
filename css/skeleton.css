@@ -300,26 +300,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 48px;
-  font-family: "Graphik-Semibold";
-}
-
-h2 {
   font-size: 40px;
   font-family: "Graphik-Semibold";
 }
 
-h3 {
-  font-size: 28px;
-  font-family: "Graphik-Regular";
+h2 {
+  font-size: 32px;
+  font-family: "Graphik-Semibold";
 }
 
-h4 {
+h3 {
   font-size: 20px;
   font-family: "Graphik-Regular";
 }
 
-@media (min-width: 900px) {
+h4 {
+  font-size: 18px;
+  font-family: "Graphik-Regular";
+}
+
+@media (min-width: 768px) {
   h1 {
     font-size: 48px;
     font-family: "Graphik-Semibold";
@@ -807,7 +807,12 @@ form {
   }
 }
 .panel--half-height {
-  height: 50vh;
+  height: calc(50vh - 54px);
+}
+@media (min-width: 900px) {
+  .panel--half-height {
+    height: 50vh;
+  }
 }
 .panel--primary {
   background-image: url("../images/background-pattern.png");
@@ -826,12 +831,35 @@ form {
   color: #000000;
   text-transform: uppercase;
 }
+.panel--secondary .row {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .panel--secondary .row {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
 .panel--tertiary {
   background: #F9F9F9;
 }
 .panel .panel__heading {
   position: absolute;
-  top: 33%;
+  top: 12%;
+}
+.panel .panel__heading h1, .panel .panel__heading h3, .panel .panel__heading h4, .panel .panel__heading button, .panel .panel__heading .divider {
+  margin-left: 5%;
+  margin-right: 12%;
+}
+@media (min-width: 768px) {
+  .panel .panel__heading {
+    top: 33%;
+  }
+  .panel .panel__heading h1, .panel .panel__heading h3, .panel .panel__heading h4, .panel .panel__heading button, .panel .panel__heading .divider {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
 .panel .divider {
   margin-bottom: 10px;
@@ -848,8 +876,12 @@ form {
   }
 }
 .panel .header-row {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .panel .header-row {
+    margin-top: 20px;
+  }
 }
 
 /* Layout */
@@ -920,6 +952,7 @@ form {
   background: #FFFFFF;
   box-shadow: 0 0 2px #7E7E80 inset;
   opacity: .98;
+  z-index: 2;
 }
 .header-section .nav-collapse li {
   border-bottom: 1px solid #DBDBDB;
@@ -1100,10 +1133,12 @@ form {
 .case-study-section {
   position: absolute;
   top: 54px;
+  height: 0;
   visibility: hidden;
   z-index: -1;
 }
 .case-study-section.active {
+  height: auto;
   visibility: visible;
   z-index: 10;
 }
@@ -1112,16 +1147,40 @@ form {
   letter-spacing: 2px;
 }
 .case-study-section .row {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+.case-study-section .three {
+  text-align: center;
 }
 .case-study-section .three img {
-  max-width: 100%;
+  max-width: 70%;
   width: auto;
   height: auto;
-  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .case-study-section .three img {
+    max-width: 100%;
+    padding-top: 30px;
+    text-align: initial;
+  }
+}
+.case-study-section .seven {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .case-study-section .seven {
+    margin-top: initial;
+  }
 }
 .case-study-section .ten img {
-  width: 100%;
+  margin-left: -30px;
+  width: 130%;
+}
+@media (min-width: 768px) {
+  .case-study-section .ten img {
+    width: 100%;
+    margin-left: initial;
+  }
 }
 .case-study-section .close-icon {
   position: absolute;
@@ -1162,29 +1221,69 @@ form {
     height: 32px;
     margin: 20px;
   }
+  .case-study-section .row {
+    margin-bottom: 30px;
+  }
 }
 
+.about-section {
+  margin-top: 54px;
+}
+@media (min-width: 768px) {
+  .about-section {
+    margin-top: 0;
+  }
+}
 .about-section .panel--primary {
   background-color: #E93AA6;
+}
+.about-section .panel--secondary .row {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .about-section .panel--secondary .row {
+    text-align: initial;
+  }
 }
 .about-section .partner-logo {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  opacity: .7;
-  transition: all 200ms;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 200ms;
 }
 .about-section .partner-logo:hover {
   -webkit-filter: none;
   filter: none;
   opacity: 1;
 }
+@media (min-width: 768px) {
+  .about-section .partner-logo {
+    margin-bottom: initial;
+    opacity: .7;
+  }
+}
 .about-section img {
-  max-width: 100%;
+  max-width: 70%;
   width: auto;
   height: auto;
-  padding-top: 30px;
+}
+@media (min-width: 768px) {
+  .about-section img {
+    max-width: 100%;
+    padding-top: 30px;
+    text-align: initial;
+  }
 }
 
+.team-section {
+  margin-top: 54px;
+}
+@media (min-width: 768px) {
+  .team-section {
+    margin-top: 0;
+  }
+}
 .team-section .panel--primary {
   background-color: #00B264;
 }

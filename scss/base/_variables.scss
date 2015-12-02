@@ -50,4 +50,5 @@ $header-height: 54px;
 $left-rail-width: 250px;
 $panel-full-height-mobile: calc(100vh - 54px);
 $panel-full-height-desktop: 100vh;
-$panel-half-height: 50vh;
+$panel-half-height-mobile: calc(50vh - 54px);
+$panel-half-height-desktop: 50vh;

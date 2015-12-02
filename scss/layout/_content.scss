@@ -77,10 +77,12 @@
 .case-study-section {
   position: absolute;
   top: $header-height;
+  height: 0;
   visibility: hidden;
   z-index: -1;
 
   &.active {
+    height: auto;
     visibility: visible;
     z-index: 10;
   }
@@ -91,21 +93,42 @@
   }
 
   .row {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .three {
+    text-align: center;
+
     img {
-      max-width: 100%;
+      max-width: 70%;
       width: auto;
       height: auto;
-      padding-top: 30px;
+
+      @media (#{$bp-larger-than-mobile}) {
+        max-width: 100%;
+        padding-top: 30px;
+        text-align: initial;
+      }
+    }
+  }
+
+  .seven {
+    margin-top: 20px;
+
+    @media (#{$bp-larger-than-mobile}) {
+      margin-top: initial;
     }
   }
 
   .ten {
     img {
-      width: 100%;
+      margin-left: -30px;
+      width: 130%;
+
+      @media (#{$bp-larger-than-mobile}) {
+        width: 100%;
+        margin-left: initial;
+      }
     }
   }
 
@@ -157,36 +180,73 @@
       height: 32px;
       margin: 20px;
     }
+
+    .row {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .about-section {
+  margin-top: $header-height;
+
+  @media (#{$bp-larger-than-mobile}) {
+    margin-top: 0;
+  }
+
   .panel--primary {
     background-color: $pink;
+  }
+
+  .panel--secondary {
+    .row {
+      text-align: center;
+
+      @media (#{$bp-larger-than-mobile}) {
+        text-align: initial;
+      }
+    }
   }
 
   .partner-logo {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    opacity: .7;
-    transition: all 200ms;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 200ms;
 
     &:hover {
       -webkit-filter: none;
       filter: none;
       opacity: 1;
     }
+
+    @media (#{$bp-larger-than-mobile}) {
+      margin-bottom: initial;
+      opacity: .7;
+    }
   }
 
   img {
-    max-width: 100%;
+    max-width: 70%;
     width: auto;
     height: auto;
-    padding-top: 30px;
+
+    @media (#{$bp-larger-than-mobile}) {
+      max-width: 100%;
+      padding-top: 30px;
+      text-align: initial;
+    }
   }
 }
 
 .team-section {
+  margin-top: $header-height;
+
+  @media (#{$bp-larger-than-mobile}) {
+    margin-top: 0;
+  }
+
   .panel--primary {
     background-color: $green;
   }

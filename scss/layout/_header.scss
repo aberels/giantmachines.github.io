@@ -75,6 +75,7 @@
     background: $white;
     box-shadow: 0 0 2px $medium-gray inset;
     opacity: .98;
+    z-index: 2;
 
     li {
       border-bottom: 1px solid $lightgreyborder;
