@@ -551,7 +551,7 @@ button {
   cursor: pointer;
   box-sizing: border-box;
   border: 3px solid #FFFFFF;
-  border-radius: 1px;
+  border-radius: 2px;
   color: #FFFFFF;
   font-size: 20px;
   height: 50px;
@@ -575,7 +575,7 @@ input[type="submit"], input[type="reset"], input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box;
@@ -648,7 +648,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   padding: 6px 10px;
   background-color: #fff;
   border: 1px solid #d1d1d1;
-  border-radius: 4px;
+  border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
 }
@@ -659,7 +659,7 @@ select {
   padding: 6px 10px;
   background-color: #fff;
   border: 1px solid #d1d1d1;
-  border-radius: 4px;
+  border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
 }
@@ -747,7 +747,7 @@ code {
   white-space: nowrap;
   background: #f1f1f1;
   border: 1px solid #e1e1e1;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 pre > code {
@@ -916,7 +916,7 @@ form {
 .header-section .hamburger span:before,
 .header-section .hamburger span:after {
   background: #7E7E80;
-  border-radius: 1px;
+  border-radius: 2px;
   content: '';
   cursor: pointer;
   display: block;
@@ -986,7 +986,7 @@ form {
   margin-bottom: 18px;
   background-color: #FFFFFF;
   border: 2px solid #FFFFFF;
-  border-radius: 1px;
+  border-radius: 2px;
   opacity: .4;
   cursor: pointer;
 }
@@ -998,7 +998,7 @@ form {
   width: 10px;
   margin: -5px 0 0 -5px;
   background: #FFFFFF;
-  border-radius: 1px;
+  border-radius: 2px;
   opacity: 0;
 }
 .header-section .section-nav li.active {
@@ -1132,15 +1132,20 @@ form {
 
 .case-study-section {
   position: absolute;
-  top: 54px;
-  height: 0;
+  top: 100vh;
   visibility: hidden;
   z-index: -1;
 }
 .case-study-section.active {
+  top: 54px;
   height: auto;
   visibility: visible;
   z-index: 10;
+}
+@media (min-width: 900px) {
+  .case-study-section.active {
+    top: 0;
+  }
 }
 .case-study-section h3 {
   font-weight: 300;
@@ -1160,7 +1165,7 @@ form {
 @media (min-width: 768px) {
   .case-study-section .three img {
     max-width: 100%;
-    padding-top: 30px;
+    padding-top: 15px;
     text-align: initial;
   }
 }
@@ -1209,11 +1214,6 @@ form {
 .case-study-section.minted button {
   color: #E93AA6;
   border-color: #E93AA6;
-}
-@media (min-width: 900px) {
-  .case-study-section {
-    top: 0;
-  }
 }
 @media (min-width: 768px) {
   .case-study-section .close-icon {

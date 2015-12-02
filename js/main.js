@@ -98,7 +98,7 @@ $(function() {
     setTimeout(function() {
       $('.container').not(caseStudy).addClass('hidden');
     }, 300);
-    $('body').scrollTop(0);
+    $('body').animate({scrollTop: 0}, 300);
   });
 
   // Close Case Study Click Handler

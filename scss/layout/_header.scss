@@ -30,7 +30,7 @@
     span:before,
     span:after {
       background: $medium-gray;
-      border-radius: 1px;
+      border-radius: $global-radius;
       content: '';
       cursor: pointer;
       display: block;
@@ -114,7 +114,7 @@
       margin-bottom: 18px;
       background-color: $white;
       border: 2px solid $white;
-      border-radius: 1px;
+      border-radius: $global-radius;
       opacity: .4;
       cursor: pointer;
 
@@ -126,7 +126,7 @@
         width: 10px;
         margin: -5px 0 0 -5px;
         background: $white;
-        border-radius: 1px;
+        border-radius: $global-radius;
         opacity: 0;
       }
 

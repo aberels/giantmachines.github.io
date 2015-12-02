@@ -76,15 +76,21 @@
 
 .case-study-section {
   position: absolute;
-  top: $header-height;
-  height: 0;
+  top: 100vh;
   visibility: hidden;
   z-index: -1;
 
   &.active {
+    top: $header-height;
     height: auto;
     visibility: visible;
     z-index: 10;
+  }
+
+  @media (#{$bp-larger-than-tablet}) {
+    &.active {
+      top: 0;
+    }
   }
 
   h3 {
@@ -106,7 +112,7 @@
 
       @media (#{$bp-larger-than-mobile}) {
         max-width: 100%;
-        padding-top: 30px;
+        padding-top: 15px;
         text-align: initial;
       }
     }
@@ -168,10 +174,6 @@
       color: $pink;
       border-color: $pink;
     }
-  }
-
-  @media (#{$bp-larger-than-tablet}) {
-    top: 0;
   }
 
   @media (#{$bp-larger-than-mobile}) {
