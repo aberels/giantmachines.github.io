@@ -262,6 +262,24 @@
   .employees {
     padding-left: 5%;
     padding-right: 5%;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $black;
+      margin: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .header-row {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
   }
 
   img {

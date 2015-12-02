@@ -1294,6 +1294,20 @@ form {
   padding-left: 5%;
   padding-right: 5%;
 }
+.team-section .employees h4 {
+  margin-bottom: 0;
+}
+.team-section .employees a {
+  color: #000000;
+  margin: 0;
+}
+.team-section .employees a:hover {
+  text-decoration: underline;
+}
+.team-section .employees .header-row {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
 .team-section img {
   max-width: 100%;
   width: auto;
