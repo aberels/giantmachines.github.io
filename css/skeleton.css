@@ -851,11 +851,6 @@ form {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-@media (min-width: 768px) {
-  .panel img {
-    width: 100%;
-  }
-}
 
 /* Layout */
 .header-section {
@@ -1112,6 +1107,22 @@ form {
   visibility: visible;
   z-index: 10;
 }
+.case-study-section h3 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.case-study-section .row {
+  margin-bottom: 30px;
+}
+.case-study-section .three img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding-top: 30px;
+}
+.case-study-section .ten img {
+  width: 100%;
+}
 .case-study-section .close-icon {
   position: absolute;
   right: 0;
@@ -1167,6 +1178,12 @@ form {
   filter: none;
   opacity: 1;
 }
+.about-section img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding-top: 30px;
+}
 
 .team-section .panel--primary {
   background-color: #00B264;
@@ -1177,6 +1194,16 @@ form {
 .team-section .employees {
   padding-left: 5%;
   padding-right: 5%;
+}
+.team-section img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding-top: 30px;
+}
+.team-section ul {
+  list-style: disc;
+  list-style-position: inside;
 }
 
 .contact-section .close-icon {

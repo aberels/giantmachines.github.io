@@ -85,6 +85,11 @@ $(function() {
 
   // Case Study Click Handler
   $('.view-case-study').click(function(){
+    if ($('.hamburger').hasClass('active')) {
+      $('.hamburger').removeClass('active');
+      $('.nav-collapse').slideToggle(300);
+    }
+
     $('.container').removeClass('hidden');
     $('.section-nav').addClass('hidden');
     var caseStudy = $($(this).data('case'));
