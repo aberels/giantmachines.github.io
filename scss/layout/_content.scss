@@ -2,6 +2,10 @@
 .container {
   padding-left: 0;
 
+  &.hidden {
+    display: none;
+  }
+
   // Larger than tablet
   @media (#{$bp-larger-than-tablet}) {
     padding-left: $left-rail-width;
@@ -14,6 +18,7 @@
 
 .home-section {
   margin-top: $header-height;
+  overflow-x: hidden;
 
   #introduction {
     background-color: $blue;
@@ -70,6 +75,67 @@
   }
 }
 
+.case-study-section {
+  position: absolute;
+  top: $header-height;
+  visibility: hidden;
+  z-index: -1;
+
+  &.active {
+    visibility: visible;
+    z-index: 10;
+  }
+
+  .close-icon {
+    position: absolute;
+    right: 0;
+    height: 16px;
+    width: 16px;
+    margin: 10px;
+    background: url('../images/case-studies/close-icon.png');
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &.flightclub {
+    .panel--primary {
+      background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
+      background-position: 0;
+      background-size: cover;
+    }
+
+    button {
+      color: $black;
+      border-color: $black;
+    }
+  }
+
+  &.minted {
+    .panel--primary {
+      background: url('../images/case-studies/minted/minted-background.jpg') no-repeat;
+      background-position: 0;
+      background-size: cover;
+    }
+
+    button {
+      color: $pink;
+      border-color: $pink;
+    }
+  }
+
+  @media (#{$bp-larger-than-tablet}) {
+    top: 0;
+  }
+
+  @media (#{$bp-larger-than-mobile}) {
+    .close-icon {
+      width: 32px;
+      height: 32px;
+      margin: 20px;
+    }
+  }
+}
+
 .about-section {
   .panel--primary {
     background-color: $pink;
@@ -90,11 +156,6 @@
 }
 
 .team-section {
-  .row {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
   .panel--primary {
     background-color: $green;
   }
@@ -112,6 +173,11 @@
 }
 
 .contact-section {
+  .close-icon {
+    background: url('../images/gray-close-icon.png');
+    background-size: cover;
+  }
+
   .panel--primary {
     background-color: $greybackground;
 
@@ -120,13 +186,11 @@
     }
   }
 
-  .underline {
-    border: 1px solid $black;
-    margin-bottom: 20px;
+  .panel--secondary {
+    margin-top: -66vh;
 
-    // Larger than tablet
-    @media (#{$bp-larger-than-tablet}) {
-      width: 60%;
+    a {
+      color: $black;
     }
   }
 

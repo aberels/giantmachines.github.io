@@ -7,7 +7,14 @@ $(function() {
   var footerHeight = $('.footer').height();
 
   // Initialize
-  // autoScrollCarousel();
+  if($('body').is('.homepage')) {
+    autoScrollCarousel();
+  }
+
+  // Kill Autoscroll on user interaction
+  $(document).click(function() {
+    awatingInteraction = false;
+  });
 
   /** Responsive call for height of navbar */
   function checkNavHeight() {
@@ -61,7 +68,6 @@ $(function() {
 
   // Carousel Click Handler
   $('.section-nav__radio-button').click(function() {
-    awatingInteraction = false;
     var linkedPanelID = $(this).data('panel');
     var linkedPanelOffset = $('#' + linkedPanelID).offset().top;
     checkNavHeight();
@@ -72,7 +78,6 @@ $(function() {
   // Menu Click Handler
   $('.hamburger').click(function(e) {
     e.preventDefault();
-    awatingInteraction = false;
 
     $('.nav-collapse').slideToggle(300);
     $('.hamburger').toggleClass('active');
@@ -80,25 +85,28 @@ $(function() {
 
   // Case Study Click Handler
   $('.view-case-study').click(function(){
-    $($(this).data('case')).addClass('active');
+    $('.container').removeClass('hidden');
+    $('.section-nav').addClass('hidden');
+    var caseStudy = $($(this).data('case'));
+    caseStudy.addClass('active');
 
     setTimeout(function() {
-      $('.homepage, .footer').addClass('hidden');
+      $('.container').not(caseStudy).addClass('hidden');
     }, 300);
     $('body').scrollTop(0);
   });
 
   // Close Case Study Click Handler
   $('.close-icon').click(function() {
-    $('.homepage, .footer').removeClass('hidden');
-    $('.case-study').removeClass('active');
+    $('.container, .section-nav').removeClass('hidden');
+    $('.case-study-section').removeClass('active');
     setActivePanel($('.section-nav__radio-button').first());
   });
 
   // Next Case Study Click Handler
   $('.button-next').click(function() {
-    $('.case-study').removeClass('active');
-    $($(this).data('case-study')).addClass('active');
+    $('.case-study').hide();
+    $($(this).data('case-study')).show();
     $('body').scrollTop(0);
   });
 });

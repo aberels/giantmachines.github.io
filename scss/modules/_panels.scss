@@ -41,15 +41,29 @@
     top: 33%;
   }
 
+  .divider {
+    margin-bottom: 10px;
+
+    &--white {
+      border: 1px solid $white;
+    }
+
+    &--black {
+      border: 1px solid $black;
+    }
+
+    // Larger than tablet
+    @media (#{$bp-larger-than-tablet}) {
+      width: 60%;
+    }
+  }
+
   .header-row {
     margin-top: 50px;
     margin-bottom: 50px;
   }
 
   img {
-    width: 70%;
-    margin-bottom: 20px;
-
 
     @media (#{$bp-larger-than-mobile}) {
       width: 100%;

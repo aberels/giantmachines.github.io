@@ -833,13 +833,23 @@ form {
   position: absolute;
   top: 33%;
 }
+.panel .divider {
+  margin-bottom: 10px;
+}
+.panel .divider--white {
+  border: 1px solid #FFFFFF;
+}
+.panel .divider--black {
+  border: 1px solid #000000;
+}
+@media (min-width: 900px) {
+  .panel .divider {
+    width: 60%;
+  }
+}
 .panel .header-row {
   margin-top: 50px;
   margin-bottom: 50px;
-}
-.panel img {
-  width: 70%;
-  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .panel img {
@@ -938,6 +948,9 @@ form {
   margin-top: -96px;
   z-index: 1;
 }
+.header-section .section-nav.hidden {
+  display: none;
+}
 .header-section .section-nav li {
   position: relative;
   height: 24px;
@@ -1025,6 +1038,9 @@ form {
 .container {
   padding-left: 0;
 }
+.container.hidden {
+  display: none;
+}
 @media (min-width: 900px) {
   .container {
     padding-left: 250px;
@@ -1037,6 +1053,7 @@ form {
 
 .home-section {
   margin-top: 54px;
+  overflow-x: hidden;
 }
 .home-section #introduction {
   background-color: #0080CA;
@@ -1085,6 +1102,57 @@ form {
   }
 }
 
+.case-study-section {
+  position: absolute;
+  top: 54px;
+  visibility: hidden;
+  z-index: -1;
+}
+.case-study-section.active {
+  visibility: visible;
+  z-index: 10;
+}
+.case-study-section .close-icon {
+  position: absolute;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  margin: 10px;
+  background: url("../images/case-studies/close-icon.png");
+  background-size: cover;
+  z-index: 1;
+}
+.case-study-section.flightclub .panel--primary {
+  background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+.case-study-section.flightclub button {
+  color: #000000;
+  border-color: #000000;
+}
+.case-study-section.minted .panel--primary {
+  background: url("../images/case-studies/minted/minted-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+.case-study-section.minted button {
+  color: #E93AA6;
+  border-color: #E93AA6;
+}
+@media (min-width: 900px) {
+  .case-study-section {
+    top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .case-study-section .close-icon {
+    width: 32px;
+    height: 32px;
+    margin: 20px;
+  }
+}
+
 .about-section .panel--primary {
   background-color: #E93AA6;
 }
@@ -1100,10 +1168,6 @@ form {
   opacity: 1;
 }
 
-.team-section .row {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
 .team-section .panel--primary {
   background-color: #00B264;
 }
@@ -1115,170 +1179,24 @@ form {
   padding-right: 5%;
 }
 
+.contact-section .close-icon {
+  background: url("../images/gray-close-icon.png");
+  background-size: cover;
+}
 .contact-section .panel--primary {
   background-color: #F0F0F0;
 }
 .contact-section .panel--primary .panel__heading {
   top: 20%;
 }
-.contact-section .underline {
-  border: 1px solid #000000;
-  margin-bottom: 20px;
+.contact-section .panel--secondary {
+  margin-top: -66vh;
 }
-@media (min-width: 900px) {
-  .contact-section .underline {
-    width: 60%;
-  }
+.contact-section .panel--secondary a {
+  color: #000000;
 }
 .contact-section h1, .contact-section h4 {
   color: #000000;
-}
-
-.case-study {
-  opacity: 0;
-  position: absolute;
-  top: 100vh;
-  z-index: -1;
-  height: 0;
-  overflow: hidden;
-  transition: top 300ms ease;
-}
-.case-study.active {
-  height: 100%;
-  left: 0;
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  z-index: 10;
-  overflow: visible;
-}
-.case-study .main-content .close-icon {
-  background: url("../images/case-studies/close-icon.png");
-  background-size: cover;
-  height: 16px;
-  margin: 20px;
-  position: absolute;
-  right: 0;
-  width: 16px;
-  z-index: 1;
-}
-.case-study .main-content .panel .panel__heading {
-  top: 25%;
-}
-.case-study .main-content .panel .panel__heading h1 {
-  margin-bottom: 5px;
-}
-.case-study .main-content .panel .panel__heading h4 {
-  font-size: 16px;
-}
-.case-study .underline {
-  border: 1px solid #FFFFFF;
-  margin: 0 0 10px -2px;
-  width: 100%;
-}
-.case-study .panel-flightclub {
-  background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;
-  background-position: 0;
-  background-size: cover;
-  height: 50vh;
-}
-.case-study .panel-imbu {
-  background: green;
-  background-position: 0;
-  background-size: cover;
-  height: 50vh;
-}
-.case-study .panel-minted {
-  background: url("../images/case-studies/minted/minted-background.jpg") no-repeat;
-  background-position: 0;
-  background-size: cover;
-  height: 50vh;
-}
-.case-study .panel-secondary {
-  background: #F0F0F0;
-  height: 100%;
-  overflow: hidden;
-  padding-top: 50px;
-}
-.case-study .panel-secondary h3 {
-  color: #000000;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.case-study .panel-secondary .case-study-section {
-  margin-bottom: 20px;
-  padding: 0 20px;
-}
-.case-study .panel-secondary .case-study-section .four.columns {
-  text-align: center;
-}
-.case-study .panel-secondary .case-study-section .right {
-  float: right;
-}
-.case-study .panel-secondary .case-study-section.button-section {
-  text-align: center;
-}
-.case-study .panel-secondary .case-study-section.button-section .button-flightclub {
-  border-color: #00B264;
-  color: #00B264;
-}
-.case-study .panel-secondary .case-study-section.button-section .button-imbu {
-  border-color: #00B264;
-  color: #00B264;
-}
-.case-study .panel-secondary .case-study-section.button-section .button-minted {
-  border-color: #E93AA6;
-  color: #E93AA6;
-}
-.case-study .full-width {
-  margin-left: -20px;
-  width: 150%;
-}
-@media (min-width: 768px) {
-  .case-study .full-width {
-    margin: 0;
-    width: 100%;
-  }
-}
-@media (min-width: 900px) {
-  .case-study.active {
-    left: 250px;
-  }
-  .case-study .underline {
-    width: 60%;
-  }
-  .case-study .main-content .close-icon {
-    background: url("../images/case-studies/close-icon.png");
-    height: 32px;
-    margin: 20px;
-    position: absolute;
-    right: 0;
-    width: 32px;
-    z-index: 1;
-  }
-  .case-study .main-content .panel .panel__heading {
-    top: 30%;
-  }
-  .case-study .main-content .panel .panel__heading h1 {
-    margin-bottom: 15px;
-  }
-  .case-study .main-content .panel .panel__heading h4 {
-    font-size: 20px;
-  }
-  .case-study .panel-secondary {
-    padding-top: 70px;
-  }
-  .case-study .panel-secondary .case-study-section {
-    padding: 0;
-  }
-  .case-study .panel-secondary .case-study-section .four.columns {
-    text-align: left;
-  }
-  .case-study .panel-secondary .case-study-section .four.columns img {
-    width: 100%;
-    margin-bottom: 0;
-  }
 }
 
 * {

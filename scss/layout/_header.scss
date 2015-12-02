@@ -102,6 +102,10 @@
     margin-top: -96px;
     z-index: 1;
 
+    &.hidden {
+      display: none;
+    }
+
     li {
       position: relative;
       height: 24px;
