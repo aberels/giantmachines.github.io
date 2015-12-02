@@ -6,7 +6,7 @@ $(function() {
   var navHeight = $('.header-section').height();
   var footerHeight = $('.footer').height();
 
-  // Auto-scroll
+  // Initialize
   // autoScrollCarousel();
 
   /** Responsive call for height of navbar */
@@ -32,7 +32,7 @@ $(function() {
    * @param {object} panel - The jQuery panel el
    */
   function setActivePanel(panel) {
-    $('.link').not(panel).removeClass('active');
+    $('.section-nav__radio-button').not(panel).removeClass('active');
     $(panel).addClass('active');
   }
 
@@ -49,9 +49,9 @@ $(function() {
     var windowPosition = $(this).scrollTop();
     checkNavHeight();
 
-    $('.link').each(function(e) {
-      var linkedPanelClass = $(this).data('panel');
-      var linkedPanelOffset = $('.' + linkedPanelClass).offset().top - (panelHeight / 2);
+    $('.section-nav__radio-button').each(function(e) {
+      var linkedPanelID = $(this).data('panel');
+      var linkedPanelOffset = $('#' + linkedPanelID).offset().top - (panelHeight / 2);
 
       if (windowPosition >= linkedPanelOffset - navHeight) {
         setActivePanel(this);
@@ -60,10 +60,10 @@ $(function() {
   });
 
   // Carousel Click Handler
-  $('.link').click(function() {
+  $('.section-nav__radio-button').click(function() {
     awatingInteraction = false;
-    var linkedPanelClass = $(this).data('panel');
-    var linkedPanelOffset = $('.' + linkedPanelClass).offset().top;
+    var linkedPanelID = $(this).data('panel');
+    var linkedPanelOffset = $('#' + linkedPanelID).offset().top;
     checkNavHeight();
 
     scrollCarousel(linkedPanelOffset - navHeight);
@@ -80,7 +80,7 @@ $(function() {
 
   // Case Study Click Handler
   $('.view-case-study').click(function(){
-    $($(this).data('case-study')).addClass('active');
+    $($(this).data('case')).addClass('active');
 
     setTimeout(function() {
       $('.homepage, .footer').addClass('hidden');
@@ -92,7 +92,7 @@ $(function() {
   $('.close-icon').click(function() {
     $('.homepage, .footer').removeClass('hidden');
     $('.case-study').removeClass('active');
-    setActivePanel($('.carousel li').first());
+    setActivePanel($('.section-nav__radio-button').first());
   });
 
   // Next Case Study Click Handler

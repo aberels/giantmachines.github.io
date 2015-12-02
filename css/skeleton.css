@@ -250,10 +250,10 @@ body {
 }
 
 a {
-  color: #7E7E80;
+  color: #FFFFFF;
 }
 a:hover {
-  color: #717173;
+  text-decoration: underline;
 }
 
 hr {
@@ -551,13 +551,14 @@ button {
   cursor: pointer;
   box-sizing: border-box;
   border: 3px solid #FFFFFF;
-  border-radius: 8px;
+  border-radius: 1px;
   color: #FFFFFF;
   font-size: 20px;
   height: 50px;
   margin-top: 20px;
   padding: 5px 0 0;
   width: 240px;
+  outline: 0;
 }
 
 input[type="submit"], input[type="reset"], input[type="button"] {
@@ -582,9 +583,9 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 
 .button:hover,
 button:hover {
-  color: #333;
-  border-color: #888888;
-  outline: 0;
+  border-color: #FFFFFF;
+  background: #FFFFFF;
+  color: #0080CA;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
@@ -595,8 +596,6 @@ input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hove
 
 .button:focus,
 button:focus {
-  color: #333;
-  border-color: #888888;
   outline: 0;
 }
 
@@ -800,7 +799,12 @@ form {
 
 .panel {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 54px);
+}
+@media (min-width: 900px) {
+  .panel {
+    height: 100vh;
+  }
 }
 .panel--half-height {
   height: 50vh;
@@ -808,6 +812,9 @@ form {
 .panel--primary {
   background-image: url("../images/background-pattern.png");
   background-size: 120px;
+}
+.panel--primary a {
+  font: inherit;
 }
 .panel--secondary {
   height: 100%;
@@ -824,16 +831,7 @@ form {
 }
 .panel .panel__heading {
   position: absolute;
-  top: 20%;
-  left: 6%;
-  right: 15%;
-}
-@media (min-width: 900px) {
-  .panel .panel__heading {
-    top: 40%;
-    right: 15%;
-    left: 20%;
-  }
+  top: 33%;
 }
 .panel .header-row {
   margin-top: 50px;
@@ -852,8 +850,10 @@ form {
 /* Layout */
 .header-section {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 54px;
-  width: 100%;
   z-index: 100;
   background-color: #FFFFFF;
 }
@@ -926,9 +926,47 @@ form {
   height: 100%;
   padding: 24px 20px;
   width: 100%;
+  color: #7E7E80;
 }
 .header-section .copyright {
   display: none;
+}
+.header-section .section-nav {
+  position: fixed;
+  top: 50%;
+  right: 3%;
+  margin-top: -96px;
+  z-index: 1;
+}
+.header-section .section-nav li {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 18px;
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 1px;
+  opacity: .4;
+  cursor: pointer;
+}
+.header-section .section-nav li .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  margin: -5px 0 0 -5px;
+  background: #FFFFFF;
+  border-radius: 1px;
+  opacity: 0;
+}
+.header-section .section-nav li.active {
+  box-shadow: 0 0 5px #7E7E80 inset;
+  background-color: transparent;
+  opacity: .9;
+}
+.header-section .section-nav li.active .inner {
+  opacity: .9;
 }
 @media (max-width: 320px) {
   .header-section .navbar-brand {
@@ -984,130 +1022,6 @@ form {
   }
 }
 
-.main-content {
-  margin-top: 54px;
-}
-.main-content.hidden {
-  display: none;
-}
-.main-content .carousel {
-  margin-top: -96px;
-  position: fixed;
-  right: 4%;
-  top: 50%;
-  z-index: 1;
-}
-.main-content .carousel li {
-  background-color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 30px;
-  margin-bottom: 18px;
-  opacity: .4;
-  position: relative;
-  transition: opacity 200ms;
-  width: 30px;
-}
-.main-content .carousel li .inner-circle {
-  opacity: 0;
-  background: #FFFFFF;
-  border-radius: 50%;
-  height: 18px;
-  left: 50%;
-  margin: -9px 0 0 -9px;
-  position: absolute;
-  top: 50%;
-  width: 18px;
-  transition: opacity 200ms;
-}
-.main-content .carousel li.active {
-  background-color: transparent;
-  opacity: 1;
-}
-.main-content .carousel li.active .inner-circle {
-  opacity: 1;
-}
-.main-content .panel {
-  height: 100vh;
-  position: relative;
-  width: 100%;
-}
-.main-content .panel .panel__heading h4 a {
-  color: #FFFFFF;
-}
-.main-content .panel .panel__heading h4 a:hover {
-  text-decoration: underline;
-}
-.main-content .panel-primary {
-  background-color: #0080CA;
-  background-image: url("../images/background-pattern.png");
-  background-size: 120px;
-}
-.main-content .panel-about {
-  background-color: #E93AA6;
-  background-image: url("../images/background-pattern.png");
-  background-size: 120px;
-}
-.main-content .illustration-container {
-  bottom: 60px;
-  position: absolute;
-  width: 100%;
-}
-.main-content .illustration-container img {
-  width: 100%;
-}
-.main-content .illustration-container .illustration--desktop {
-  display: none;
-}
-.main-content .panel-finance {
-  background: url("../images/home-flightclub-background.jpg") no-repeat;
-  background-position: 0;
-  background-size: cover;
-}
-.main-content .panel-fashion {
-  background: url("../images/home-airdye-background.jpg") no-repeat;
-  background-position: 0;
-  background-size: cover;
-}
-.main-content .panel-stationary {
-  background: url("../images/home-minted-background.jpg") no-repeat;
-  background-position: 0;
-  background-size: cover;
-}
-@media (min-width: 900px) {
-  .main-content {
-    margin-top: 0;
-  }
-  .main-content .carousel {
-    margin-top: -96px;
-    right: 2%;
-    top: 45%;
-  }
-  .main-content .carousel li {
-    height: 30px;
-    margin-bottom: 18px;
-    width: 30px;
-  }
-  .main-content .illustration-container {
-    padding: 0 20px;
-  }
-  .main-content .illustration-container .illustration--desktop {
-    display: block;
-  }
-  .main-content .illustration-container .illustration--mobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 960px) and (orientation: landscape) {
-  .main-content .panel .panel__heading {
-    z-index: 1;
-  }
-  .main-content .illustration-container {
-    opacity: .3;
-  }
-}
-
 .container {
   padding-left: 0;
 }
@@ -1119,6 +1033,56 @@ form {
 
 .center-content {
   text-align: center;
+}
+
+.home-section {
+  margin-top: 54px;
+}
+.home-section #introduction {
+  background-color: #0080CA;
+}
+.home-section #flightclub {
+  background: url("../images/home-flightclub-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+.home-section #imbu {
+  background: url("../images/home-airdye-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+.home-section #minted {
+  background: url("../images/home-minted-background.jpg") no-repeat;
+  background-position: 0;
+  background-size: cover;
+}
+.home-section .illustration {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 45vh;
+  background: url("../images/GiantMachines-graphic.png");
+  background-size: cover;
+  opacity: .7;
+}
+.home-section .copyright {
+  padding-top: 20px;
+}
+@media (min-width: 900px) {
+  .home-section {
+    margin-top: 0;
+  }
+  .home-section .illustration {
+    height: 30vh;
+    left: -50px;
+    right: -50px;
+    background: url("../images/home-image.png") no-repeat;
+    background-size: cover;
+  }
+  .home-section .copyright {
+    display: none;
+  }
 }
 
 .about-section .panel--primary {
@@ -1168,23 +1132,6 @@ form {
 }
 .contact-section h1, .contact-section h4 {
   color: #000000;
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-}
-.footer.hidden {
-  display: none;
-}
-.footer p {
-  margin: 0;
-}
-@media (min-width: 900px) {
-  .footer {
-    display: none;
-  }
 }
 
 .case-study {

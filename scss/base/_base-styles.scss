@@ -20,10 +20,10 @@ body {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 a {
-  color: $link-color;
+  color: $white;
 
   &:hover {
-    color: darken($link-color, 5%);
+    text-decoration: underline;
   }
 }
 

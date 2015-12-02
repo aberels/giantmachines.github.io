@@ -35,6 +35,21 @@
       <li><a href="/contact">CONTACT</a></li>
     </ul>
 
+    <ul class="section-nav">
+      <li data-panel="introduction" class="section-nav__radio-button active">
+        <div class="inner"></div>
+      </li>
+      <li data-panel="flightclub" class="section-nav__radio-button">
+        <div class="inner"></div>
+      </li>
+      <li data-panel="imbu" class="section-nav__radio-button">
+        <div class="inner"></div>
+      </li>
+      <li data-panel="minted" class="section-nav__radio-button">
+        <div class="inner"></div>
+      </li>
+    </ul>
+
     <div class="copyright">
       <p>
         &copy; <span class="copyright-year">2015</span> Giant Machines<br>
@@ -46,76 +61,87 @@
   <!-- /Header LeftRail Nav –––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 
-  <!-- Homepage –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns main-content homepage">
-        <ul class="carousel">
-          <li data-panel="panel-primary"    class="link active"><div class="inner-circle"></div></li>
-          <li data-panel="panel-finance"    class="link"><div class="inner-circle"></div></li>
-          <li data-panel="panel-fashion"    class="link"><div class="inner-circle"></div></li>
-          <li data-panel="panel-stationary" class="link"><div class="inner-circle"></div></li>
-        </ul>
-        <div class="panel panel-primary">
-          <div class="panel__heading">
-            <h1>We solve your problems.</h1>
-            <h3>Sometimes with software.</h3>
-          </div>
-          <div class="illustration-container">
-            <img class="illustration--desktop" src="images/home-image.png" alt="">
-            <img class="illustration--mobile" src="images/GiantMachines-graphic.png" alt="">
-          </div>
+  <!-- Home Section –––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container home-section">
+    <div class="panel panel--primary" id="introduction">
+      <div class="row">
+        <div class="ten columns offset-by-one panel__heading">
+          <h1>We Solve Your Problems.</h1>
+          <h3>Sometimes with software.</h3>
         </div>
-        <div class="panel panel-finance">
-          <div class="panel__heading">
-            <h2>Financial Instruments</h2>
-            <h4>
-              Applying our expertise in financial systems Giant machines
-              creates a platform for the sneaker resale market’s biggest
-              player, <a target="_blank" href="http://flightclub.com"><b>Flight Club</b></a>.
-            </h4>
-            <div class="button view-case-study" data-case-study="#flightclub">View Case Study</div>
-          </div>
-        </div>
-        <div class="panel panel-fashion">
-          <div class="panel__heading">
-            <h2>High Fashion</h2>
-            <h4>
-              Giant Machines takes a global digital textile printing business to
-              the cloud, integrating proprietary desktop software, ERP, and
-              cloud services for <b>IMBU.</b>
-            </h4>
-            <div class="button view-case-study" data-case-study="#imbu">View Case Study</div>
-          </div>
-        </div>
-        <div class="panel panel-stationary">
-          <div class="panel__heading">
-            <h2>Stationary</h2>
-            <h4>
-              Giant Machines tackles a mobile overhaul for one of
-              the fastest growing design marketplaces, <a target="_blank" href="http://minted.com"><b>Minted</b></a>.
-            </h4>
-            <div class="button view-case-study" data-case-study="#minted">View Case Study</div>
-          </div>
+      </div>
+
+      <div class="illustration"></div>
+
+    </div>
+
+    <div class="panel panel--primary" id="flightclub">
+      <div class="row">
+        <div class="ten columns offset-by-one panel__heading">
+          <h1>Financial Instruments</h1>
+          <h3>
+            Applying our expertise in financial systems Giant machines creates
+            a platform for the sneaker resale market’s biggest player,
+            <a target="_blank" href="http://flightclub.com">
+              <b>Flight Club</b>
+            </a>.
+          </h3>
+          <button class="view-case-study" data-case="#flightclub-case">
+            View Case Study
+          </button>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="twelve columns footer">
-        <div class="copyright">
-          <p>
-            &copy; <span class="copyright-year">2015</span> Giant Machines<br>
-            Software LLC.<br>
-            All rights reserved.
-          </p>
+
+    <div class="panel panel--primary" id="imbu">
+      <div class="row">
+        <div class="ten columns offset-by-one panel__heading">
+          <h1>High Fashion</h1>
+          <h3>
+            Giant Machines takes a global digital textile printing business to
+            the cloud, integrating proprietary desktop software, ERP, and
+            cloud services for <b>IMBU.</b>
+          </h3>
+          <button class="view-case-study" data-case="#imbu-case">
+            View Case Study
+          </button>
         </div>
+      </div>
+    </div>
+
+    <div class="panel panel--primary" id="minted">
+      <div class="row">
+        <div class="ten columns offset-by-one panel__heading">
+          <h1>Stationary</h1>
+          <h3>
+            Giant Machines tackles a mobile overhaul for one of the fastest
+            growing design marketplaces,
+            <a target="_blank" href="http://minted.com">
+              <b>Minted</b>
+            </a>.
+          </h3>
+          <button class="view-case-study" data-case="#minted-case">
+            View Case Study
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns copyright center-content">
+        <p>
+          &copy; <span class="copyright-year">2015</span> Giant Machines<br>
+          Software LLC.<br>
+          All rights reserved.
+        </p>
       </div>
     </div>
   </div>
-  <!-- End Homepage –––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- /Home Section ––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 
   <!-- Flightclub Case ––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="row case-study" id="flightclub">
+  <div class="row case-study" id="flightclub-case">
     <div class="twelve-columns main-content">
       <div class="close-icon" data-panel="panel-finance"></div>
       <div class="panel panel-flightclub">
@@ -236,8 +262,9 @@
   </div>
   <!-- End Flightclub Case ––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+
   <!-- Airdye/imbu Case –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="row case-study" id="imbu">
+  <div class="row case-study" id="imbu-case">
     <div class="twelve-columns main-content">
       <div class="close-icon" data-panel="panel-fashion"></div>
       <div class="panel panel-imbu">
@@ -358,8 +385,9 @@
   </div>
   <!-- End Airdye/imbu Case –––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+
   <!-- Minted Case ––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="row case-study" id="minted">
+  <div class="row case-study" id="minted-case">
     <div class="twelve-columns main-content">
       <div class="close-icon" data-panel="panel-stationary"></div>
       <div class="panel panel-minted">
@@ -502,6 +530,7 @@
   </div>
   <!-- End Minted Case ––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+
   <!-- About Section ––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container about-section">
     <div class="panel panel--primary panel--half-height">
@@ -627,6 +656,7 @@
     </div>
   </div>
   <!-- End About Section ––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 
   <!-- Team Section –––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container team-section">
@@ -828,6 +858,7 @@
   </div>
   <!-- End Team Section –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+
   <!-- Contact Section ––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container contact-section">
     <div class="panel panel--primary">
@@ -856,6 +887,7 @@
     </div>
   </div>
   <!-- End Contact Section ––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 
   <!-- Core Javascript Files -->
   <script src="js/jquery-1.11.3.min.js"></script>
