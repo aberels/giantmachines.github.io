@@ -285,15 +285,6 @@
       margin-bottom: 0;
     }
 
-    a {
-      color: $black;
-      margin: 0;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
     .header-row {
       margin-top: 30px;
       margin-bottom: 0;
@@ -305,6 +296,15 @@
     width: auto;
     height: auto;
     padding-top: 30px;
+  }
+
+  a {
+    color: $black;
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   ul {

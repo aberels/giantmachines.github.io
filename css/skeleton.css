@@ -1308,13 +1308,6 @@ form {
 .team-section .employees h4 {
   margin-bottom: 0;
 }
-.team-section .employees a {
-  color: #000000;
-  margin: 0;
-}
-.team-section .employees a:hover {
-  text-decoration: underline;
-}
 .team-section .employees .header-row {
   margin-top: 30px;
   margin-bottom: 0;
@@ -1324,6 +1317,13 @@ form {
   width: auto;
   height: auto;
   padding-top: 30px;
+}
+.team-section a {
+  color: #000000;
+  margin: 0;
+}
+.team-section a:hover {
+  text-decoration: underline;
 }
 .team-section ul {
   list-style: disc;
