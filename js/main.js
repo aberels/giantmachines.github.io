@@ -24,6 +24,11 @@ $(function() {
 
   /** SetTimeout for scrolling the main content automatically */
   function autoScrollCarousel() {
+    try {
+      window.performance.mark('GM_carousel_loaded');  
+    } catch (e) {
+      console.log('Your browser does not support HTML5 UserTiming API!');
+    }
     var scrollDistance = panelHeight;
     setInterval(function(){
       if (awatingInteraction) {
@@ -114,4 +119,12 @@ $(function() {
     $($(this).data('case-study')).show();
     $('body').scrollTop(0);
   });
+
+  try {
+    window.performance.measure('domLoading to carousel init', 'domLoading', 'GM_carousel_loaded');
+    console.log('domLoading to carousel init:', window.performance.getEntriesByName('domLoading to carousel init')[0]);
+  } catch (e) {
+    console.log('Your browser does not support HTML5 UserTiming API!');
+  }
+  
 });
