@@ -1,0 +1,98 @@
+.panel {
+  position: relative;
+  height: $panel-full-height-mobile;
+
+  @media (#{$bp-larger-than-tablet}) {
+    height: $panel-full-height-desktop;
+  }
+
+  &--half-height {
+    height: $panel-half-height-mobile;
+
+    @media (#{$bp-larger-than-tablet}) {
+      height: $panel-half-height-desktop;
+    }
+  }
+
+  &--primary {
+    background-image: url('../images/background-pattern.png');
+    background-size: 120px;
+
+    a {
+      font: inherit;
+    }
+  }
+
+  &--secondary {
+    height: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+    background: $greybackground;
+
+    h3, h4 {
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    .row {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media (#{$bp-larger-than-mobile}) {
+      .row {
+        margin-left: initial;
+        margin-right: initial;
+      }
+    }
+  }
+
+  &--tertiary {
+    background: $lightgreybackground;
+  }
+
+  .panel__heading {
+    position: absolute;
+    top: 12%;
+
+    h1, h3, h4, button, .divider {
+      margin-left: 5%;
+      margin-right: 12%;
+    }
+
+
+    @media (#{$bp-larger-than-mobile}) {
+      top: 33%;
+
+      h1, h3, h4, button, .divider {
+        margin-left: initial;
+        margin-right: initial;
+      }
+    }
+  }
+
+  .divider {
+    margin-bottom: 10px;
+
+    &--white {
+      border: 1px solid $white;
+    }
+
+    &--black {
+      border: 1px solid $black;
+    }
+
+    // Larger than tablet
+    @media (#{$bp-larger-than-tablet}) {
+      width: 60%;
+    }
+  }
+
+  .header-row {
+    margin-bottom: 10px;
+
+    @media (#{$bp-larger-than-mobile}) {
+      margin-top: 20px;
+    }
+  }
+}
