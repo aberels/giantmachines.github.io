@@ -263,24 +263,6 @@ hr {
   border-top: 1px solid #e1e1e1;
 }
 
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.u-pull-right {
-  float: right;
-}
-
-.u-pull-left {
-  float: left;
-}
-
 @font-face {
   font-family: Graphik-Regular;
   src: url("../fonts/Graphik-Regular.otf");
@@ -653,65 +635,6 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   box-sizing: border-box;
 }
 
-textarea,
-select {
-  height: 38px;
-  padding: 6px 10px;
-  background-color: #fff;
-  border: 1px solid #d1d1d1;
-  border-radius: 2px;
-  box-shadow: none;
-  box-sizing: border-box;
-}
-
-input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #33c3f0;
-  outline: 0;
-}
-
-textarea:focus,
-select:focus {
-  border: 1px solid #33c3f0;
-  outline: 0;
-}
-
-label,
-legend {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600;
-}
-
-fieldset {
-  padding: 0;
-  border-width: 0;
-}
-
-input[type="checkbox"], input[type="radio"] {
-  display: inline;
-}
-
-label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: normal;
-}
-
 ul {
   list-style: circle inside;
 }
@@ -754,23 +677,6 @@ pre > code {
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre;
-}
-
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #e1e1e1;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
 }
 
 button,
