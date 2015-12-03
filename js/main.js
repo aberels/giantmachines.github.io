@@ -172,9 +172,9 @@ $(function() {
   // Close hamburger on blur
   $(document).on('touchstart click', function(event) {
     if (!$(event.target).closest('.nav-collapse').length) {
-      if($('.nav-collapse').is(':visible')) {
+      if($('.hamburger').hasClass('active')) {
         $('.nav-collapse').slideToggle(300);
-        $('.hamburger').toggleClass('active');
+        $('.hamburger').removeClass('active');
       }
     }
   });
