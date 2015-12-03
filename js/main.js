@@ -1,12 +1,18 @@
 $(function() {
   // Setting initial values for carousel
   var panelHeight = $('.panel').height();
+  var numCarouselSections = $('.home-section .panel--primary').length;
   var activePanel = 'panel-primary';
   var navHeight = $('.header-section').height();
   var footerHeight = $('.footer').height();
   var scrollDistance = panelHeight;
   var autoScrollInterval;
   var userScroll = false;
+
+  // Initialize Autoscroll
+  if($('body').is('.homepage')) {
+    autoScrollInterval = setInterval(autoScrollCarousel, 2500);
+  }
 
   // detect user scroll through mouse
   // Mozilla/Webkit
@@ -17,17 +23,12 @@ $(function() {
   //for IE/OPERA etc
   document.onmousewheel = mouseEvent;
 
-  // Simulate Navigation (Deep Linking)
-  navigateToPage();
-
-  // Initialize Autoscroll
-  if($('body').is('.homepage')) {
-    autoScrollInterval = setInterval(autoScrollCarousel, 4000);
-  }
-
   function mouseEvent(e) {
     userScroll = true;
   }
+
+  // Simulate Navigation (Deep Linking)
+  navigateToPage();
 
   // Kill autoscroll on click or touch
   $(document).on('click touchstart', function() {
@@ -42,7 +43,7 @@ $(function() {
       console.log('Your browser does not support HTML5 UserTiming API!');
     }
 
-    if (scrollDistance === (panelHeight * 3)) {
+    if (scrollDistance === (panelHeight * numCarouselSections)) {
       scrollDistance = 0;
     }
 
@@ -99,8 +100,8 @@ $(function() {
   function navigateToPage() {
     var pageName = getPageName();
     if (pageName) {
-      clearInterval(autoScrollInterval);
       showCaseStudy('#' + pageName);
+      clearInterval(autoScrollInterval);
     }
   }
 
@@ -151,8 +152,6 @@ $(function() {
 
   // Carousel Click Handler
   $('.section-nav__radio-button').click(function() {
-    clearInterval(autoScrollInterval);
-
     var linkedPanelID = $(this).data('panel');
     var linkedPanelOffset = $('#' + linkedPanelID).offset().top;
     checkNavHeight();
@@ -161,16 +160,27 @@ $(function() {
   });
 
   // Menu Click Handler
-  $('.hamburger').click(function(e) {
+  $('.hamburger').on('touchstart click', function(e) {
+    clearInterval(autoScrollInterval);
     e.preventDefault();
+    e.stopPropagation();
 
     $('.nav-collapse').slideToggle(300);
     $('.hamburger').toggleClass('active');
   });
 
+  // Close hamburger on blur
+  $(document).on('touchstart click', function(event) {
+    if (!$(event.target).closest('.nav-collapse').length) {
+      if($('.nav-collapse').is(':visible')) {
+        $('.nav-collapse').slideToggle(300);
+        $('.hamburger').toggleClass('active');
+      }
+    }
+  });
+
   // Case Study Click Handler
   $('.view-case-study').click(function(){
-    clearInterval(autoScrollInterval);
     var caseStudy = $(this).data('case');
 
     showCaseStudy(caseStudy);
@@ -184,8 +194,6 @@ $(function() {
     setActivePanel($('.section-nav__radio-button').first());
 
     updateURL(this);
-
-    clearInterval(autoScrollInterval);
   });
 
   try {

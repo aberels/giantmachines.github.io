@@ -905,11 +905,10 @@ form {
   background-size: contain;
 }
 .header-section .hamburger {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  margin-top: -12px;
-  padding: 10px 35px 16px 0;
+  height: 54px;
+  float: right;
+  padding: 25px 20px 0;
+  width: 70px;
   cursor: pointer;
 }
 .header-section .hamburger span,
@@ -973,7 +972,7 @@ form {
   position: fixed;
   top: 50%;
   right: 3%;
-  margin-top: -96px;
+  margin-top: -63px;
   z-index: 1;
 }
 .header-section .section-nav.hidden {
@@ -1201,6 +1200,7 @@ form {
   background: url("../images/case-studies/close-icon.png");
   background-size: cover;
   z-index: 1;
+  cursor: pointer;
 }
 .case-study-section.flightclub .panel--primary {
   background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;

@@ -19,11 +19,10 @@
   }
 
   .hamburger {
-    position: absolute;
-    top: 50%;
-    right: $gutter-mobile;
-    margin-top: -12px;
-    padding: 10px 35px 16px 0;
+    height: 54px;
+    float: right;
+    padding: 25px $gutter-mobile 0;
+    width: 70px;
     cursor: pointer;
 
     span,
@@ -100,7 +99,7 @@
     position: fixed;
     top: 50%;
     right: 3%;
-    margin-top: -96px;
+    margin-top: -63px;
     z-index: 1;
 
     &.hidden {
