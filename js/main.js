@@ -29,8 +29,8 @@ $(function() {
     userScroll = true;
   }
 
-  // Reset Autoscroll on click
-  $(document).click(function() {
+  // Kill autoscroll on click or touch
+  $(document).on('click touchstart', function() {
     clearInterval(autoScrollInterval);
   });
 
@@ -134,7 +134,6 @@ $(function() {
   $(window).scroll(function() {
     if (userScroll) {
       clearInterval(autoScrollInterval);
-      autoScrollInterval = setInterval(autoScrollCarousel, 4000);
     }
 
     var windowPosition = $(this).scrollTop();
@@ -153,7 +152,6 @@ $(function() {
   // Carousel Click Handler
   $('.section-nav__radio-button').click(function() {
     clearInterval(autoScrollInterval);
-    autoScrollInterval = setInterval(autoScrollCarousel, 4000);
 
     var linkedPanelID = $(this).data('panel');
     var linkedPanelOffset = $('#' + linkedPanelID).offset().top;
@@ -188,7 +186,6 @@ $(function() {
     updateURL(this);
 
     clearInterval(autoScrollInterval);
-    autoScrollInterval = setInterval(autoScrollCarousel, 4000);
   });
 
   try {
