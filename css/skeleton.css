@@ -1000,6 +1000,7 @@ form {
   background: #FFFFFF;
   border-radius: 2px;
   opacity: 0;
+  transition: opacity 300ms;
 }
 .header-section .section-nav li.active {
   box-shadow: 0 0 5px #7E7E80 inset;

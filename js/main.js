@@ -48,7 +48,7 @@ $(function() {
    * @param {integer} offset - pixes to scroll
    */
   function scrollCarousel(offset) {
-    $('body').animate({scrollTop: offset}, 1000, 'easeInOutQuart');
+    $('body').animate({scrollTop: offset}, 800, 'easeInOutQuart');
   }
 
   // Sets the active panel on page scroll
