@@ -32,7 +32,6 @@ $(function() {
   // Reset Autoscroll on click
   $(document).click(function() {
     clearInterval(autoScrollInterval);
-    autoScrollInterval = setInterval(autoScrollCarousel, 4000);
   });
 
   /** SetTimeout for scrolling the main content automatically */
