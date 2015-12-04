@@ -11,7 +11,7 @@ $(function() {
 
   // Initialize Autoscroll
   if($('body').is('.homepage')) {
-    autoScrollInterval = setInterval(autoScrollCarousel, 2000);
+    // autoScrollInterval = setInterval(autoScrollCarousel, 2000);
   }
 
   // detect user scroll through mouse
