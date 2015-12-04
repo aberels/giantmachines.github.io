@@ -20,28 +20,37 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px 0;
   color: $white;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
-h1 { font-size: 40px; font-family: $font-semibold;}
-h2 { font-size: 32px; font-family: $font-semibold;}
-h3 { font-size: 20px; font-family: $font-regular;}
-h4 { font-size: 18px; font-family: $font-regular;}
+// Mobile
+h1 { font-size: 44px; font-family: $font-semibold;}
+h2 { font-size: 35px; font-family: $font-semibold;}
+h3 { font-size: 22px; font-family: $font-regular;}
+h4 { font-size: 16px; font-family: $font-regular;}
 
-// Larger than tablet
+// Desktop
 @media (#{$bp-larger-than-mobile}) {
-  h1 { font-size: 48px; font-family: $font-semibold;}
-  h2 { font-size: 40px; font-family: $font-semibold;}
-  h3 { font-size: 28px; font-family: $font-regular;}
-  h4 { font-size: 20px; font-family: $font-regular;}
+  h1 { font-size: 36px; font-family: $font-semibold;}
+  h2 { font-size: 28px; font-family: $font-semibold;}
+  h3 { font-size: 20px; font-family: $font-regular;}
+  h4 { font-size: 16px; font-family: $font-regular;}
 }
+
+// Small Phone
+@media (#{$small-phone}) {
+  h1 {font-size: 40px; line-height: 1.3;}
+  h3 {font-size: 18px;}
+}
+
 
 p {
-  margin-top: 0;
   font-family: $font-regular;
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 a {
-  font-size: 18px;
+  color: $medium-gray;
+  font-family: $font-regular;
 }

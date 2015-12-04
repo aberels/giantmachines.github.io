@@ -5,19 +5,73 @@
     display: none;
   }
 
-  // Larger than tablet
   @media (#{$bp-larger-than-tablet}) {
     padding-left: $left-rail-width;
   }
-}
 
-.center-content {
-  text-align: center;
+  .row {
+    &.copyright {
+      margin: 0;
+      padding: 20px;
+
+      p {
+        margin: 0;
+        color: $medium-gray;
+      }
+
+      @media (#{$bp-larger-than-tablet}) {
+        display: none;
+      }
+    }
+  }
+
+  .illustration-container {
+    @include absolute($bottom: 70px);
+    @include scale(2);
+    width: 100%;
+    text-align: center;
+    @include opacity(.8);
+
+    @media (#{$small-phone}) {
+      @include opacity(.1);
+    }
+
+    @media (max-height: 414px) {
+      @include opacity(.1);
+    }
+
+    .large {
+      display: none;
+    }
+
+    .small {
+      @include size($width: 375px, $height: 180px);
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .illustration-container {
+      @include opacity(1);
+
+      .large {
+        @include size($width: 773px, $height: 124px);
+        display: inline-block;
+      }
+
+      .small {
+        display: none;
+      }
+    }
+  }
 }
 
 .home-section {
   margin-top: $header-height;
   overflow-x: hidden;
+
+  @media (#{$bp-larger-than-tablet}) {
+    margin-top: 0;
+  }
 
   #introduction {
     background-color: $blue;
@@ -40,119 +94,90 @@
     background-position: 0;
     background-size: cover;
   }
-
-  .illustration {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    height: 45vh;
-    background: url('../images/GiantMachines-graphic.png');
-    background-size: cover;
-    opacity: .7;
-  }
-
-  .copyright {
-    padding-top: 20px;
-  }
-
-  // Desktop styles
-  @media (#{$bp-larger-than-tablet}) {
-    margin-top: 0;
-
-    .illustration {
-      height: 30vh;
-      left: -50px;
-      right: -50px;
-      background: url('../images/home-image.png') no-repeat;
-      background-size: cover;
-    }
-
-    .copyright {
-      display: none;
-    }
-  }
 }
 
 .case-study-section {
-  top: $header-height;
-  position: absolute;
-  top: 100vh;
+  @include absolute($top: 100vh);
   height: 0;
   visibility: hidden;
   overflow-y: hidden;
-  z-index: -1;
 
   &.active {
+    top: $header-height;
     height: auto;
     visibility: visible;
-    z-index: 10;
-    top: $header-height;
     overflow-y: visible;
-  }
+    z-index: 10;
 
-  @media (#{$bp-larger-than-tablet}) {
-    &.active {
+    @media (#{$bp-larger-than-tablet}) {
       top: 0;
     }
   }
 
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 18px;
+    letter-spacing: 2.8px;
+    font-family: $font-regular;
+    color: $black;
+    text-transform: uppercase;
+
+    @media (#{$bp-larger-than-tablet}) {
+      font-size: 17px;
+    }
+  }
+
   h3 {
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
   }
 
   .row {
-    margin-bottom: 10px;
-  }
+    margin-bottom: 30px;
 
-  .three {
-    text-align: center;
-
-    img {
-      max-width: 70%;
-      width: auto;
-      height: auto;
-
-      @media (#{$bp-larger-than-mobile}) {
-        max-width: 100%;
-        padding-top: 15px;
-        text-align: initial;
-      }
+    &.no-gutter {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
-  .seven {
-    margin-top: 20px;
+  img {
+    margin: 20px 0;
 
     @media (#{$bp-larger-than-mobile}) {
-      margin-top: initial;
+      margin: initial;
     }
   }
 
-  .ten {
-    img {
-      margin-left: -30px;
-      width: 130%;
+  .stretch {
+    @include size($width: 620px, $height: 100%);
+    max-width: 100%;
 
-      @media (#{$bp-larger-than-mobile}) {
-        width: 100%;
-        margin-left: initial;
-      }
+    @media (#{$bp-larger-than-mobile}) {
+      width: 100%;
     }
   }
-
 
   .close-icon {
-    position: absolute;
-    right: 0;
-    height: 16px;
-    width: 16px;
+    @include absolute($right: 0);
+    @include size($width: 16px, $height: 16px);
     margin: 10px;
     background: url('../images/case-studies/close-icon.png');
     background-size: cover;
     z-index: 1;
     cursor: pointer;
+
+    @media (#{$bp-larger-than-mobile}) {
+      @include size($width: 32px, $height: 32px);
+      margin: 20px;
+    }
   }
 
   &.flightclub {
@@ -160,6 +185,17 @@
       background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
       background-position: 0;
       background-size: cover;
+    }
+
+    .modernize,
+    .bridge {
+      @include size($width: 220px, $height: 100%);
+      max-width: 100%;
+    }
+
+    .sneaker {
+      @include size($width: 204px, $height: 100%);
+      max-width: 100%;
     }
 
     button {
@@ -170,7 +206,7 @@
 
   &.imbu {
     .panel--primary {
-      // background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
+      // background: url('') no-repeat;
       // background-position: 0;
       // background-size: cover;
       background-color: $blue;
@@ -189,124 +225,129 @@
       background-size: cover;
     }
 
+    .traffic {
+      @include size($width: 219px, $height: 100%);
+      max-width: 100%;
+    }
+
+    .devices {
+      @include size($width: 212px, $height: 100%);
+      max-width: 100%;
+    }
+
     button {
       color: $pink;
       border-color: $pink;
-    }
-  }
-
-  @media (#{$bp-larger-than-mobile}) {
-    .close-icon {
-      width: 32px;
-      height: 32px;
-      margin: 20px;
-    }
-
-    .row {
-      margin-bottom: 30px;
     }
   }
 }
 
 .about-section {
   margin-top: $header-height;
+  overflow-x: hidden;
 
-  @media (#{$bp-larger-than-mobile}) {
+  @media (#{$bp-larger-than-tablet}) {
     margin-top: 0;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
+
+  img {
+    margin: 20px 0;
+
+    @media (#{$bp-larger-than-mobile}) {
+      margin: initial;
+    }
   }
 
   .panel--primary {
     background-color: $pink;
   }
 
-  .panel--secondary {
-    .row {
-      text-align: center;
+  .machine {
+    @include size($width: 220px, $height: 100%);
+    max-width: 100%;
+  }
 
-      @media (#{$bp-larger-than-mobile}) {
-        text-align: initial;
-      }
+  .expertise {
+    background-color: $white;
+
+    @media (#{$bp-larger-than-tablet}) {
+      border-left: 4px solid $greybackground;
+      border-right: 4px solid $greybackground;
+    }
+
+    .briefcase,
+    .pricetag,
+    .mobile,
+    .creditcards {
+      @include size($width: 60px, $height: 100%);
+      max-width: 100%;
     }
   }
 
   .partner-logo {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    margin-bottom: 20px;
-    opacity: 1;
-    transition: opacity 200ms;
+    @include size($width: 140px, $height: 100%);
+    max-width: 100%;
 
-    &:hover {
-      -webkit-filter: none;
-      filter: none;
-      opacity: 1;
+    &--bw {
+      display: none;
+      @media (#{$bp-larger-than-mobile}) {
+        display: block;
+      }
     }
 
-    @media (#{$bp-larger-than-mobile}) {
-      margin-bottom: initial;
-      opacity: .7;
-    }
-  }
-
-  img {
-    max-width: 70%;
-    width: auto;
-    height: auto;
-
-    @media (#{$bp-larger-than-mobile}) {
-      max-width: 100%;
-      padding-top: 30px;
-      text-align: initial;
+    &--color {
+      @media (#{$bp-larger-than-mobile}) {
+        display: none;
+      }
     }
   }
 }
 
 .team-section {
   margin-top: $header-height;
+  overflow-x: hidden;
 
-  @media (#{$bp-larger-than-mobile}) {
+  h4 {
+    a {
+      text-transform: lowercase;
+    }
+  }
+
+  @media (#{$bp-larger-than-tablet}) {
     margin-top: 0;
+  }
+
+  .row {
+    margin-bottom: 30px;
   }
 
   .panel--primary {
     background-color: $green;
   }
 
-  .history {
-    p {
-      margin: 0;
+  .principal {
+    max-height: 80%;
+    max-width: 80%;
+  }
+
+  .team {
+    background-color: $white;
+
+    @media (#{$bp-larger-than-tablet}) {
+      border-left: 4px solid $greybackground;
+      border-right: 4px solid $greybackground;
     }
   }
 
-  .employees {
-    padding-left: 5%;
-    padding-right: 5%;
-
-    h4 {
-      margin-bottom: 0;
-    }
-
-    .header-row {
-      margin-top: 30px;
-      margin-bottom: 0;
-    }
-  }
-
-  img {
+  .robot {
+    @include size($width: 127px, $height: 100%);
     max-width: 100%;
-    width: auto;
-    height: auto;
-    padding-top: 30px;
   }
 
-  a {
-    color: $black;
-    margin: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   ul {
     list-style: disc;
@@ -315,6 +356,24 @@
 }
 
 .contact-section {
+  overflow: hidden;
+
+  h1, h4 {
+    color: $black;
+  }
+
+  h4, p {
+    margin-left: $gutter-mobile;
+    margin-right: $gutter-desktop;
+  }
+
+  @media (#{$bp-larger-than-mobile}) {
+    h4, p {
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+
   .close-icon {
     background: url('../images/gray-close-icon.png');
     background-size: cover;
@@ -322,21 +381,19 @@
 
   .panel--primary {
     background-color: $greybackground;
-
-    .panel__heading {
-      top: 20%;
-    }
   }
 
   .panel--secondary {
-    margin-top: -66vh;
+    min-height: 50vh;
+  }
 
+  .email {
     a {
-      color: $black;
+      color: $blue;
     }
   }
 
-  h1, h4 {
-    color: $black;
+  .illustration-container {
+    @include opacity(.1);
   }
 }
