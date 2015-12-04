@@ -11,7 +11,7 @@ $(function() {
 
   // Initialize Autoscroll
   if($('body').is('.homepage')) {
-    autoScrollInterval = setInterval(autoScrollCarousel, 2500);
+    autoScrollInterval = setInterval(autoScrollCarousel, 2000);
   }
 
   // detect user scroll through mouse
@@ -45,6 +45,7 @@ $(function() {
 
     if (scrollDistance === (panelHeight * numCarouselSections)) {
       scrollDistance = 0;
+      clearInterval(autoScrollInterval);
     }
 
     scrollCarousel(scrollDistance);
