@@ -328,7 +328,7 @@ a {
 /*
     Display
  */
-.panel .panel__heading {
+.panel .panel__heading, .container .flex-row {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flexbox;
@@ -352,6 +352,13 @@ a {
 /*
     Flex wrap
  */
+.container .flex-row {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 /*
     Flex flow
  */
@@ -381,6 +388,12 @@ a {
   -moz-justify-content: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+.container .flex-row {
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
 
 /*
@@ -1070,6 +1083,17 @@ form {
     display: none;
   }
 }
+.container .flex-row .center-content {
+  min-width: 25%;
+  -webkit-flex-grow: 1;
+  -webkit-box-flex: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.container .flex-row.five-wide .center-content {
+  min-width: 20%;
+}
 .container .illustration-container {
   position: absolute;
   bottom: 70px;
@@ -1323,13 +1347,14 @@ form {
   width: 140px;
   height: 100%;
   max-width: 100%;
+  margin: 10px;
 }
 .about-section .partner-logo--bw {
   display: none;
 }
 @media (min-width: 768px) {
   .about-section .partner-logo--bw {
-    display: block;
+    display: inline-block;
   }
 }
 @media (min-width: 768px) {
@@ -1357,8 +1382,10 @@ form {
   background-color: #00B264;
 }
 .team-section .principal {
-  max-height: 80%;
-  max-width: 80%;
+  width: 180px;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 20px;
 }
 .team-section .team {
   background-color: #FFFFFF;
@@ -1373,6 +1400,7 @@ form {
   width: 127px;
   height: 100%;
   max-width: 100%;
+  margin: 20px 10px;
 }
 .team-section ul {
   list-style: disc;

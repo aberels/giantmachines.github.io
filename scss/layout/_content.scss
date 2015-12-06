@@ -25,6 +25,24 @@
     }
   }
 
+
+  .flex-row {
+    @include display-flex();
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+
+    .center-content {
+      min-width: 25%;
+      @include flex-grow(1);
+    }
+
+    &.five-wide {
+      .center-content {
+        min-width: 20%;
+      }
+    }
+  }
+
   .illustration-container {
     @include absolute($bottom: 70px);
     @include scale(2);
@@ -291,11 +309,12 @@
   .partner-logo {
     @include size($width: 140px, $height: 100%);
     max-width: 100%;
+    margin: 10px;
 
     &--bw {
       display: none;
       @media (#{$bp-larger-than-mobile}) {
-        display: block;
+        display: inline-block;
       }
     }
 
@@ -330,8 +349,9 @@
   }
 
   .principal {
-    max-height: 80%;
-    max-width: 80%;
+    @include size($width: 180px, $height: 100%);
+    max-width: 100%;
+    margin: 0 20px;
   }
 
   .team {
@@ -346,6 +366,7 @@
   .robot {
     @include size($width: 127px, $height: 100%);
     max-width: 100%;
+    margin: 20px 10px;
   }
 
 
