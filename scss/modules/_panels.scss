@@ -1,32 +1,30 @@
 .panel {
   position: relative;
-  height: $panel-full-height-mobile;
+  height: calc(100vh - 54px);
 
   @media (#{$bp-larger-than-tablet}) {
-    height: $panel-full-height-desktop;
-  }
-
-  &--half-height {
-    height: $panel-half-height-mobile;
-
-    @media (#{$bp-larger-than-tablet}) {
-      height: $panel-half-height-desktop;
-    }
+    height: $panel-full-height;
   }
 
   &--primary {
     background-image: url('../images/background-pattern.png');
     background-size: 120px;
+    background-attachment: fixed;
 
-    a {
-      font: inherit;
+    .row {
+      height: 100%;
     }
+  }
+
+
+  &--half-height {
+    height: $panel-half-height;
   }
 
   &--secondary {
     height: 100%;
     overflow: hidden;
-    padding: 50px 0;
+    padding: 50px 0 0;
     background: $greybackground;
 
     h3, h4 {
@@ -37,33 +35,35 @@
     .row {
       margin-left: 20px;
       margin-right: 20px;
-    }
 
-    @media (#{$bp-larger-than-mobile}) {
-      .row {
+      @media (#{$bp-larger-than-mobile}) {
         margin-left: initial;
         margin-right: initial;
       }
     }
   }
 
-  &--tertiary {
-    background: $lightgreybackground;
-  }
-
   .panel__heading {
-    position: absolute;
-    top: 12%;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+    height: 100%;
+    margin-top: -15px;
 
     h1, h3, h4, button, .divider {
-      margin-left: 5%;
-      margin-right: 12%;
+      margin-left: $gutter-mobile;
+      margin-right: $gutter-desktop;
     }
 
+    a {
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 
     @media (#{$bp-larger-than-mobile}) {
-      top: 33%;
-
       h1, h3, h4, button, .divider {
         margin-left: initial;
         margin-right: initial;
@@ -72,7 +72,7 @@
   }
 
   .divider {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     &--white {
       border: 1px solid $white;
@@ -82,17 +82,8 @@
       border: 1px solid $black;
     }
 
-    // Larger than tablet
     @media (#{$bp-larger-than-tablet}) {
       width: 60%;
-    }
-  }
-
-  .header-row {
-    margin-bottom: 10px;
-
-    @media (#{$bp-larger-than-mobile}) {
-      margin-top: 20px;
     }
   }
 }
