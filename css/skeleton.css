@@ -868,9 +868,10 @@ form {
   right: 0;
   left: 0;
   height: 54px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
   padding: 0 20px;
   z-index: 100;
-  background-color: #FFFFFF;
 }
 @media (max-width: 414px) {
   .header-section {
@@ -889,9 +890,9 @@ form {
   top: 50%;
   width: 240px;
   height: 14px;
-  margin-top: -7px;
   background: url("../images/GM-logo-small.png") no-repeat;
   background-size: contain;
+  margin-top: -7px;
 }
 @media (min-width: 1024px) {
   .header-section .navbar-brand {
@@ -912,9 +913,9 @@ form {
   right: 0;
   width: 70px;
   height: 54px;
+  cursor: pointer;
   float: right;
   padding: 25px 20px 0;
-  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .header-section .hamburger {
@@ -924,6 +925,11 @@ form {
 .header-section .hamburger span,
 .header-section .hamburger span:before,
 .header-section .hamburger span:after {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   background: #7E7E80;
   border-radius: 2px;
   content: '';
@@ -931,11 +937,6 @@ form {
   display: block;
   height: 3px;
   position: absolute;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
   width: 35px;
 }
 .header-section .hamburger span:before {
@@ -960,32 +961,32 @@ form {
   top: 54px;
   right: 0;
   left: 0;
-  display: none;
   background: #FFFFFF;
   box-shadow: 0 0 2px #7E7E80 inset;
+  display: none;
   z-index: 2;
 }
 .header-section .nav-collapse li {
   border-bottom: 1px solid #DBDBDB;
+  display: table;
   height: 60px;
   margin: 0;
   width: 100%;
-  display: table;
 }
 .header-section .nav-collapse li a {
   display: table-cell;
-  vertical-align: middle;
   padding-left: 20px;
+  vertical-align: middle;
 }
-.header-section .nav-collapse li a:hover {
+.header-section .nav-collapse li a:hover, .header-section .nav-collapse li a.active {
   color: #000000;
 }
 @media (min-width: 1024px) {
   .header-section .nav-collapse {
+    box-shadow: none;
     display: block;
     top: 180px;
     width: 200px;
-    box-shadow: none;
   }
   .header-section .nav-collapse li {
     border: none;
@@ -1002,6 +1003,13 @@ form {
   .header-section .nav-collapse li a:hover {
     padding-left: 52px;
   }
+  .header-section .nav-collapse li a.active {
+    background-image: -webkit-linear-gradient(left, #f3f3f3 0%, #FFFFFF 100%);
+    background-image: -o-linear-gradient(left, #f3f3f3 0%, #FFFFFF 100%);
+    background-image: linear-gradient(to right, #f3f3f3 0%, #FFFFFF 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3F3F3', endColorstr='#FFFFFFFF', GradientType=1);
+  }
 }
 .header-section .copyright {
   display: none;
@@ -1010,15 +1018,15 @@ form {
   .header-section .copyright {
     position: absolute;
     bottom: 0;
-    display: block;
     color: #b7b7b7;
+    display: block;
   }
 }
 .header-section .section-nav {
   position: fixed;
   top: 50%;
   right: 20px;
-  margin: -84px 0 0;
+  margin: -63px 0 0;
   z-index: 1;
 }
 @media (max-width: 414px) {
@@ -1035,38 +1043,38 @@ form {
   display: none;
 }
 .header-section .section-nav li {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
   position: relative;
   width: 24px;
   height: 24px;
-  margin-bottom: 18px;
   background-color: #FFFFFF;
-  border: 2px solid #FFFFFF;
   border-radius: 2px;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+  border: 2px solid #FFFFFF;
   cursor: pointer;
+  margin-bottom: 18px;
 }
 .header-section .section-nav li .inner {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
-  margin: -5px 0 0 -5px;
-  background: #FFFFFF;
-  border-radius: 2px;
   opacity: 0;
   filter: alpha(opacity=0);
+  width: 10px;
+  height: 10px;
   -webkit-transition: opacity 0.1s ease;
   -moz-transition: opacity 0.1s ease;
   -ms-transition: opacity 0.1s ease;
   -o-transition: opacity 0.1s ease;
   transition: opacity 0.1s ease;
+  background: #FFFFFF;
+  border-radius: 2px;
+  margin: -5px 0 0 -5px;
 }
 .header-section .section-nav li.active {
-  background-color: transparent;
   opacity: 1;
   filter: alpha(opacity=100);
+  background-color: transparent;
 }
 .header-section .section-nav li.active .inner {
   opacity: 1;
@@ -1126,6 +1134,10 @@ form {
   height: 100%;
   display: block;
 }
+.container .close-icon--black {
+  background: url("../images/case-studies/close-icon-black.png");
+  background-size: cover;
+}
 .container .illustration {
   position: relative;
 }
@@ -1175,6 +1187,12 @@ form {
     margin-top: 0;
   }
 }
+.home-section a {
+  color: #FFFFFF;
+}
+.home-section a:hover {
+  text-decoration: underline;
+}
 .home-section #introduction {
   background-color: #0080CA;
 }
@@ -1183,7 +1201,7 @@ form {
   background-position: 0;
   background-size: cover;
 }
-.home-section #imbu {
+.home-section #airdye {
   background: url("../images/home-airdye-background.jpg") no-repeat;
   background-position: 0;
   background-size: cover;
@@ -1242,6 +1260,9 @@ form {
   margin-left: 0;
   margin-right: 0;
 }
+.case-study-section .row:last-child {
+  margin-bottom: 0;
+}
 .case-study-section img {
   margin: 20px 0;
 }
@@ -1280,12 +1301,25 @@ form {
   color: #000000;
   border-color: #000000;
 }
-.case-study-section.imbu .panel--primary {
-  background-color: #0080CA;
+.case-study-section.airdye .panel--primary {
+  background: url("../images/case-studies/airdye/air-dye-background.png") no-repeat;
+  background-position: 0;
+  background-size: cover;
 }
-.case-study-section.imbu button {
-  color: #0080CA;
-  border-color: #0080CA;
+.case-study-section.airdye .cloud {
+  width: 219px;
+  height: 100%;
+  max-width: 100%;
+}
+.case-study-section.airdye .move,
+.case-study-section.airdye .office {
+  width: 218px;
+  height: 100%;
+  max-width: 100%;
+}
+.case-study-section.airdye button {
+  color: #FAAD3B;
+  border-color: #FAAD3B;
 }
 .case-study-section.minted .panel--primary {
   background: url("../images/case-studies/minted/minted-background.jpg") no-repeat;
@@ -1305,6 +1339,9 @@ form {
 .case-study-section.minted button {
   color: #E93AA6;
   border-color: #E93AA6;
+}
+.case-study-section .panel--secondary {
+  padding-bottom: 30px;
 }
 
 .about-section {
@@ -1369,14 +1406,26 @@ form {
 .about-section .expertise .mobile,
 .about-section .expertise .creditcards {
   position: relative;
-  left: 20px;
   width: 60px;
   height: 100%;
   max-width: 100%;
 }
+@media (min-width: 768px) {
+  .about-section .expertise .briefcase,
+  .about-section .expertise .pricetag,
+  .about-section .expertise .mobile,
+  .about-section .expertise .creditcards {
+    left: 15px;
+  }
+}
 .about-section .partners-grid .image-container {
   position: relative;
-  margin: 15px;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .about-section .partners-grid .image-container {
+    margin: 15px;
+  }
 }
 .about-section .partners-grid .image-container img {
   width: 140px;
@@ -1387,6 +1436,7 @@ form {
   -o-transition: box-shadow 0.2s, opacity 0.3s;
   transition: box-shadow 0.2s, opacity 0.3s;
   border-radius: 2px;
+  margin: 0;
 }
 .about-section .partners-grid .image-container .partner-logo--color {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
@@ -1397,7 +1447,7 @@ form {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .about-section .partners-grid .image-container .partner-logo--bw {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -1490,8 +1540,14 @@ form {
 }
 
 .contact-section {
-  background-color: #F0F0F0;
-  overflow: hidden;
+  background: #FFFFFF;
+  margin-top: 54px;
+  overflow-x: hidden;
+}
+@media (min-width: 1024px) {
+  .contact-section {
+    margin-top: 0;
+  }
 }
 .contact-section h1, .contact-section h5, .contact-section p {
   color: #000000;
@@ -1505,8 +1561,9 @@ form {
   }
 }
 .contact-section .panel--primary {
-  background: #FFFFFF;
-  height: 96vh;
+  background-color: #fafafa;
+  background-size: 60px;
+  height: 97vh;
 }
 @media (min-width: 1024px) {
   .contact-section .panel--primary {
@@ -1520,6 +1577,14 @@ form {
 }
 .contact-section .panel--primary .content-wrapper {
   margin-top: 35px;
+}
+.contact-section .panel--primary .content-wrapper .columns:last-child {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .contact-section .panel--primary .content-wrapper .columns:last-child {
+    margin-top: 0;
+  }
 }
 .contact-section .email,
 .contact-section .phone,

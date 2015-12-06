@@ -1,9 +1,11 @@
 .header-section {
   @include fixed($top: 0, $right: 0, $left: 0);
   @include size($height: $header-height);
+
+  background-color: $white;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
   padding: 0 $gutter-mobile;
   z-index: 100;
-  background-color: $white;
 
   @media (#{$small-phone}) {
     padding: 0 $gutter-small-phone;
@@ -11,19 +13,22 @@
 
   @media (#{$bp-larger-than-tablet}) {
     @include size($width: $left-rail-width, $height: 100vh);
+
     padding: $gutter-desktop;
   }
 
   .navbar-brand {
     @include absolute($top: 50%);
     @include size($width: 240px, $height: 14px);
-    margin-top: -7px;
+
     background: url('../images/GM-logo-small.png') no-repeat;
     background-size: contain;
+    margin-top: -7px;
 
     @media (#{$bp-larger-than-tablet}) {
       @include absolute($top: $gutter-desktop, $right: 0, $left: 0);
       @include size($width: 111px, $height: 110px);
+
       background: url('../images/GM-logo.png') no-repeat;
       background-size: contain;
       margin: auto;
@@ -33,9 +38,10 @@
   .hamburger {
     @include absolute($top: 0, $right: 0);
     @include size($width: 70px, $height: $header-height);
+
+    cursor: pointer;
     float: right;
     padding: 25px 20px 0;
-    cursor: pointer;
 
     @media (#{$bp-larger-than-tablet}) {
       display: none;
@@ -44,6 +50,8 @@
     span,
     span:before,
     span:after {
+      @include transition(all 500ms ease-in-out);
+
       background: $medium-gray;
       border-radius: $global-radius;
       content: '';
@@ -51,7 +59,6 @@
       display: block;
       height: 3px;
       position: absolute;
-      @include transition(all 500ms ease-in-out);
       width: 35px;
     }
 
@@ -82,50 +89,36 @@
 
   .nav-collapse {
     @include fixed($top: $header-height, $right: 0, $left: 0);
-    display: none;
+
     background: $white;
     box-shadow: 0 0 2px $medium-gray inset;
+    display: none;
     z-index: 2;
 
     li {
       border-bottom: 1px solid $lightgreyborder;
+      display: table;
       height: 60px;
       margin: 0;
       width: 100%;
-      display: table;
 
       a {
         display: table-cell;
-        vertical-align: middle;
         padding-left: $gutter-mobile;
+        vertical-align: middle;
 
-        &:hover {
+        &:hover,
+        &.active {
           color: $black;
         }
-      }
-
-      &:first-child {
-        // background-image: radial-gradient(rgba($gm-yellow, .09), rgba($gm-yellow, .03));
-      }
-
-      &:nth-child(2) {
-        // background-image: radial-gradient(rgba($gm-green, .09), rgba($gm-green, .03));
-      }
-
-      &:nth-child(3) {
-        // background-image: radial-gradient(rgba($gm-blue, .09), rgba($gm-blue, .03));
-      }
-
-      &:last-child {
-        // background-image: radial-gradient(rgba($gm-pink, .09), rgba($gm-pink, .03));
       }
     }
 
     @media (#{$bp-larger-than-tablet}) {
+      box-shadow: none;
       display: block;
       top: 180px;
       width: $left-rail-width;
-      box-shadow: none;
 
       li {
         border: none;
@@ -139,6 +132,10 @@
           &:hover {
             padding-left: 52px;
           }
+
+          &.active {
+            @include gradient-horizontal($start-color: lighten($greybackground, 1%), $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+          }
         }
       }
     }
@@ -149,14 +146,16 @@
 
     @media (#{$bp-larger-than-tablet}) {
       @include absolute($bottom: 0);
-      display: block;
+
       color: $grey;
+      display: block;
     }
   }
 
   .section-nav {
     @include fixed($top: 50%, $right: $gutter-mobile);
-    margin: -84px 0 0;
+
+    margin: -63px 0 0;
     z-index: 1;
 
     @media (#{$small-phone}) {
@@ -172,28 +171,31 @@
     }
 
     li {
+      @include opacity(.4);
       @include relative();
       @include size($width: 24px, $height: 24px);
-      margin-bottom: 18px;
+
       background-color: $white;
-      border: 2px solid $white;
       border-radius: $global-radius;
-      @include opacity(.4);
+      border: 2px solid $white;
       cursor: pointer;
+      margin-bottom: 18px;
 
       .inner {
         @include absolute($top: 50%, $left: 50%);
+        @include opacity(0);
         @include size($width: 10px, $height: 10px);
-        margin: -5px 0 0 -5px;
+        @include transition(opacity .1s ease);
+
         background: $white;
         border-radius: $global-radius;
-        @include opacity(0);
-        @include transition(opacity .1s ease);
+        margin: -5px 0 0 -5px;
       }
 
       &.active {
-        background-color: transparent;
         @include opacity(1);
+
+        background-color: transparent;
 
         .inner {
           @include opacity(1);

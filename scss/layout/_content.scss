@@ -55,6 +55,11 @@
       @include size($height: 100%);
       display: block;
     }
+
+    &--black {
+      background: url('../images/case-studies/close-icon-black.png');
+      background-size: cover;
+    }
   }
 
   .illustration {
@@ -107,6 +112,14 @@
     margin-top: 0;
   }
 
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   #introduction {
     background-color: $blue;
   }
@@ -117,7 +130,7 @@
     background-size: cover;
   }
 
-  #imbu {
+  #airdye {
     background: url('../images/home-airdye-background.jpg') no-repeat;
     background-position: 0;
     background-size: cover;
@@ -180,6 +193,10 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   img {
@@ -223,17 +240,27 @@
     }
   }
 
-  &.imbu {
+  &.airdye {
     .panel--primary {
-      // background: url('') no-repeat;
-      // background-position: 0;
-      // background-size: cover;
-      background-color: $blue;
+      background: url('../images/case-studies/airdye/air-dye-background.png') no-repeat;
+      background-position: 0;
+      background-size: cover;
+    }
+
+    .cloud {
+      @include size($width: 219px, $height: 100%);
+      max-width: 100%;
+    }
+
+    .move,
+    .office {
+      @include size($width: 218px, $height: 100%);
+      max-width: 100%;
     }
 
     button {
-      color: $blue;
-      border-color: $blue;
+      color: $yellow;
+      border-color: $yellow;
     }
   }
 
@@ -258,6 +285,10 @@
       color: $pink;
       border-color: $pink;
     }
+  }
+
+  .panel--secondary {
+    padding-bottom: 30px;
   }
 }
 
@@ -321,7 +352,7 @@
 
     @media (#{$bp-larger-than-tablet}) {
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
-      border-radius: 2px;
+      border-radius: $global-radius;
       margin: 20px;
     }
 
@@ -329,10 +360,14 @@
     .pricetag,
     .mobile,
     .creditcards {
-      @include relative($left: 20px);
+      @include relative();
       @include size($width: 60px, $height: 100%);
 
       max-width: 100%;
+
+      @media (#{$bp-larger-than-mobile}) {
+        left: 15px;
+      }
     }
   }
 
@@ -342,14 +377,20 @@
     @include justify-content(center);
 
     .image-container {
-      @include relative;
-      margin: 15px;
+      @include relative();
+
+      margin: 10px;
+
+      @media (#{$bp-larger-than-mobile}) {
+        margin: 15px;
+      }
 
       img {
         @include size($width: 140px, $height: 140px);
         @include transition(box-shadow .2s, opacity .3s);
 
-        border-radius: 2px;
+        border-radius: $global-radius;
+        margin: 0;
       }
 
       .partner-logo--color {
@@ -360,7 +401,7 @@
         @include absolute($top: 0);
         @include opacity(0);
 
-        @media (#{$bp-larger-than-mobile}) {
+        @media (#{$bp-larger-than-tablet}) {
           @include opacity(1);
         }
       }
@@ -440,7 +481,7 @@
 
     @media (#{$bp-larger-than-tablet}) {
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
-      border-radius: 2px;
+      border-radius: $global-radius;
       margin: 20px;
     }
   }
@@ -469,8 +510,13 @@
 }
 
 .contact-section {
-  background-color: $greybackground;
-  overflow: hidden;
+  background: $white;
+  margin-top: $header-height;
+  overflow-x: hidden;
+
+  @media (#{$bp-larger-than-tablet}) {
+    margin-top: 0;
+  }
 
   h1, h5, p {
     color: $black;
@@ -485,12 +531,13 @@
   }
 
   .panel--primary {
-    background: $white;
-    height: 96vh;
+    background-color: darken($white, 2%);
+    background-size: 60px;
+    height: 97vh;
 
     @media (#{$bp-larger-than-tablet}) {
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
-      border-radius: 2px;
+      border-radius: $global-radius;
       margin: 20px;
     }
 
@@ -500,6 +547,14 @@
 
     .content-wrapper {
       margin-top: 35px;
+
+      .columns:last-child {
+        margin-top: 20px;
+
+        @media (#{$bp-larger-than-mobile}) {
+          margin-top: 0;
+        }
+      }
     }
   }
 
