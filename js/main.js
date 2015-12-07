@@ -83,12 +83,15 @@ $(function() {
     $('.section-nav').addClass('hidden');
 
     var caseStudy = $(caseStudyID);
-    caseStudy.addClass('active');
+    if (caseStudy) {
+      caseStudy.addClass('active');
 
-    setTimeout(function() {
-      $('.container').not(caseStudy).addClass('hidden');
-    }, 300);
-    $('body').animate({scrollTop: 0}, 300);
+      setTimeout(function() {
+        $('.container').not(caseStudy).addClass('hidden');
+      }, 300);
+      $('body').animate({scrollTop: 0}, 300);
+    }
+
   }
 
   /** Responsive call for height of navbar */
