@@ -83,7 +83,7 @@ $(function() {
     $('.section-nav').addClass('hidden');
 
     var caseStudy = $(caseStudyID);
-    if (caseStudy) {
+    if (caseStudy.length) {
       caseStudy.addClass('active');
 
       setTimeout(function() {
