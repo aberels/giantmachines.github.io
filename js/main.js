@@ -192,13 +192,13 @@ $(function() {
   });
 
   // Close Case Study Click Handler
-  $('.close-icon').click(function() {
-    $('.container, .section-nav').removeClass('hidden');
-    $('.case-study-section').removeClass('active');
-    setActivePanel($('.section-nav__radio-button').first());
-
-    updateURL(this);
-  });
+  // $('.close-icon').click(function() {
+  //   $('.container, .section-nav').removeClass('hidden');
+  //   $('.case-study-section').removeClass('active');
+  //   setActivePanel($('.section-nav__radio-button').first());
+  //
+  //   updateURL(this);
+  // });
 
   try {
     window.performance.measure('domLoading to carousel init', 'domLoading', 'GM_carousel_loaded');
