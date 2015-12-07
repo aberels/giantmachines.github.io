@@ -366,7 +366,7 @@
   .robot {
     @include size($width: 127px, $height: 100%);
     max-width: 100%;
-    margin: 20px 10px;
+    margin: 20px 10px 5px;
   }
 
 
