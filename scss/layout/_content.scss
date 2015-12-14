@@ -25,30 +25,46 @@
     }
   }
 
-
   .flex-row {
     @include display-flex();
     @include justify-content(space-around);
     @include flex-wrap(wrap);
 
     .center-content {
-      min-width: 25%;
       @include flex-grow(1);
-    }
 
-    &.five-wide {
-      .center-content {
-        min-width: 20%;
-      }
+      margin-bottom: 25px;
+      min-width: 25%;
     }
   }
 
+  .close-icon {
+    @include absolute($right: 0);
+    @include size($width: 16px, $height: 16px);
+    margin: 10px;
+    background: url('../images/case-studies/close-icon.png');
+    background-size: cover;
+    z-index: 1;
+    cursor: pointer;
+
+    @media (#{$bp-larger-than-mobile}) {
+      margin: 20px;
+    }
+
+    a {
+      @include size($height: 100%);
+      display: block;
+    }
+  }
+
+  .illustration {
+    position: relative;
+  }
+
   .illustration-container {
-    @include absolute($bottom: 70px);
-    @include scale(2);
-    width: 100%;
+    @include absolute($bottom: 0px);
+
     text-align: center;
-    @include opacity(.8);
 
     @media (#{$small-phone}) {
       @include opacity(.1);
@@ -60,19 +76,19 @@
 
     .large {
       display: none;
+      max-width: 100%;
     }
 
     .small {
-      @include size($width: 375px, $height: 180px);
+      max-width: 100%;
     }
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 500px) {
     .illustration-container {
       @include opacity(1);
 
       .large {
-        @include size($width: 773px, $height: 124px);
         display: inline-block;
       }
 
@@ -183,21 +199,6 @@
     }
   }
 
-  .close-icon {
-    @include absolute($right: 0);
-    @include size($width: 16px, $height: 16px);
-    margin: 10px;
-    background: url('../images/case-studies/close-icon.png');
-    background-size: cover;
-    z-index: 1;
-    cursor: pointer;
-
-    @media (#{$bp-larger-than-mobile}) {
-      @include size($width: 32px, $height: 32px);
-      margin: 20px;
-    }
-  }
-
   &.flightclub {
     .panel--primary {
       background: url('../images/case-studies/flightclub/flight-club-background.jpg') no-repeat;
@@ -261,6 +262,7 @@
 }
 
 .about-section {
+  background-color: $greybackground;
   margin-top: $header-height;
   overflow-x: hidden;
 
@@ -270,6 +272,20 @@
 
   .row {
     margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.header-row {
+      margin-bottom: 40px;
+
+      h2 {
+        font: 24px $font-semibold;
+        color: $black;
+        text-transform: uppercase;
+      }
+    }
   }
 
   img {
@@ -284,6 +300,17 @@
     background-color: $pink;
   }
 
+  .panel--secondary {
+    h3 {
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
   .machine {
     @include size($width: 220px, $height: 100%);
     max-width: 100%;
@@ -293,48 +320,68 @@
     background-color: $white;
 
     @media (#{$bp-larger-than-tablet}) {
-      border-left: 4px solid $greybackground;
-      border-right: 4px solid $greybackground;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
+      border-radius: 2px;
+      margin: 20px;
     }
 
     .briefcase,
     .pricetag,
     .mobile,
     .creditcards {
+      @include relative($left: 20px);
       @include size($width: 60px, $height: 100%);
+
       max-width: 100%;
     }
   }
 
-  .partner-logo {
-    @include size($width: 140px, $height: 100%);
-    max-width: 100%;
-    margin: 10px;
+  .partners-grid {
+    @include display-flex();
+    @include flex-wrap(wrap);
+    @include justify-content(center);
 
-    &--bw {
-      display: none;
-      @media (#{$bp-larger-than-mobile}) {
-        display: inline-block;
+    .image-container {
+      @include relative;
+      margin: 15px;
+
+      img {
+        @include size($width: 140px, $height: 140px);
+        @include transition(box-shadow .2s, opacity .3s);
+
+        border-radius: 2px;
       }
-    }
 
-    &--color {
-      @media (#{$bp-larger-than-mobile}) {
-        display: none;
+      .partner-logo--color {
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .1);
+      }
+
+      .partner-logo--bw {
+        @include absolute($top: 0);
+        @include opacity(0);
+
+        @media (#{$bp-larger-than-mobile}) {
+          @include opacity(1);
+        }
+      }
+
+      &:hover {
+        .partner-logo--bw {
+          @include opacity(0);
+        }
+
+        .partner-logo--color {
+          box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, .1);
+        }
       }
     }
   }
 }
 
 .team-section {
+  background: $greybackground;
   margin-top: $header-height;
   overflow-x: hidden;
-
-  h4 {
-    a {
-      text-transform: lowercase;
-    }
-  }
 
   @media (#{$bp-larger-than-tablet}) {
     margin-top: 0;
@@ -342,6 +389,40 @@
 
   .row {
     margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.header-row {
+      margin-bottom: 40px;
+
+      h2 {
+        font: 24px $font-semibold;
+        color: $black;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  h4 {
+    font: $font-semibold;
+    text-transform: capitalize;
+
+    a {
+      text-transform: lowercase;
+      font: 12px $font-regular;
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h5 {
+    color: $black;
+    text-transform: uppercase;
   }
 
   .panel--primary {
@@ -349,7 +430,7 @@
   }
 
   .principal {
-    @include size($width: 180px, $height: 100%);
+    @include size($width: 140px, $height: 100%);
     max-width: 100%;
     margin: 0 20px;
   }
@@ -358,15 +439,16 @@
     background-color: $white;
 
     @media (#{$bp-larger-than-tablet}) {
-      border-left: 4px solid $greybackground;
-      border-right: 4px solid $greybackground;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
+      border-radius: 2px;
+      margin: 20px;
     }
   }
 
   .robot {
     @include size($width: 127px, $height: 100%);
     max-width: 100%;
-    margin: 20px 10px 5px;
+    margin: 0 10px;
   }
 
 
@@ -374,47 +456,71 @@
     list-style: disc;
     list-style-position: inside;
   }
+
+  a {
+    text-transform: lowercase;
+    font: 12px $font-regular;
+    color: $blue;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .contact-section {
+  background-color: $greybackground;
   overflow: hidden;
 
-  h1, h4 {
+  h1, h5, p {
     color: $black;
   }
 
-  h4, p {
-    margin-left: $gutter-mobile;
-    margin-right: $gutter-desktop;
-  }
+  h5, p {
+    padding-left: $gutter-mobile;
 
-  @media (#{$bp-larger-than-mobile}) {
-    h4, p {
-      margin-left: initial;
-      margin-right: initial;
+    @media (#{$bp-larger-than-mobile}) {
+      padding-left: 0;
     }
-  }
-
-  .close-icon {
-    background: url('../images/gray-close-icon.png');
-    background-size: cover;
   }
 
   .panel--primary {
-    background-color: $greybackground;
-  }
+    background: $white;
+    height: 96vh;
 
-  .panel--secondary {
-    min-height: 50vh;
-  }
+    @media (#{$bp-larger-than-tablet}) {
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
+      border-radius: 2px;
+      margin: 20px;
+    }
 
-  .email {
-    a {
-      color: $blue;
+    .panel__heading {
+      height: auto;
+    }
+
+    .content-wrapper {
+      margin-top: 35px;
     }
   }
 
-  .illustration-container {
-    @include opacity(.1);
+  .row {
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+
+  .email,
+  .phone,
+  .address {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
