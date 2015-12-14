@@ -41,7 +41,18 @@
       <li><a href="/contact">CONTACT</a></li>
     </ul>
 
-    <!-- Section Nav Placeholder -->
+    <!-- Section Nav -->
+    <ul class="section-nav">
+      <li data-panel="introduction" class="section-nav__radio-button active">
+        <div class="inner"></div>
+      </li>
+      <li data-panel="airdye" class="section-nav__radio-button">
+        <div class="inner"></div>
+      </li>
+      <li data-panel="minted" class="section-nav__radio-button">
+        <div class="inner"></div>
+      </li>
+    </ul>
 
     <div class="copyright">
       <p>
@@ -72,13 +83,48 @@
       </div>
     </div>
 
-    <!-- Panels Placeholder -->
+    <!-- Panels -->
+    <div class="panel panel--primary" id="airdye">
+      <div class="row">
+        <div class="seven columns offset-by-two panel__heading">
+          <h1>High Fashion</h1>
+          <h3>
+            Giant Machines takes a global digital textile printing business to
+            the cloud, integrating proprietary desktop software, ERP, and
+            cloud services for
+            <a target="_blank" href="http://imbu.com/">
+              <b>Airdye.</b>
+            </a>
+          </h3>
+          <button class="view-case-study" data-case="#airdye-case">
+            View Case Study
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel--primary" id="minted">
+      <div class="row">
+        <div class="seven columns offset-by-two panel__heading">
+          <h1>Stationary</h1>
+          <h3>
+            Giant Machines tackles a mobile overhaul for one of the fastest
+            growing design marketplaces,
+            <a target="_blank" href="http://minted.com">
+              <b>Minted.</b>
+            </a>
+          </h3>
+          <button class="view-case-study" data-case="#minted-case">
+            View Case Study
+          </button>
+        </div>
+      </div>
+    </div>
 
     <div class="row copyright">
       <div class="twelve columns center-content">
         <p>
-          &copy; <span class="copyright-year">2015</span> Giant Machines<br>
-          Software LLC.<br>
+          &copy; <span class="copyright-year">2015</span> Giant Machines Software LLC.<br>
           All rights reserved.
         </p>
       </div>
@@ -87,7 +133,322 @@
   <!-- /Home Section ––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 
-  <!-- Case Studies Placeholder -->
+  <!-- Airdye/Imbu Case Study Section –––––––––––––––––––––––––––––––––––––– -->
+  <div class="container case-study-section airdye" id="airdye-case">
+    <div class="close-icon"></div>
+    <div class="panel panel--primary panel--half-height">
+      <div class="row">
+        <div class="seven columns offset-by-two panel__heading">
+          <h1>Airdye</h1>
+          <div class="divider divider--white"></div>
+          <h3>
+            AirDye is a platform that modernizes textiles manufacturing.
+            Bringing online a system that enables users to modify designs and
+            colorways, accurately preview digitally colored designs,
+            and manage orders.
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel--secondary">
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <h2>Challenge</h2>
+          <p>
+            AirDye approached us with one of the biggest technical challenges
+            we had ever seen: migrate the company's entire business and
+            manufacturing systems from a collection of aging, unsupported
+            platforms onto a modern web-enabled infrastructure, make
+            thousands of design assets browsable by customers and salespeople,
+            and finally take its proprietary color matching technologies from
+            the desktop to the cloud. The client wanted to completely
+            transform the global textile printing business with a networked
+            global supply chain and web-based coloration, previewing, and
+            ordering. This would represent a radical departure from business
+            as usual in textile printing where the majority of business is
+            done with phone calls, emails, and the shipping of physical samples.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns offset-by-one">
+          <p>
+            At the time of engagement, AirDye's manufacturing and ERP systems
+            were running Paradox, a file-based database installed at the
+            company in the 1990s. Their design assets were hosted on a NAS in
+            North Carolina, stored in a proprietary third-party format called
+            AVA.  Its proprietary color matching and printing software was
+            running on Windows desktop computers. To fulfill the vision, we
+            would need to develop methods for data extraction from their
+            legacy systems, integrate with a modern ERP, and wrap core
+            functions of the desktop software and deploy to the cloud.
+          </p>
+        </div>
+        <div class="four columns center-content">
+          <img class="cloud" src="images/case-studies/airdye/cloud-graphic.png" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <p>
+            And we would need to do it with no more than four (4) human
+            resources, devs and product management.
+          </p>
+        </div>
+      </div>
+
+      <div class="row no-gutter">
+        <div class="ten columns offset-by-one">
+          <img class="stretch" src="images/case-studies/airdye/airdye-image1.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <h2>Solution</h2>
+          <p>
+            To unlock access to the business data stored in Paradox, we
+            collaborated with the engineering team at AirDye to leverage
+            existing synchronization processes that read data from Paradox
+            and write it to a MSSQL 2000 database. We took this on-site
+            process and moved it to Azure, Microsoft's cloud platform. We
+            chose Microsoft's Azure platform to deploy the majority of the
+            core manufacturing and technical infrastructure of AirDye based
+            on the Windows-centric software that ran the company.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns offset-by-one center-content">
+          <img class="move" src="images/case-studies/airdye/move-data-graphic.png" alt="">
+        </div>
+        <div class="six columns">
+          <p>
+            With the company's business data now available outside of the
+            manufacturing location, we then authored an HTTP API using
+            Microsoft's Entity Framework and Web API technologies to allow for
+            data access from nearly any language. With an HTTP API now
+            exposing the data, we wrote processes to fully populate a
+            cloud-hosted MySQL database that would later be used to build the
+            customer and sales portals and integrate them with a new ERP.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <p>
+            Design files were copied from the on-site NAS to Azure Blob
+            Storage allowing for secure, url-based access from the customer
+            portals, ERP, color management software, and manufacturing processes.
+          </p>
+        </div>
+      </div>
+
+      <div class="row no-gutter">
+        <div class="ten columns offset-by-one">
+          <img class="stretch" src="images/case-studies/airdye/airdye-image2.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <p>
+            We then began the task of extracting the algorithms from their
+            proprietary color management desktop software for use in online
+            color-accurate design previews - a first in the textile printing
+            industry. The C++ code underlying the software was very well
+            factored - the product of 15 years of engineering - but needed
+            work to make it available as a Web Service. Rather than rewriting
+            this valuable code, Giant Machines authored C# wrappers to expose
+            the needed C++ functions. These wrappers now form the foundation
+            of not only the Web Services, but also of the next generation of
+            development for this specialized manufacturing software that will
+            link these services directly to the printers.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns offset-by-one">
+          <p>
+            NetSuite was chosen by the client as an ERP to manage their
+            customers, orders, inventory, and aspects of the manufacturing
+            process. Giant Machines collaborated with a NetSuite vendor to
+            integrate this new ERP implementation with the new customer and
+            sales portals providing a seamless flow of data from web through
+            to back office and manufacturing.
+          </p>
+        </div>
+        <div class="four columns center-content">
+          <img class="office" src="images/case-studies/airdye/office-data-graphic.png" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <h2>Result</h2>
+          <p>
+            The systems developed by Giant Machines were the background for
+            the tremendous business moves the company made in 2014 and 2015
+            including a merger with its largest customer and the expansion of
+            its manufacturing globally. The development process is ongoing and
+            we look forward to continuing to provide exceptional value to
+            AirDye's new market presence, IMBU, in 2016.
+          </p>
+        </div>
+      </div>
+
+      <div class="row no-gutter">
+        <div class="ten columns offset-by-one">
+          <img class="stretch" src="images/case-studies/airdye/airdye-image3.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve columns center-content">
+          <button class="view-case-study" data-case="#minted-case">
+            Next Case Study
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Airdye/Imbu Case Study Section ––––––––––––––––––––––––––––––––––––– -->
+
+
+  <!-- Minted Case Study Section ––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container case-study-section minted" id="minted-case">
+    <div class="close-icon"></div>
+    <div class="panel panel--primary panel--half-height">
+      <div class="row">
+        <div class="seven columns offset-by-two panel__heading">
+          <h1>Minted</h1>
+          <div class="divider divider--white"></div>
+          <h3>Minted is an online marketplace that builds inventory by
+            crowdsourcing independent artists and designers work in a
+            contest format.</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel--secondary">
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <h2>Challenge</h2>
+          <p>
+            Minted is a design marketplace. They have a unique competitive
+            advantage where they source creative content from a global
+            community of independent artists, then sell the best content
+            in the form of art, home décor, and stationery, directly to
+            consumers. An early pioneer of crowdsourcing, Minted has held
+            art and design challenges monthly since April 2008.
+          </p>
+        </div>
+      </div>
+
+      <div class="row no-gutter">
+        <div class="ten columns offset-by-one">
+          <img class="stretch" src="images/case-studies/minted/minted-image1.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns offset-by-one">
+          <p>
+            Minted, like all websites, was starting to see a larger
+            and larger share of their site traffic coming from
+            smartphones.  Without a mobile optimized site, mobile users
+            were not converting as frequently as desktop users and
+            Minted was losing out on revenue opportunities.
+          </p>
+          <br>
+          <p>
+            Minted engaged Giant Machines to integrate with the Minted
+            team to build out their mobile vision, with a focus on the
+            browsing experience, customizing art products, and the
+            checkout flow.
+          </p>
+        </div>
+        <div class="four columns center-content">
+          <img class="traffic" src="images/case-studies/minted/traffic-graphic.png" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <h2>Solution</h2>
+          <p>
+            With an existing system that supposes tens of thousands of unique
+            products and encompasses different programming languages, this was
+            the furthest from a greenfield project.  Giant Machines analyzed
+            the existing software stacks and worked in conjunction with the
+            Minted engineering team to come up with an elegant, stable
+            solution for serving up mobile pages.
+          </p>
+        </div>
+      </div>
+
+      <div class="row no-gutter">
+        <div class="ten columns offset-by-one">
+          <img class="stretch" src="images/case-studies/minted/minted-image2.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <p>
+            Giant Machines worked with Minted to understand the
+            technical and product tradeoffs between taking a responsive
+            vs adaptive mobile approach.  Giant Machines embedded with
+            a Minted engineering team to build out dozens of new
+            mobile page.
+          </p>
+          <br>
+          <p>
+            Starting with Minted’s Visual Design concepts, our team was
+            able to build a solid mobile experience in the months
+            preceding their main holiday season, fast tracking a major
+            priority on the roadmap.  Our team also worked closely
+            with Minted’s QA team to ensure a successful launch.  We
+            were able to test our implementations across a variety of
+            different devices, hitting over 95% device coverage based
+            on their traffic demographics.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="three columns offset-by-one center-content">
+          <img class="devices" src="images/case-studies/minted/devices-graphic.png" alt="">
+        </div>
+        <div class="seven columns">
+          <h2>Result</h2>
+          <p>
+            Minted now has a great mobile experience, with easy access
+            to an updated navigation system, cart, checkout, as well
+            as registration, sign up, order status and other essential
+            endpoints.  The new system extended the existing desktop
+            logic, which allowed for the best tradeoff between
+            maintainability and extensibility of new features.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve columns center-content">
+          <button class="view-case-study" data-case="#airdye-case">
+            Next Case Study
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Minted Case Study Section –––––––––––––––––––––––––––––––––––––––––– -->
 
 
   <!-- Core Javascript Files -->
