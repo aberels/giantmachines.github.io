@@ -1611,6 +1611,10 @@ form {
   -webkit-tap-highlight-color: transparent;
 }
 
+body {
+  background-color: #E93AA6;
+}
+
 ul {
   list-style: none;
 }
