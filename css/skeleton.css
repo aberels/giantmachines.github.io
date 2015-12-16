@@ -1505,8 +1505,10 @@ form {
   background-color: #00B264;
 }
 .team-section .principal {
-  width: 140px;
+  width: 120px;
   height: 100%;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   margin: 0 20px;
 }
@@ -1515,14 +1517,16 @@ form {
 }
 @media (min-width: 1024px) {
   .team-section .team {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     margin: 20px;
   }
 }
 .team-section .robot {
-  width: 127px;
+  width: 120px;
   height: 100%;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   margin: 0 10px;
 }
