@@ -1093,6 +1093,7 @@ form {
   }
 }
 .container .row.copyright {
+  background: #FFFFFF;
   margin: 0;
   padding: 20px;
 }
@@ -1159,10 +1160,14 @@ form {
   }
 }
 .container .illustration-container .large {
+  width: 773px;
+  height: 124px;
   display: none;
   max-width: 100%;
 }
 .container .illustration-container .small {
+  width: 375px;
+  height: 180px;
   max-width: 100%;
 }
 @media screen and (min-width: 500px) {
@@ -1272,14 +1277,9 @@ form {
   }
 }
 .case-study-section .stretch {
-  width: 620px;
-  height: 100%;
-  max-width: 100%;
-}
-@media (min-width: 768px) {
-  .case-study-section .stretch {
-    width: 100%;
-  }
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 .case-study-section.flightclub .panel--primary {
   background: url("../images/case-studies/flightclub/flight-club-background.jpg") no-repeat;
@@ -1305,17 +1305,6 @@ form {
   background: url("../images/case-studies/airdye/air-dye-background.png") no-repeat;
   background-position: 0;
   background-size: cover;
-}
-.case-study-section.airdye .cloud {
-  width: 219px;
-  height: 100%;
-  max-width: 100%;
-}
-.case-study-section.airdye .move,
-.case-study-section.airdye .office {
-  width: 218px;
-  height: 100%;
-  max-width: 100%;
 }
 .case-study-section.airdye button {
   color: #FAAD3B;
