@@ -81,15 +81,11 @@
     }
 
     .large {
-      @include size($width: 773px, $height: 124px);
-
       display: none;
       max-width: 100%;
     }
 
     .small {
-      @include size($width: 375px, $height: 180px);
-
       max-width: 100%;
     }
   }

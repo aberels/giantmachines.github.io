@@ -1160,14 +1160,10 @@ form {
   }
 }
 .container .illustration-container .large {
-  width: 773px;
-  height: 124px;
   display: none;
   max-width: 100%;
 }
 .container .illustration-container .small {
-  width: 375px;
-  height: 180px;
   max-width: 100%;
 }
 @media screen and (min-width: 500px) {
