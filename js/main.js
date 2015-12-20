@@ -8,7 +8,7 @@ $(function() {
   var scrollDistance = panelHeight;
   var autoScrollInterval;
   var userScroll = false;
-  var activePage = document.querySelector('.page-active');
+  var activePage = $('.page-active');
 
   // Initialize Autoscroll
   if($('body').is('.homepage')) {
@@ -35,9 +35,7 @@ $(function() {
   $('.nav-collapse li').on('mouseenter', function() {
     var el = this.querySelector('a');
 
-    if (activePage) {
-      activePage.classList.remove('active');
-    }
+    activePage.removeClass('active');
 
     el.classList.add('active');
   });
@@ -48,7 +46,7 @@ $(function() {
     el.classList.remove('active');
 
     if ($('a.active').length === 0) {
-      activePage.classList.add('active');
+      activePage.addClass('active');
     }
   });
 
