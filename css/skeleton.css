@@ -989,26 +989,44 @@ form {
     width: 200px;
   }
   .header-section .nav-collapse li {
+    position: relative;
     border: none;
-    height: 35px;
+    height: 36px;
+  }
+  .header-section .nav-collapse li:first-child .indicator {
+    background-color: #E93AA6;
+  }
+  .header-section .nav-collapse li:nth-child(2) .indicator {
+    background-color: #00B264;
+  }
+  .header-section .nav-collapse li:nth-child(3) .indicator {
+    background-color: #0080CA;
+  }
+  .header-section .nav-collapse li:last-child .indicator {
+    background-color: #FAAD3B;
   }
   .header-section .nav-collapse li a {
-    -webkit-transition: padding-left 0.1s;
-    -moz-transition: padding-left 0.1s;
-    -ms-transition: padding-left 0.1s;
-    -o-transition: padding-left 0.1s;
-    transition: padding-left 0.1s;
+    -webkit-transition: padding-left 0.3s;
+    -moz-transition: padding-left 0.3s;
+    -ms-transition: padding-left 0.3s;
+    -o-transition: padding-left 0.3s;
+    transition: padding-left 0.3s;
     padding-left: 44px;
   }
-  .header-section .nav-collapse li a:hover {
-    padding-left: 52px;
+  .header-section .nav-collapse li a .indicator {
+    position: absolute;
+    top: 12px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    -webkit-transition: left 300ms;
+    -moz-transition: left 300ms;
+    -ms-transition: left 300ms;
+    -o-transition: left 300ms;
+    transition: left 300ms;
   }
-  .header-section .nav-collapse li a.active {
-    background-image: -webkit-linear-gradient(left, #f3f3f3 0%, #FFFFFF 100%);
-    background-image: -o-linear-gradient(left, #f3f3f3 0%, #FFFFFF 100%);
-    background-image: linear-gradient(to right, #f3f3f3 0%, #FFFFFF 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3F3F3', endColorstr='#FFFFFFFF', GradientType=1);
+  .header-section .nav-collapse li a.active .indicator {
+    left: 19px;
   }
 }
 .header-section .copyright {

@@ -121,20 +121,51 @@
       width: $left-rail-width;
 
       li {
+        @include relative();
+
         border: none;
-        height: 35px;
+        height: 36px;
+
+
+        &:first-child {
+          .indicator {
+            background-color: $pink;
+          }
+        }
+
+        &:nth-child(2) {
+          .indicator {
+            background-color: $green;
+          }
+        }
+
+        &:nth-child(3) {
+          .indicator {
+            background-color: $blue;
+          }
+        }
+
+        &:last-child {
+          .indicator {
+            background-color: $yellow;
+          }
+        }
 
         a {
-          @include transition(padding-left .1s);
+          @include transition(padding-left .3s);
 
           padding-left: 44px;
 
-          &:hover {
-            padding-left: 52px;
+          .indicator {
+            @include absolute($top: 12px, $left: -20px);
+            @include size($width: 10px, $height: 10px);
+            @include transition(left 300ms);
           }
 
           &.active {
-            @include gradient-horizontal($start-color: lighten($greybackground, 1%), $end-color: $white, $start-percent: 0%, $end-percent: 100%);
+            .indicator {
+              left: 19px;
+            }
           }
         }
       }

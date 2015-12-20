@@ -8,6 +8,7 @@ $(function() {
   var scrollDistance = panelHeight;
   var autoScrollInterval;
   var userScroll = false;
+  var activePage = document.querySelector('.page-active');
 
   // Initialize Autoscroll
   if($('body').is('.homepage')) {
@@ -29,6 +30,27 @@ $(function() {
 
   // Simulate Navigation (Deep Linking)
   navigateToPage();
+
+  // Nav events
+  $('.nav-collapse li').on('mouseenter', function() {
+    var el = this.querySelector('a');
+
+    if (activePage) {
+      activePage.classList.remove('active');
+    }
+
+    el.classList.add('active');
+  });
+
+  $('.nav-collapse li').on('mouseleave', function() {
+    var el = this.querySelector('a');
+
+    el.classList.remove('active');
+
+    if ($('a.active').length === 0) {
+      activePage.classList.add('active');
+    }
+  });
 
   // Kill autoscroll on click or touch
   $(document).on('click touchstart', function() {
