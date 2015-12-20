@@ -283,12 +283,19 @@
 }
 
 .about-section {
-  background-color: $greybackground;
+  background-attachment: fixed;
+  background-color: $pink;
+  background-image: url('../images/background-pattern.png');
+  background-size: 300px;
   margin-top: $header-height;
   overflow-x: hidden;
 
   @media (#{$bp-larger-than-tablet}) {
     margin-top: 0;
+  }
+
+  .panel--primary {
+    background-color: $pink;
   }
 
   .row {
@@ -317,11 +324,10 @@
     }
   }
 
-  .panel--primary {
-    background-color: $pink;
-  }
-
   .panel--secondary {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    padding: 60px 0;
+
     h3 {
       font-size: 17px;
       letter-spacing: 2px;
@@ -343,7 +349,7 @@
     @media (#{$bp-larger-than-tablet}) {
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
       border-radius: $global-radius;
-      margin: 20px;
+      margin: 60px;
     }
 
     .briefcase,
@@ -375,9 +381,79 @@
         margin: 15px;
       }
 
+      &.view-case-study {
+        cursor: pointer;
+      }
+
+      .case-study {
+        @include absolute($top: 6px, $left: 0, $right: 0);
+        @include size($height: 21px);
+        @include transition(background-color 100ms, color 100ms, letter-spacing 300ms);
+
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px -1px 3px 0px rgba(0, 0, 0, 0.05);
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        overflow-x: hidden;
+        padding-top: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+
+        &.flightclub {
+          background-color: #DE2423;
+
+          @media (#{$bp-larger-than-tablet}) {
+            background-color: $greybackground;
+          }
+        }
+
+        &.airdye {
+          background-color: #465AA7;
+
+          @media (#{$bp-larger-than-tablet}) {
+            background-color: darken($greybackground, 5%);
+          }
+        }
+
+        &.minted {
+          background-color: #8AAD39;
+
+          @media (#{$bp-larger-than-tablet}) {
+            background-color: $greybackground;
+          }
+        }
+
+        .slide-down {
+          @include absolute($left: 0, $top: 4px);
+          @include size($width: 140px);
+          @include transition(top 300ms);
+
+          color: $white;
+
+          @media (#{$bp-larger-than-tablet}) {
+            color: $black;
+          }
+        }
+
+        .coming-soon {
+          @include absolute($top: -105%, $left: 0);
+          @include size($width: 140px);
+          @include transition(top 300ms, letter-spacing 400ms);
+
+          letter-spacing: 2.5px;
+
+          .plus {
+            @include transition(color 500ms);
+
+            color: $white;
+          }
+        }
+      }
+
       img {
         @include size($width: 140px, $height: 140px);
-        @include transition(box-shadow .2s, opacity .3s);
+        @include transition(box-shadow .2s, opacity .2s);
 
         border-radius: $global-radius;
         margin: 0;
@@ -403,6 +479,50 @@
 
         .partner-logo--color {
           box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, .1);
+        }
+
+        .case-study {
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15), 0px -1px 3px 0px rgba(0, 0, 0, 0.15);
+          color: $white;
+          letter-spacing: 1.7px;
+
+          .slide-down {
+            color: $white;
+            top: 105%;
+          }
+
+          .coming-soon {
+            letter-spacing: 1.2px;
+            top: 4px;
+          }
+
+          &.airdye {
+            background-color: #465AA7;
+
+            .coming-soon {
+              background-color: #465AA7;
+
+              .plus {
+                color: #BBC528;
+              }
+            }
+          }
+
+          &.flightclub {
+            background-color: #DE2423;
+
+            .coming-soon {
+              background-color: #DE2423;
+            }
+          }
+
+          &.minted {
+            background-color: #8AAD39;
+
+            .coming-soon {
+              background-color: #8AAD39;
+            }
+          }
         }
       }
     }
@@ -506,7 +626,15 @@
 }
 
 .contact-section {
-  background: $white;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include size($height: $panel-full-height);
+
+  background-color: lighten($greybackground, 4%);
+  background-image: url('../images/background-pattern.png');
+  background-size: 166px;
+  background-attachment: fixed;
   margin-top: $header-height;
   overflow-x: hidden;
 
@@ -527,14 +655,17 @@
   }
 
   .panel--primary {
-    background-color: darken($white, 2%);
-    background-size: 60px;
-    height: 97vh;
+    background-color: transparent;
+    background-image: none;
+    max-height: 500px;
 
-    @media (#{$bp-larger-than-tablet}) {
+    @media (#{$bp-larger-than-mobile}) {
+      background-color: rgba($yellow, .6);
+      background-image: url('../images/background-pattern.png');
+      background-size: 42px;
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
       border-radius: $global-radius;
-      margin: 20px;
+      margin: 60px;
     }
 
     .panel__heading {
