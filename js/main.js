@@ -207,6 +207,10 @@ $(function() {
   $('.view-case-study').click(function(){
     var caseStudy = $(this).data('case');
 
+    if ($(this).hasClass('redirect')) {
+      window.location.href = ('/' + caseStudy);
+    }
+
     showCaseStudy(caseStudy);
     updateURL(this);
   });
