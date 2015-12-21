@@ -809,7 +809,7 @@ form {
   height: 100%;
 }
 .panel--half-height {
-  height: 60vh;
+  height: 64vh;
 }
 .panel--secondary {
   height: 100%;
@@ -962,7 +962,7 @@ form {
   right: 0;
   left: 0;
   background: #FFFFFF;
-  box-shadow: 0 0 2px #7E7E80 inset;
+  box-shadow: inset 0px 0 2px rgba(0, 0, 0, 0.4);
   display: none;
   z-index: 2;
 }
@@ -1349,9 +1349,9 @@ form {
 
 .about-section {
   background-attachment: fixed;
-  background-color: #E93AA6;
+  background-color: #e8e8e8;
   background-image: url("../images/background-pattern.png");
-  background-size: 300px;
+  background-size: 350px;
   margin-top: 54px;
   overflow-x: hidden;
 }
@@ -1386,7 +1386,7 @@ form {
   }
 }
 .about-section .panel--secondary {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+  background: none;
   padding: 60px 0;
 }
 .about-section .panel--secondary h3 {
@@ -1408,7 +1408,7 @@ form {
   .about-section .expertise {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-    margin: 60px;
+    margin: 40px;
   }
 }
 .about-section .expertise .briefcase,
@@ -1452,8 +1452,7 @@ form {
   -o-transition: background-color 100ms, color 100ms, letter-spacing 300ms;
   transition: background-color 100ms, color 100ms, letter-spacing 300ms;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px -1px 3px 0px rgba(0, 0, 0, 0.05);
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 11px;
   letter-spacing: 1.2px;
   overflow-x: hidden;
   padding-top: 3px;
@@ -1466,7 +1465,7 @@ form {
 }
 @media (min-width: 1024px) {
   .about-section .partners-grid .image-container .case-study.flightclub {
-    background-color: #F0F0F0;
+    background-color: #e3e3e3;
   }
 }
 .about-section .partners-grid .image-container .case-study.airdye {
@@ -1482,7 +1481,7 @@ form {
 }
 @media (min-width: 1024px) {
   .about-section .partners-grid .image-container .case-study.minted {
-    background-color: #F0F0F0;
+    background-color: #e3e3e3;
   }
 }
 .about-section .partners-grid .image-container .case-study .slide-down {
@@ -1507,12 +1506,12 @@ form {
   top: -105%;
   left: 0;
   width: 140px;
-  -webkit-transition: top 300ms, letter-spacing 400ms;
-  -moz-transition: top 300ms, letter-spacing 400ms;
-  -ms-transition: top 300ms, letter-spacing 400ms;
-  -o-transition: top 300ms, letter-spacing 400ms;
-  transition: top 300ms, letter-spacing 400ms;
-  letter-spacing: 2.5px;
+  -webkit-transition: top 300ms, letter-spacing 300ms;
+  -moz-transition: top 300ms, letter-spacing 300ms;
+  -ms-transition: top 300ms, letter-spacing 300ms;
+  -o-transition: top 300ms, letter-spacing 300ms;
+  transition: top 300ms, letter-spacing 300ms;
+  letter-spacing: 5px;
 }
 .about-section .partners-grid .image-container .case-study .coming-soon .plus {
   -webkit-transition: color 500ms;
@@ -1565,7 +1564,8 @@ form {
   top: 105%;
 }
 .about-section .partners-grid .image-container:hover .case-study .coming-soon {
-  letter-spacing: 1.2px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
   top: 4px;
 }
 .about-section .partners-grid .image-container:hover .case-study.airdye {
@@ -1575,6 +1575,8 @@ form {
   background-color: #465AA7;
 }
 .about-section .partners-grid .image-container:hover .case-study.airdye .coming-soon .plus {
+  position: relative;
+  top: -1px;
   color: #BBC528;
 }
 .about-section .partners-grid .image-container:hover .case-study.flightclub {
@@ -1591,7 +1593,10 @@ form {
 }
 
 .team-section {
-  background: #F0F0F0;
+  background-attachment: fixed;
+  background-color: #e8e8e8;
+  background-image: url("../images/background-pattern.png");
+  background-size: 350px;
   margin-top: 54px;
   overflow-x: hidden;
 }
@@ -1636,32 +1641,40 @@ form {
 .team-section .principal {
   width: 120px;
   height: 100%;
-  border-radius: 2px;
-  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
   max-width: 100%;
   margin: 0 20px;
 }
+.team-section .panel--secondary {
+  background: none;
+}
+@media (min-width: 1024px) {
+  .team-section .panel--secondary {
+    padding: 40px 0 20px;
+  }
+}
 .team-section .team {
   background-color: #FFFFFF;
+  border-radius: 2px;
+  margin: 0px;
 }
 @media (min-width: 1024px) {
   .team-section .team {
-    border-radius: 2px;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
-    margin: 20px;
+    margin: 40px;
   }
 }
 .team-section .robot {
   width: 120px;
   height: 100%;
-  border-radius: 2px;
-  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
   max-width: 100%;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 .team-section ul {
   list-style: disc;
   list-style-position: inside;
+}
+.team-section ul.requirements {
+  margin: 20px 0;
 }
 .team-section a {
   text-transform: lowercase;
@@ -1704,12 +1717,10 @@ form {
 }
 @media (min-width: 768px) {
   .contact-section .panel--primary {
-    background-color: rgba(250, 173, 59, 0.6);
-    background-image: url("../images/background-pattern.png");
-    background-size: 42px;
+    background-color: #FFFFFF;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-    margin: 60px;
+    margin: 40px;
   }
 }
 .contact-section .panel--primary .panel__heading {

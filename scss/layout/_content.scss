@@ -284,9 +284,9 @@
 
 .about-section {
   background-attachment: fixed;
-  background-color: $pink;
+  background-color: darken($greybackground, 3%);
   background-image: url('../images/background-pattern.png');
-  background-size: 300px;
+  background-size: 350px;
   margin-top: $header-height;
   overflow-x: hidden;
 
@@ -325,7 +325,7 @@
   }
 
   .panel--secondary {
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    background: none;
     padding: 60px 0;
 
     h3 {
@@ -349,7 +349,7 @@
     @media (#{$bp-larger-than-tablet}) {
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
       border-radius: $global-radius;
-      margin: 60px;
+      margin: 40px;
     }
 
     .briefcase,
@@ -391,8 +391,7 @@
         @include transition(background-color 100ms, color 100ms, letter-spacing 300ms);
 
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px -1px 3px 0px rgba(0, 0, 0, 0.05);
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
         letter-spacing: 1.2px;
         overflow-x: hidden;
         padding-top: 3px;
@@ -404,7 +403,7 @@
           background-color: #DE2423;
 
           @media (#{$bp-larger-than-tablet}) {
-            background-color: $greybackground;
+            background-color: darken($greybackground, 5%);
           }
         }
 
@@ -420,7 +419,7 @@
           background-color: #8AAD39;
 
           @media (#{$bp-larger-than-tablet}) {
-            background-color: $greybackground;
+            background-color: darken($greybackground, 5%);
           }
         }
 
@@ -439,9 +438,9 @@
         .coming-soon {
           @include absolute($top: -105%, $left: 0);
           @include size($width: 140px);
-          @include transition(top 300ms, letter-spacing 400ms);
+          @include transition(top 300ms, letter-spacing 300ms);
 
-          letter-spacing: 2.5px;
+          letter-spacing: 5px;
 
           .plus {
             @include transition(color 500ms);
@@ -492,7 +491,8 @@
           }
 
           .coming-soon {
-            letter-spacing: 1.2px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
             top: 4px;
           }
 
@@ -503,6 +503,8 @@
               background-color: #465AA7;
 
               .plus {
+                @include relative($top: -1px);
+
                 color: #BBC528;
               }
             }
@@ -530,7 +532,10 @@
 }
 
 .team-section {
-  background: $greybackground;
+  background-attachment: fixed;
+  background-color: darken($greybackground, 3%);
+  background-image: url('../images/background-pattern.png');
+  background-size: 350px;
   margin-top: $header-height;
   overflow-x: hidden;
 
@@ -583,35 +588,44 @@
   .principal {
     @include size($width: 120px, $height: 100%);
 
-    border-radius: $global-radius;
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, .2);
     max-width: 100%;
     margin: 0 20px;
   }
 
-  .team {
-    background-color: $white;
+  .panel--secondary {
+    background: none;
 
     @media (#{$bp-larger-than-tablet}) {
-      border-radius: $global-radius;
-      box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
-      margin: 20px;
+      padding: 40px 0 20px;
+    }
+  }
+
+  .team {
+    background-color: $white;
+    border-radius: 2px;
+    margin: 0px;
+
+    @media (#{$bp-larger-than-tablet}) {
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+      margin: 40px;
     }
   }
 
   .robot {
     @include size($width: 120px, $height: 100%);
 
-    border-radius: $global-radius;
-    box-shadow: 0 0 5px 0px rgba(0, 0, 0, .2);
     max-width: 100%;
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
 
   ul {
     list-style: disc;
     list-style-position: inside;
+
+    &.requirements {
+      margin: 20px 0;
+    }
   }
 
   a {
@@ -660,12 +674,10 @@
     max-height: 500px;
 
     @media (#{$bp-larger-than-mobile}) {
-      background-color: rgba($yellow, .6);
-      background-image: url('../images/background-pattern.png');
-      background-size: 42px;
+      background-color: $white;
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, .25);
       border-radius: $global-radius;
-      margin: 60px;
+      margin: 40px;
     }
 
     .panel__heading {

@@ -91,7 +91,7 @@
     @include fixed($top: $header-height, $right: 0, $left: 0);
 
     background: $white;
-    box-shadow: 0 0 2px $medium-gray inset;
+    box-shadow: inset 0px 0 2px rgba(0, 0, 0, 0.4);
     display: none;
     z-index: 2;
 
