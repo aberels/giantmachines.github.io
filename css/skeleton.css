@@ -818,7 +818,10 @@ form {
   padding: 80px 0 60px;
   background: #F0F0F0;
 }
-.panel--secondary h3, .panel--secondary h4 {
+.panel--secondary h3 {
+  color: #000000;
+}
+.panel--secondary h4 {
   color: #000000;
   text-transform: uppercase;
 }
