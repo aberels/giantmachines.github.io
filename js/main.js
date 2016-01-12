@@ -149,7 +149,7 @@ $(function() {
     if (deepLink) {
       pageName = deepLink;
     } else {
-      pageName = '/';
+      pageName = window.location.href.split('#')[0];
     }
 
     window.history.pushState(null, '', pageName);
@@ -207,9 +207,9 @@ $(function() {
   $('.view-case-study').click(function(){
     var caseStudy = $(this).data('case');
 
-    if ($(this).hasClass('redirect')) {
-      window.location.href = ('/' + caseStudy);
-    }
+    // if ($(this).hasClass('redirect')) {
+    //   window.location.href = ('/' + caseStudy);
+    // }
 
     showCaseStudy(caseStudy);
     updateURL(this);

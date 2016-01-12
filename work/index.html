@@ -7,12 +7,13 @@
   <meta name="description" content="Web &amp; Software Experts specializing in e-commerce, financial technologies, enterprise and CRM systems, and mobile applications">
   <meta name="author" content="Giant Machines LLC.">
   <meta name="google-site-verification" content="CZscJjliBINVOHtsJ87EpbBzdiLoojOP32hRxiH6TpU" />
-  <title>Giant Machines - Web &amp; Software Experts</title>
+  <title>Giant Machines - Web &amp; Software Experts - Team</title>
 
   <!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <!-- CSS ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
 
   <!-- Favicon ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -26,7 +27,7 @@
      ga('send', 'pageview');
   </script>
 </head>
-<body class="homepage">
+<body>
 
   <!-- Header LeftRail Nav ––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="header-section">
@@ -35,19 +36,9 @@
 
     <ul class="nav-collapse">
       <li><a href="/about"><span class="indicator"></span>OUR TEAM</a></li>
-      <li><a href="/work"><span class="indicator"></span>OUR WORK</a></li>
+      <li><a href="/work" class="active page-active"><span class="indicator"></span>OUR WORK</a></li>
       <li><a href="http://blog.giantmachines.com/" target="_blank"><span class="indicator"></span>BLOG</a></li>
       <li><a href="/contact"><span class="indicator"></span>CONTACT</a></li>
-    </ul>
-
-    <!-- Section Nav -->
-    <ul class="section-nav">
-      <li data-panel="introduction" class="section-nav__radio-button active">
-        <div class="inner"></div>
-      </li>
-      <li data-panel="airdye" class="section-nav__radio-button">
-        <div class="inner"></div>
-      </li>
     </ul>
 
     <div class="copyright">
@@ -61,40 +52,148 @@
   <!-- /Header LeftRail Nav –––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 
-  <!-- Home Section –––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container home-section">
-    <div class="panel panel--primary" id="introduction">
+  <!-- Team Section –––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container work-section">
+    <div class="panel panel--primary panel--half-height">
       <div class="row">
         <div class="seven columns offset-by-two panel__heading">
-          <h1>We Solve Your Problems.</h1>
-          <h3>Sometimes with software.</h3>
-        </div>
-
-        <div class="ten columns offset-by-one illustration">
-          <div class="illustration-container">
-            <img class="large" width="773px" height="124px" src="/images/home-image.png" alt="">
-            <img class="small" width="375px" height="180px" src="/images/GiantMachines-graphic.png" alt="">
-          </div>
+          <h1>Our Work</h1>
+          <h3>Proven results.</h3>
         </div>
       </div>
     </div>
 
-    <!-- Panels -->
-    <div class="panel panel--primary" id="airdye">
+    <div class="panel panel--secondary expertise">
+      <div class="row header-row">
+        <div class="ten columns offset-by-one center-content">
+          <h2>Our Expertise</h2>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="seven columns offset-by-two panel__heading">
-          <h1>High Fashion</h1>
-          <h3>
-            Giant Machines takes a global digital textile printing business to
-            the cloud, integrating proprietary desktop software, ERP, and
-            cloud services for
-            <a target="_blank" href="http://imbu.com/">
-              <b>Airdye.</b>
-            </a>
-          </h3>
-          <button class="view-case-study" data-case="#airdye-case">
-            View Case Study
-          </button>
+        <div class="one column offset-by-one center-content">
+          <img class="briefcase" src="../images/about/briefcase-graphic.png" alt="">
+        </div>
+        <div class="four columns">
+          <h3>Enterprise</h3>
+          <p>
+            We specialize in enterprise grade software, whether it be
+            connecting with your existing ERP or migrating your
+            your production database to the cloud along with building API capabilities.
+          </p>
+        </div>
+
+        <div class="one column center-content">
+          <img class="creditcards" src="../images/about/creditcards-graphic.png" alt="">
+        </div>
+        <div class="four columns">
+          <h3>Financial Tech</h3>
+          <p>
+            With over 20 years of experience in fintech, our principals
+            understand finance nuances from compliance to redundancy.  We have a range of
+            experiences, from building bond price parsing models to real time financial
+            messaging applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="one column offset-by-one center-content">
+          <img class="pricetag" src="../images/about/pricetag-graphic.png" alt="">
+        </div>
+        <div class="four columns">
+          <h3>eCommerce</h3>
+          <p>
+            We have helped our clients streamline their eCommerce offerings,
+            adding a level of sophistication to the online shopping experience
+            while improving inventory and business intelligence.
+          </p>
+        </div>
+
+        <div class="one column center-content">
+          <img class="mobile" src="../images/about/mobile-graphic.png" alt="">
+        </div>
+        <div class="four columns">
+          <h3>iOS and WatchOS</h3>
+          <p>
+            Our team has deployed several iOS and WatchOS apps, some with over
+            one million downloads.  We can help you build your mobile app and the
+            web services to support it.
+          </p>
+        </div>
+      </div>
+    </div>
+    <a name="clients"></a>
+    <div class="panel panel--secondary">
+      <div class="row header-row">
+        <div class="ten columns offset-by-one center-content">
+          <h2>Select Clients</h2>
+        </div>
+      </div>
+
+      <div class="row partners-grid">
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/aiga-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/aiga-logo.png" alt="">
+        </div>
+        <div class="image-container view-case-study redirect" data-case="#airdye-case">
+          <div class="case-study airdye"><span class="slide-down">Case Study</span><span class="coming-soon">AD <span class="plus">+ </span>GM</span></div>
+          <img class="partner-logo--color"src="../images/about/airdye-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/airdye-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/etsy-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/etsy-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/fabricmuse-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/fabricmuse-logo.png" alt="">
+        </div>
+        <div class="image-container" data-case="#flightclub-case">
+          <div class="case-study flightclub"><span class="slide-down">Case Study</span> <span class="coming-soon">coming soon</span></div>
+          <img class="partner-logo--color"src="../images/about/FC-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/FC-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/forbes-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/forbes-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/getty-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/getty-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/g-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/g-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/hatch-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/hatch-logo.png" alt="">
+        </div>
+        <div class="image-container" data-case="#minted-case">
+          <div class="case-study minted"><span class="slide-down">Case Study</span> <span class="coming-soon">coming soon</span></div>
+          <img class="partner-logo--color"src="../images/about/minted-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/minted-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/nooka-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/nooka-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/npr-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/npr-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/RH-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/RH-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/sonymusic-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/sonymusic-logo.png" alt="">
+        </div>
+        <div class="image-container">
+          <img class="partner-logo--color"src="../images/about/TR-logo-color.png" alt="">
+          <img class="partner-logo--bw" src="../images/about/TR-logo.png" alt="">
         </div>
       </div>
     </div>
@@ -108,8 +207,7 @@
       </div>
     </div>
   </div>
-  <!-- /Home Section ––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
+  <!-- End Team Section –––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <!-- Airdye/Imbu Case Study Section –––––––––––––––––––––––––––––––––––––– -->
   <div class="container case-study-section airdye" id="airdye-case">
@@ -297,7 +395,6 @@
     </div>
   </div>
   <!-- /Airdye/Imbu Case Study Section ––––––––––––––––––––––––––––––––––––– -->
-
 
   <!-- Core Javascript Files -->
   <script src="../js/jquery-1.11.3.min.js"></script>
