@@ -346,9 +346,8 @@
   .principals {
     padding-bottom: 0;
   }
-  
-  .team,
-  .hiring {
+
+  .team {
     background-color: $white;
     border-radius: 2px;
     margin: 0px;
@@ -396,6 +395,21 @@
     color: $black;
     text-transform: uppercase;
   }
+
+  h4 {
+    font: $font-semibold;
+    text-transform: capitalize;
+
+    a {
+      text-transform: lowercase;
+      font: 12px $font-regular;
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .work-section {
@@ -424,21 +438,6 @@
         font: 24px $font-semibold;
         color: $black;
         text-transform: uppercase;
-      }
-    }
-  }
-
-  h4 {
-    font: $font-semibold;
-    text-transform: capitalize;
-
-    a {
-      text-transform: lowercase;
-      font: 12px $font-regular;
-      color: $blue;
-
-      &:hover {
-        text-decoration: underline;
       }
     }
   }

@@ -1408,15 +1408,13 @@ form {
 .about-section .principals {
   padding-bottom: 0;
 }
-.about-section .team,
-.about-section .hiring {
+.about-section .team {
   background-color: #FFFFFF;
   border-radius: 2px;
   margin: 0px;
 }
 @media (min-width: 1024px) {
-  .about-section .team,
-  .about-section .hiring {
+  .about-section .team {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
     margin: 40px;
   }
@@ -1452,6 +1450,18 @@ form {
   color: #000000;
   text-transform: uppercase;
 }
+.about-section h4 {
+  font: "Graphik-Semibold";
+  text-transform: capitalize;
+}
+.about-section h4 a {
+  text-transform: lowercase;
+  font: 12px "Graphik-Regular";
+  color: #0080CA;
+}
+.about-section h4 a:hover {
+  text-decoration: underline;
+}
 
 .work-section {
   background-attachment: fixed;
@@ -1479,18 +1489,6 @@ form {
   font: 24px "Graphik-Semibold";
   color: #000000;
   text-transform: uppercase;
-}
-.work-section h4 {
-  font: "Graphik-Semibold";
-  text-transform: capitalize;
-}
-.work-section h4 a {
-  text-transform: lowercase;
-  font: 12px "Graphik-Regular";
-  color: #0080CA;
-}
-.work-section h4 a:hover {
-  text-decoration: underline;
 }
 .work-section .panel--primary {
   background-color: #00B264;
