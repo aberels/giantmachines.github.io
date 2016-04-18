@@ -15,3 +15,6 @@ drwxr-xr-x  5 roycyang  staff   170 Oct  1 09:32 ..
 atom ubiquitous_192A2A8C-9E1B-485A-B4F6-17C5587D5102.mailsignature
 ```
 
+How to update email signature in Gmail:
+
+Copy and paste the <a href="giantmachines.github.io/email/template.mailsignature">code</a> into your text editor, make the changes for your name, title and phone number (if you want your cell added and not the office line). Then open up the html in the browser and copy and paste the rendered signature that into the settings panel for gmail (gear icon on the far right > settings > General > Signature (towards the bottom)). Click "save changes" at the bottom of the page.
